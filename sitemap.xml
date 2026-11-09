@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://mmtrading.example/</loc></url>
+  <url><loc>https://mmtrading.example/about.php</loc></url>
+  <url><loc>https://mmtrading.example/products.php</loc></url>
+  <url><loc>https://mmtrading.example/projects.php</loc></url>
+  <url><loc>https://mmtrading.example/contact.php</loc></url>
+</urlset>
