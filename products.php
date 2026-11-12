@@ -1,129 +1,260 @@
 <?php
 $Page = 'products';
-$PageTitle = 'Aluminium & Industrial Metal Products | MM Trading';
-$PageDescription = 'Explore MM Trading product families: aluminium sheets and plates, tread plates, stucco sheets, perforated metal, marine-grade aluminium, extrusions and coils.';
-$PageCanonical = 'https://mmtrading.example/products.php';
-$PageOgImage = 'https://mmtrading.example/assets/images/service/service-1.jpg';
-$PageKeywords = 'aluminium sheets UAE, aluminium plates, chequered plate, stucco embossed sheet, perforated metal, marine grade aluminium, aluminium extrusions, aluminium coils';
-$PageSchema = json_encode(['@context' => 'https://schema.org', '@type' => 'CollectionPage', 'name' => 'MM Trading Aluminium and Industrial Metal Products', 'url' => $PageCanonical, 'description' => $PageDescription]);
+$PageTitle = 'Products & Materials Catalog | MM General Trading L.L.C Dubai';
+$PageDescription = 'Explore the complete MM General Trading L.L.C product portfolio: Aluminium sheets, chequered plates, stucco coils, stainless steel, GUIBAO architectural sealants, TKK PU foam, Astral Bondtite adhesives, and SEALz passive fire solutions.';
+$PageCanonical = 'https://www.mmgeneraltrading.com/products.php';
+$PageOgImage = 'https://www.mmgeneraltrading.com/assets/images/service/service-1.jpg';
+$PageKeywords = 'aluminium sheets UAE, aluminium plates Dubai, chequered plate, stucco embossed sheet, perforated metal, GUIBAO silicone sealant, Astral Bondtite, SEALz fire seals, TKK PU foam Dubai';
+
+$PRODUCTS_DB = include __DIR__ . '/products-data.php';
+
+$PageSchema = json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'CollectionPage',
+    'name' => 'MM General Trading L.L.C Full Product Catalogue',
+    'url' => $PageCanonical,
+    'description' => $PageDescription
+]);
+
 include __DIR__ . '/header.php';
 
-$productFamilies = [
-    ['name' => 'Plain Aluminium Sheets & Plates', 'summary' => 'Flat aluminium products for fabrication, cladding, signage, equipment panels and general industrial work.', 'grades' => 'Commonly requested grades include 1100, 3003, 5005, 5052, 5083, 6061, 6082 and 7075.', 'image' => 'service/service-1.jpg', 'applications' => 'Fabrication · cladding · signage · general engineering'],
-    ['name' => 'Aluminium Tread & Chequered Plates', 'summary' => 'Patterned aluminium plate selected where a durable, slip-resistant surface and practical appearance are required.', 'grades' => 'Available patterns and grades can include 1100, 3003, 3105 and 5754; confirm pattern, temper and thickness for each order.', 'image' => 'service/service-2.jpg', 'applications' => 'Walkways · platforms · vehicle bodies · ramps · workshops'],
-    ['name' => 'Stucco Embossed Aluminium Sheets', 'summary' => 'Embossed aluminium sheet with a textured finish for protective, decorative and functional applications.', 'grades' => 'Commonly specified in 1100 and 3003 aluminium; finish, backing and dimensions are confirmed against the enquiry.', 'image' => 'service/service-3.jpg', 'applications' => 'Insulation cladding · ducting · cold rooms · interior panels'],
-    ['name' => 'Perforated Sheet Metal', 'summary' => 'Perforated sheets for airflow, screening, acoustic, architectural and equipment protection requirements.', 'grades' => 'Aluminium, galvanised iron and stainless steel options can be considered with hole shape, pitch, open area and thickness.', 'image' => 'service/service-4.jpg', 'applications' => 'HVAC · screening · façades · machinery guards · acoustic panels'],
-    ['name' => 'Marine-Grade Aluminium', 'summary' => 'Corrosion-conscious aluminium solutions for marine, coastal and demanding outdoor environments.', 'grades' => '5083 is a commonly requested marine-grade alloy. Confirm temper, certification and welding requirements before purchase.', 'image' => 'service/service-5.jpg', 'applications' => 'Marine fabrication · tanks · coastal structures · heavy-duty assemblies'],
-    ['name' => 'Aluminium Extrusions & Profiles', 'summary' => 'Extruded sections for framing, trims, supports, architectural details and engineered assemblies.', 'grades' => '6063-T6 and 6082-T6 are common specification references; profile shape, finish and cut length are project-specific.', 'image' => 'service/service-6.jpg', 'applications' => 'Frames · supports · façades · partitions · equipment assemblies'],
-    ['name' => 'Aluminium Coils', 'summary' => 'Coil supply for continuous processing, cut-to-length work and high-volume sheet conversion.', 'grades' => 'Plain and stucco coil options may be requested, including moisture-barrier requirements where appropriate.', 'image' => 'service/service-7.jpg', 'applications' => 'Cut-to-length · roofing · insulation · ducting · fabrication lines'],
+$divisions = [
+    'all' => [
+        'name' => 'All Product Families',
+        'short_name' => 'All Products',
+        'icon' => 'fa-solid fa-boxes-stacked',
+        'badge' => '26 Verified Product Lines'
+    ],
+    'metals' => [
+        'name' => 'Aluminium & Metal Products',
+        'short_name' => 'Aluminium & Metals',
+        'icon' => 'fa-solid fa-layer-group',
+        'badge' => '8 Core Products · Ex-Stock DIP-2',
+        'lead' => 'Ex-stock in our Dubai DIP - 2 warehouses, MM General Trading L.L.C maintains extensive ready inventories of plain aluminium sheets, 5-bar chequered plates, stucco embossed coils, perforated metal sheets, stainless steel, and architectural extrusions in alloys 1100, 3003, 5005, 5052, 5083, 6082, and 7075 with complete mill test certification (EN 10204 3.1).'
+    ],
+    'chemicals' => [
+        'name' => 'Construction Chemicals & Sealants',
+        'short_name' => 'Chemicals & Sealants',
+        'icon' => 'fa-solid fa-flask-vial',
+        'badge' => '7 Systems · Authorized UAE Distribution',
+        'lead' => 'Direct authorized UAE distribution of GUIBAO high-performance structural glazing silicone sealants, weatherproofing sealants, total vision systems (TVS), fire-resistant sealants, and TKK polyurethane (PU) expanding foams for curtain walls, architectural façades, and insulated glass units.'
+    ],
+    'adhesives' => [
+        'name' => 'Wood & Industrial Adhesives',
+        'short_name' => 'Wood & Adhesives',
+        'icon' => 'fa-solid fa-cubes-stacked',
+        'badge' => '5 Formulations · Industrial Grade',
+        'lead' => 'Premium industrial woodworking and construction adhesive systems by Astral Bondtite and Monster. Featuring D3 water-resistant wood adhesives, edge-banding PVA, high-tack neoprene contact cements, and no-nail hybrid MS polymers engineered for the Gulf climate.'
+    ],
+    'fire-acoustic' => [
+        'name' => 'Passive Fire & Acoustic Solutions',
+        'short_name' => 'Passive Fire & Acoustic',
+        'icon' => 'fa-solid fa-shield-halved',
+        'badge' => '4 Certified Lines · Civil Defence Compliant',
+        'lead' => 'Civil Defence compliant passive fire and acoustic sealing solutions by SEALz®. Including BS 476 and UL 10C certified intumescent fire and smoke seals, automatic drop seals, perimeter acoustic seals, and intumescent hardware protection pads for fire-rated doors and partitions.'
+    ],
+    'hardware' => [
+        'name' => 'Hardware & Accessories',
+        'short_name' => 'Hardware & Accessories',
+        'icon' => 'fa-solid fa-toolbox',
+        'badge' => 'Façade & Door Solutions',
+        'lead' => 'Heavy-duty architectural glazing hardware, concealed door closers, floor springs, stainless steel patch fittings, and high-performance silicone applicator tooling for commercial and residential façades and architectural glass systems.'
+    ],
+    'services' => [
+        'name' => 'Coating & Processing Services',
+        'short_name' => 'Coating & Processing',
+        'icon' => 'fa-solid fa-gears',
+        'badge' => 'Precision Processing · Toll Coating',
+        'lead' => 'State-of-the-art toll processing and value-added coil services in the UAE: precision coil slitting, cut-to-length sheet leveling, protective PE/PVC surface film lamination, paper interleaving, and custom architectural PVDF and powder coating.'
+    ]
 ];
+
+$productsByDivision = [];
+foreach ($PRODUCTS_DB as $slug => $product) {
+    $div = $product['division'];
+    if (!isset($productsByDivision[$div])) {
+        $productsByDivision[$div] = [];
+    }
+    $productsByDivision[$div][$slug] = $product;
+}
+
+$activeFilter = $_GET['cat'] ?? 'all';
+if (!isset($divisions[$activeFilter])) {
+    $activeFilter = 'all';
+}
+
+function renderProductBox($slug, $product) {
+    ?>
+    <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+        <a href="<?= htmlspecialchars($slug, ENT_QUOTES, 'UTF-8') ?>.php" class="d-block home-product-box">
+            <span class="brand-tag"><?= htmlspecialchars($product['brand'], ENT_QUOTES, 'UTF-8') ?></span>
+            <div class="img-wrapper">
+                <img src="<?= htmlspecialchars($product['hero_image'], ENT_QUOTES, 'UTF-8') ?>" class="img-fluid w-100" alt="<?= htmlspecialchars($product['title'], ENT_QUOTES, 'UTF-8') ?>">
+            </div>
+            <span class="overlay-gradient"></span>
+            <h3 class="home-prod-title"><?= htmlspecialchars($product['title'], ENT_QUOTES, 'UTF-8') ?></h3>
+        </a>
+    </div>
+    <?php
+}
 ?>
 
-        <!-- page-title -->
-        <section class="page-title centred">
-            <div class="bg-layer" style="background-image: url(assets/images/background/page-title.jpg);"></div>
-            <div class="line-box">
-                <div class="line-1"></div>
-                <div class="line-2"></div>
-            </div>
-            <div class="auto-container">
-                <div class="content-box">
-                    <h1>Industries Served</h1>
-                    <ul class="bread-crumb clearfix">
-                        <li><a href="index.html">Home</a></li>
-                        <li>Industries</li>
-                        <li>Classic</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <!-- page-title end -->
+<!-- page-title -->
+<section class="page-title centred">
+    <div class="bg-layer" style="background-image: url(assets/images/background/page-title.jpg);"></div>
+    <div class="line-box">
+        <div class="line-1"></div>
+        <div class="line-2"></div>
+    </div>
+    <div class="auto-container">
+        <div class="content-box">
+            <h1>Product Catalogue & Materials</h1>
+            <ul class="bread-crumb clearfix">
+                <li><a href="index.php">Home</a></li>
+                <li><a href="products.php">Products</a></li>
+                <li id="breadcrumb-division-label"><?= $activeFilter !== 'all' ? htmlspecialchars($divisions[$activeFilter]['short_name'], ENT_QUOTES, 'UTF-8') : 'All Products' ?></li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- page-title end -->
+<!-- Products Project Cards Section (https://dinco.ae/products/ concept) -->
+<div class="row mx-0 mt-5 py-4 project-cards">
+    <div class="container px-0">
 
+        <!-- Filter Bar -->
+        <div class="filter-bar text-center" style="margin-bottom: 45px; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;">
+            <button type="button" class="product-filter-btn <?= $activeFilter === 'all' ? 'is-active' : '' ?>" data-division="all">
+                <i class="fa-solid fa-boxes-stacked"></i> All Products <span class="badge-count">26</span>
+            </button>
+            <?php foreach ($divisions as $divKey => $divInfo): ?>
+                <?php if ($divKey === 'all') continue; ?>
+                <?php $count = isset($productsByDivision[$divKey]) ? count($productsByDivision[$divKey]) : 0; ?>
+                <button type="button" class="product-filter-btn <?= $activeFilter === $divKey ? 'is-active' : '' ?>" data-division="<?= htmlspecialchars($divKey, ENT_QUOTES, 'UTF-8') ?>">
+                    <i class="<?= $divInfo['icon'] ?>"></i> <?= htmlspecialchars($divInfo['short_name'], ENT_QUOTES, 'UTF-8') ?> <span class="badge-count"><?= $count ?></span>
+                </button>
+            <?php endforeach; ?>
+        </div>
 
-        <!-- industry-style-three -->
-        <section class="industry-style-three industries-page-one">
-            <div class="auto-container">
-                <div class="row clearfix">
-                    <div class="col-lg-6 col-md-6 col-sm-12 industries-block">
-                        <div class="industries-block-one">
-                            <div class="inner-box">
-                                <figure class="image-box"><img src="assets/images/resource/industry-3.jpg" alt=""></figure>
-                                <div class="content-box">
-                                    <div class="light-icon"><i class="flaticon-crane"></i></div>
-                                    <div class="link-box"><a href="industrie-details.html"><i class="flaticon-diagonal-arrow"></i></a></div>
-                                    <h3><a href="industrie-details.html">Construction <br />Sector</a></h3>
-                                    <p>Lookout flogging bilge rather main shet bilge water nipper pounders skysail...</p>
-                                </div>
-                            </div>
-                        </div>
+        <!-- Categorized Sections (Dinco.ae Concept) -->
+        <div id="division-sections-container">
+            <?php foreach ($divisions as $divKey => $divInfo): ?>
+                <?php if ($divKey === 'all' || !isset($productsByDivision[$divKey])) continue; ?>
+                <div class="division-section" id="section-<?= $divKey ?>" data-division="<?= $divKey ?>" style="<?= ($activeFilter !== 'all' && $activeFilter !== $divKey) ? 'display: none;' : '' ?>">
+                    <div class="col-12 text-center">
+                        <a href="#section-<?= $divKey ?>">
+                            <h3 class="section-title-1"><?= htmlspecialchars($divInfo['name'], ENT_QUOTES, 'UTF-8') ?></h3>
+                        </a>
+                        <p class="category-lead-text"><?= htmlspecialchars($divInfo['lead'], ENT_QUOTES, 'UTF-8') ?></p>
                     </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 industries-block">
-                        <div class="industries-block-one">
-                            <div class="inner-box">
-                                <figure class="image-box"><img src="assets/images/resource/industry-4.jpg" alt=""></figure>
-                                <div class="content-box">
-                                    <div class="light-icon"><i class="flaticon-tanks"></i></div>
-                                    <div class="link-box"><a href="industrie-details.html"><i class="flaticon-diagonal-arrow"></i></a></div>
-                                    <h3><a href="industrie-details.html">Oil & Gas <br />Energy</a></h3>
-                                    <p>Matters to this principle of se- lections he rejects pleasure to secure other greater...</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 industries-block">
-                        <div class="industries-block-one">
-                            <div class="inner-box">
-                                <figure class="image-box"><img src="assets/images/resource/industry-5.jpg" alt=""></figure>
-                                <div class="content-box">
-                                    <div class="light-icon"><i class="flaticon-vaccine"></i></div>
-                                    <div class="link-box"><a href="industrie-details.html"><i class="flaticon-diagonal-arrow"></i></a></div>
-                                    <h3><a href="industrie-details.html">Heathcare & Pharma</a></h3>
-                                    <p>Blinded desire that they cannot foresee the pain & trouble that are bound to ensue...</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 industries-block">
-                        <div class="industries-block-one">
-                            <div class="inner-box">
-                                <figure class="image-box"><img src="assets/images/resource/industry-6.jpg" alt=""></figure>
-                                <div class="content-box">
-                                    <div class="light-icon"><i class="flaticon-radiator"></i></div>
-                                    <div class="link-box"><a href="industrie-details.html"><i class="flaticon-diagonal-arrow"></i></a></div>
-                                    <h3><a href="industrie-details.html">Automotive <br />Chains</a></h3>
-                                    <p>Lookout flogging bilge rather main shet bilge water nipper pounders skysail...</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 industries-block">
-                        <div class="industries-block-one">
-                            <div class="inner-box">
-                                <figure class="image-box"><img src="assets/images/resource/industry-7.jpg" alt=""></figure>
-                                <div class="content-box">
-                                    <div class="light-icon"><i class="flaticon-windmill"></i></div>
-                                    <div class="link-box"><a href="industrie-details.html"><i class="flaticon-diagonal-arrow"></i></a></div>
-                                    <h3><a href="industrie-details.html">Renewable <br />Energy</a></h3>
-                                    <p>Matters to this principle of se- lections he rejects pleasure to secure other greater...</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 industries-block">
-                        <div class="industries-block-one">
-                            <div class="inner-box">
-                                <figure class="image-box"><img src="assets/images/resource/industry-8.jpg" alt=""></figure>
-                                <div class="content-box">
-                                    <div class="light-icon"><i class="flaticon-robotic-arm"></i></div>
-                                    <div class="link-box"><a href="industrie-details.html"><i class="flaticon-diagonal-arrow"></i></a></div>
-                                    <h3><a href="industrie-details.html">Agriculture & Food</a></h3>
-                                    <p>Blinded desire that they cannot foresee the pain & trouble that are bound to ensue...</p>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="row mx-0 mt-2 mb-5 justify-content-center w-100">
+                        <?php foreach ($productsByDivision[$divKey] as $slug => $product): ?>
+                            <?php renderProductBox($slug, $product); ?>
+                        <?php endforeach; ?>
                     </div>
                 </div>
+            <?php endforeach; ?>
+        </div>
+
+    </div>
+</div>
+
+<!-- Closer to you Section (https://dinco.ae/products/ concept) -->
+<div class="row mx-0 py-5 closerbox">
+    <div class="container py-4 px-0">
+        <div class="row mx-0 align-items-center justify-content-center">
+            <div class="col-lg-8 col-md-12 col-12">
+                <span style="color: #D69A2D; font-weight: 700; text-transform: uppercase; font-size: 12px; letter-spacing: 0.1em; display: inline-block; margin-bottom: 6px;">Strategic Warehousing & Quick Dispatch</span>
+                <h3>We are closer to you in Dubai DIP - 2</h3>
+                <p>With expansive warehouse and processing facilities in Dubai Investments Park 2 (DIP - 2), MM General Trading L.L.C ensures speedy deliveries of certified industrial metals, sealants, and fire protection systems across the UAE and GCC.</p>
             </div>
-        </section>
-        <!-- industry-style-three end -->
+            <div class="col-lg-4 col-md-12 col-12 text-lg-right text-center" style="margin-top: 20px;">
+                <a href="contact.php" class="theme-btn btn-one" style="padding: 14px 34px; font-size: 14px;">
+                    <span>Contact Sales Engineers</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Filter Script -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.product-filter-btn');
+    const divisionSections = document.querySelectorAll('.division-section');
+    const breadcrumbLabel = document.getElementById('breadcrumb-division-label');
+
+    const divisionLabels = {
+        'all': 'All Products',
+        'metals': 'Aluminium & Metals',
+        'chemicals': 'Chemicals & Sealants',
+        'adhesives': 'Wood & Adhesives',
+        'fire-acoustic': 'Passive Fire & Acoustic',
+        'hardware': 'Hardware & Accessories',
+        'services': 'Coating & Processing'
+    };
+
+    function applyFilter(division, updateUrl = true, shouldScroll = false) {
+        filterButtons.forEach(btn => {
+            if (btn.getAttribute('data-division') === division) {
+                btn.classList.add('is-active');
+            } else {
+                btn.classList.remove('is-active');
+            }
+        });
+
+        divisionSections.forEach(section => {
+            const secDiv = section.getAttribute('data-division');
+            if (division === 'all' || secDiv === division) {
+                section.style.display = 'block';
+            } else {
+                section.style.display = 'none';
+            }
+        });
+
+        if (breadcrumbLabel && divisionLabels[division]) {
+            breadcrumbLabel.textContent = divisionLabels[division];
+        }
+
+        if (updateUrl) {
+            const newUrl = division === 'all' ? 'products.php' : 'products.php?cat=' + encodeURIComponent(division);
+            window.history.pushState({ division: division }, '', newUrl);
+        }
+
+        if (shouldScroll && division !== 'all') {
+            const targetSection = document.getElementById('section-' + division);
+            if (targetSection) {
+                const headerOffset = 120;
+                const elementPosition = targetSection.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
+    }
+
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const div = this.getAttribute('data-division');
+            applyFilter(div, true, true);
+        });
+    });
+
+    window.addEventListener('popstate', function(e) {
+        const urlParams = new URLSearchParams(window.location.search);
+        const cat = urlParams.get('cat') || 'all';
+        applyFilter(cat, false, false);
+    });
+
+    const initialParams = new URLSearchParams(window.location.search);
+    const initialCat = initialParams.get('cat');
+    if (initialCat && divisionLabels[initialCat]) {
+        applyFilter(initialCat, false, true);
+    }
+});
+</script>
+
 <?php include __DIR__ . '/footer.php'; ?>

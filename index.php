@@ -1,8 +1,31 @@
 <?php
-$Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufacturing'; $PageDescription='MM Trading provides metal fabrication and industrial manufacturing services including casting and molding, shearing and forming, grinding, cutting and welding.'; $PageCanonical='https://mmtrading.example/'; $PageOgImage='https://mmtrading.example/assets/images/banner/banner-1.jpg'; $PageSchema=json_encode(['@context'=>'https://schema.org','@type'=>'Organization','name'=>'MM Trading','url'=>$PageCanonical,'description'=>$PageDescription]); include __DIR__.'/header.php';
+$Page = 'home';
+$PageTitle = 'MM General Trading L.L.C | Industrial Metal Trading & Project Solutions Dubai';
+$PageDescription = 'MM General Trading L.L.C is a premier Dubai-based industrial trading and metal distribution partner supplying aluminium sheets, plates, chequered tread plates, coils, extrusions, and certified fabrication solutions.';
+$PageCanonical = 'https://www.mmgeneraltrading.com/';
+$PageOgImage = 'https://www.mmgeneraltrading.com/assets/images/banner/banner-1.jpg';
+$PageSchema = json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'Organization',
+    'name' => 'MM General Trading L.L.C',
+    'alternateName' => 'ام ام للتجاره العامه ذ.م.م',
+    'url' => $PageCanonical,
+    'description' => $PageDescription,
+    'address' => [
+        '@type' => 'PostalAddress',
+        'streetAddress' => 'Dubai Investments Park 2 (DIP - 2)',
+        'postOfficeBoxNumber' => '26737',
+        'addressLocality' => 'Dubai',
+        'addressCountry' => 'AE'
+    ],
+    'telephone' => '+97148878778',
+    'email' => 'info@mmgeneraltrading.com'
+]);
+include __DIR__ . '/header.php';
 ?>
 
-<!-- banner-section -->
+
+       <!-- banner-section -->
         <section class="banner-section">
             <div class="line-box">
                 <div class="line-1"></div>
@@ -10,27 +33,29 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
             </div>
             <div class="banner-carousel owl-theme owl-carousel">
                 <div class="slide-item">
-                    <div class="image-layer" style="background-image:url(assets/images/banner/banner-1.jpg)"></div>
+                    <div class="image-layer" style="background-image:url(assets/images/banner/banner1.jpg)"></div>
                     <div class="auto-container">
                         <div class="content-box">
                             <span class="special-text animation_text_word"></span>
-                            <h2><span>Build a Stronger</span> <br /><span>Product...</span></h2>
-                            <p>Favor the more eloquent presidential days of yesteryear give ipsum a whirl & <br />get some engaging every pleasure is to be welcomed.</p>
+                            <h2><span>Certified Industrial</span> <br /><span>Metal Solutions</span></h2>
+                            <p>Direct supply and precision processing of industrial aluminium, structural extrusions, and certified sealants across UAE & GCC.</p>
                             <div class="btn-box">
-                                <a href="index.html" class="theme-btn btn-one"><span>More Details</span></a>
+                                <a href="products.php" class="theme-btn btn-one"><span>Explore Product Catalog</span></a>
+                                <a href="contact.php" class="theme-btn btn-two"><span>Request a Quote</span></a>
                             </div>
                         </div> 
                     </div>
                 </div>
                 <div class="slide-item">
-                    <div class="image-layer" style="background-image:url(assets/images/banner/banner-2.jpg)"></div>
+                    <div class="image-layer" style="background-image:url(assets/images/banner/banner2.jpg)"></div>
                     <div class="auto-container">
                         <div class="content-box">
                             <span class="special-text animation_text_word"></span>
-                            <h2><span>Experts in</span> <br /><span>manufacturing</span></h2>
-                            <p>Favor the more eloquent presidential days of yesteryear give ipsum a whirl & <br />get some engaging every pleasure is to be welcomed.</p>
+                           <h2><span>Aluminium Sheets,</span> <br /><span>Plates & Extrusions</span></h2>
+                            <p>Extensive inventory of plain sheets, 5-bar chequered plates, stucco coils, and marine alloys ready for prompt dispatch.</p>
                             <div class="btn-box">
-                                <a href="index.html" class="theme-btn btn-one"><span>More Details</span></a>
+                                <a href="plain-aluminium-sheets-plates.php" class="theme-btn btn-one"><span>View Specifications</span></a>
+                                <a href="contact.php" class="theme-btn btn-two"><span>Contact Sales</span></a>
                             </div>
                         </div> 
                     </div>
@@ -40,18 +65,19 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
                     <div class="auto-container">
                         <div class="content-box">
                             <span class="special-text animation_text_word"></span>
-                            <h2><span>Made for</span> <br /><span>Raw Material...</span></h2>
-                            <p>Favor the more eloquent presidential days of yesteryear give ipsum a whirl & <br />get some engaging every pleasure is to be welcomed.</p>
+                            <h2><span>Engineered for</span> <br /><span>Durability & Speed</span></h2>
+                            <p>High-grade architectural hardware, passive fire protection systems, and weatherproofing sealants for landmark projects.</p>
                             <div class="btn-box">
-                                <a href="index.html" class="theme-btn btn-one"><span>More Details</span></a>
+                                <a href="products.php" class="theme-btn btn-one"><span>Explore All Products</span></a>
+                                <a href="contact.php" class="theme-btn btn-two"><span>Request Project RFQ</span></a>
                             </div>
                         </div> 
                     </div>
                 </div>
             </div>
             <div class="text-box">
-                <div class="text-1"><h3>Casting and Molding</h3></div>
-                <div class="text-2"><h3>Shearing and Forming</h3></div>
+                <div class="text-1"><h3>Aluminium Sheets & Plates</h3></div>
+                <div class="text-2"><h3>Tread Plates & Extrusions</h3></div>
             </div>
         </section>
         <!-- banner-section end -->
@@ -72,24 +98,24 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
                     <div class="col-lg-6 col-md-12 col-sm-12 content-column">
                         <div class="content-box">
                             <div class="sec-title">
-                                <span class="sub-title">About Us</span>
-                                <h2>A Company of Excellent Services</h2>
+                                <span class="sub-title">About Our Company</span>
+                                <h2>Premier Industrial Metal & Trading Partner in Dubai</h2>
                             </div>
                             <div class="text">
-                                <p>Righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, trouble that are bound to ensue.</p>
+                                <p>Headquartered in Dubai Investments Park 2, MM General Trading L.L.C supplies certified industrial metals, aluminium sheets, structural profiles, and custom cutting solutions to leading contracting and engineering firms across the UAE and GCC.</p>
                             </div>
                             <div class="single-box">
-                                <h3>Organization & Certifications</h3>
-                                <p>Meet at one of those defining moments moment when our nation is at war our economy.</p>
+                                <h3>Certified Quality & Mill Traceability</h3>
+                                <p>Every order is supplied with verified mill test reports, dimensional compliance, and protective packaging for seamless site deployment.</p>
                             </div>
                             <div class="inner-box">
                                 <div class="curve-text">
                                     <div class="icon-box"><i class="flaticon-reward"></i></div>
                                     <span class="curved-circle">Manufactured with 100% quality</span>
                                 </div>
-                                <h4>ISM Certificate</h4>
-                                <p>Premium class, Guaranteed.</p>
-                                <button type="button"><i class="flaticon-download"></i>Download</button>
+                                <h4>Certified Standards</h4>
+                                <p>Full Traceability & Compliance.</p>
+                                <a href="products.php" class="theme-btn btn-two" style="padding: 6px 18px; font-size: 13px;"><span>View Catalog</span></a>
                             </div>
                         </div>
                     </div>
@@ -162,23 +188,24 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
             </div>
             <div class="auto-container">
                 <div class="sec-title centred">
-                    <span class="sub-title">Services</span>
-                    <h2>Manufacturing at its Best</h2>
+                    <span class="sub-title">2026 Core Product Portfolio</span>
+                    <h2>Premium Metals, Architectural Sealants & Industrial Solutions</h2>
+                    <p style="max-width: 680px; margin: 10px auto 0 auto;">Supplying certified, mill-tested materials direct from Dubai Investments Park 2 to projects across the UAE and GCC.</p>
                 </div>
                 <div class="row clearfix">
                     <div class="col-lg-4 col-md-6 col-sm-12 service-block">
                         <div class="service-block-one">
                             <div class="inner-box">
                                 <div class="image-box">
-                                    <figure class="image"><img src="assets/images/service/service-1.jpg" alt=""></figure>
+                                    <figure class="image"><img src="assets/images/products/plain-aluminium-sheets-plates.png" alt="Plain Aluminium Sheets & Plates" style="height: 220px; object-fit: contain; padding: 15px; background: #F8FAFC;"></figure>
                                     <div class="shape" style="background-image: url(assets/images/shape/shape-1.png);"></div>
                                 </div>
                                 <div class="lower-content">
-                                    <span class="big-text">cg</span>
-                                    <h3><a href="service-details.html">Centerless Grinding</a></h3>
-                                    <p>Our nation is at war our economy is in turmoil and the promise.</p>
+                                    <span class="big-text">AL</span>
+                                    <h3><a href="plain-aluminium-sheets-plates.php">Plain Aluminium Sheets & Plates</a></h3>
+                                    <p>Thickness 0.3mm to 150mm in 1100, 3003, 5083, 6082, and 7075 alloys with mill test certs.</p>
                                     <div class="btn-box">
-                                        <a href="service-details.html"><span>More Details</span></a>
+                                        <a href="plain-aluminium-sheets-plates.php"><span>View Specifications</span></a>
                                     </div>
                                 </div>
                             </div>
@@ -188,15 +215,15 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
                         <div class="service-block-one">
                             <div class="inner-box">
                                 <div class="image-box">
-                                    <figure class="image"><img src="assets/images/service/service-2.jpg" alt=""></figure>
+                                    <figure class="image"><img src="assets/images/products/aluminium-chequered-sheets.png" alt="Aluminium Chequered Sheets" style="height: 220px; object-fit: contain; padding: 15px; background: #F8FAFC;"></figure>
                                     <div class="shape" style="background-image: url(assets/images/shape/shape-2.png);"></div>
                                 </div>
                                 <div class="lower-content">
-                                    <span class="big-text">lp</span>
-                                    <h3><a href="service-details.html">Laser & Plasma Cutting</a></h3>
-                                    <p>A faith in simple dream an insistence of those defining moments.</p>
+                                    <span class="big-text">CH</span>
+                                    <h3><a href="aluminium-chequered-sheets.php">Chequered & Tread Plates</a></h3>
+                                    <p>High-traction 5-bar and diamond pattern sheets in 5754-H114, 1100, and 3003 for walkways and vehicles.</p>
                                     <div class="btn-box">
-                                        <a href="service-details.html"><span>More Details</span></a>
+                                        <a href="aluminium-chequered-sheets.php"><span>View Specifications</span></a>
                                     </div>
                                 </div>
                             </div>
@@ -206,15 +233,15 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
                         <div class="service-block-one">
                             <div class="inner-box">
                                 <div class="image-box">
-                                    <figure class="image"><img src="assets/images/service/service-3.jpg" alt=""></figure>
+                                    <figure class="image"><img src="assets/images/products/guibao-1092-structural-silicone.png" alt="GUIBAO Structural Glazing Silicone" style="height: 220px; object-fit: contain; padding: 15px; background: #F8FAFC;"></figure>
                                     <div class="shape" style="background-image: url(assets/images/shape/shape-3.png);"></div>
                                 </div>
                                 <div class="lower-content">
-                                    <span class="big-text">mt</span>
-                                    <h3><a href="service-details.html">Metal & Tungsten Welding</a></h3>
-                                    <p>Those options are already baked in with this model shoot me clear.</p>
+                                    <span class="big-text">GB</span>
+                                    <h3><a href="guibao-1092-structural-silicone.php">GUIBAO® Structural Silicone</a></h3>
+                                    <p>High performance two-part neutral cure silicone for skyscraper curtain walls (ASTM C1184 & ETAG 002).</p>
                                     <div class="btn-box">
-                                        <a href="service-details.html"><span>More Details</span></a>
+                                        <a href="guibao-1092-structural-silicone.php"><span>View Specifications</span></a>
                                     </div>
                                 </div>
                             </div>
@@ -230,11 +257,11 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
         <section class="clients-section bg-color-1">
             <div class="auto-container">
                 <div class="five-item-carousel owl-carousel owl-theme owl-nav-none owl-dots-none">
-                    <figure class="clients-logo"><a href="index.html"><img src="assets/images/clients/clients-1.png" alt=""></a></figure>
-                    <figure class="clients-logo"><a href="index.html"><img src="assets/images/clients/clients-2.png" alt=""></a></figure>
-                    <figure class="clients-logo"><a href="index.html"><img src="assets/images/clients/clients-3.png" alt=""></a></figure>
-                    <figure class="clients-logo"><a href="index.html"><img src="assets/images/clients/clients-4.png" alt=""></a></figure>
-                    <figure class="clients-logo"><a href="index.html"><img src="assets/images/clients/clients-5.png" alt=""></a></figure>
+                    <figure class="clients-logo"><a href="index.php"><img src="assets/images/clients/clients-1.png" alt=""></a></figure>
+                    <figure class="clients-logo"><a href="index.php"><img src="assets/images/clients/clients-2.png" alt=""></a></figure>
+                    <figure class="clients-logo"><a href="index.php"><img src="assets/images/clients/clients-3.png" alt=""></a></figure>
+                    <figure class="clients-logo"><a href="index.php"><img src="assets/images/clients/clients-4.png" alt=""></a></figure>
+                    <figure class="clients-logo"><a href="index.php"><img src="assets/images/clients/clients-5.png" alt=""></a></figure>
                 </div>
             </div>
         </section>
@@ -251,7 +278,7 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
                             <span class="sub-title">Why Choose Us</span>
                             <h2>Deliver On Time and On Budget</h2>
                             <p>Onethose defining moments a moment when our nation is at war our economy turmoil.</p>
-                            <a href="index.html" class="theme-btn btn-two"><span>More Details</span></a>
+                            <a href="index.php" class="theme-btn btn-two"><span>More Details</span></a>
                         </div>
                     </div>
                 </div>
@@ -392,11 +419,11 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
                                                     </ul>
                                                     <p>Lookout flogging bilge rat main shet bilge water nipper fluke to go on account heave down clap of thunder. Reef sails six pounders skysail code off conduct.</p>
                                                     <div class="link-box">
-                                                        <h6><a href="index.html">Make your Appointment</a></h6>
+                                                        <h6><a href="index.php">Make your Appointment</a></h6>
                                                     </div>
-                                                    <div class="email"><a href="mailto:appointment@example.com">appointment@example.com</a></div>
+                                                    <div class="email"><a href="mailto:info@mmgeneraltrading.com">info@mmgeneraltrading.com</a></div>
                                                     <div class="btn-box">
-                                                        <a href="index.html" class="theme-btn btn-two"><span>More Details</span></a>
+                                                        <a href="index.php" class="theme-btn btn-two"><span>More Details</span></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -423,11 +450,11 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
                                                     </ul>
                                                     <p>Lookout flogging bilge rat main shet bilge water nipper fluke to go on account heave down clap of thunder. Reef sails six pounders skysail code off conduct.</p>
                                                     <div class="link-box">
-                                                        <h6><a href="index.html">Make your Appointment</a></h6>
+                                                        <h6><a href="index.php">Make your Appointment</a></h6>
                                                     </div>
-                                                    <div class="email"><a href="mailto:appointment@example.com">appointment@example.com</a></div>
+                                                    <div class="email"><a href="mailto:info@mmgeneraltrading.com">info@mmgeneraltrading.com</a></div>
                                                     <div class="btn-box">
-                                                        <a href="index.html" class="theme-btn btn-two"><span>More Details</span></a>
+                                                        <a href="index.php" class="theme-btn btn-two"><span>More Details</span></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -454,11 +481,11 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
                                                     </ul>
                                                     <p>Lookout flogging bilge rat main shet bilge water nipper fluke to go on account heave down clap of thunder. Reef sails six pounders skysail code off conduct.</p>
                                                     <div class="link-box">
-                                                        <h6><a href="index.html">Make your Appointment</a></h6>
+                                                        <h6><a href="index.php">Make your Appointment</a></h6>
                                                     </div>
-                                                    <div class="email"><a href="mailto:appointment@example.com">appointment@example.com</a></div>
+                                                    <div class="email"><a href="mailto:info@mmgeneraltrading.com">info@mmgeneraltrading.com</a></div>
                                                     <div class="btn-box">
-                                                        <a href="index.html" class="theme-btn btn-two"><span>More Details</span></a>
+                                                        <a href="index.php" class="theme-btn btn-two"><span>More Details</span></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -489,11 +516,11 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
                                                     </ul>
                                                     <p>Lookout flogging bilge rat main shet bilge water nipper fluke to go on account heave down clap of thunder. Reef sails six pounders skysail code off conduct.</p>
                                                     <div class="link-box">
-                                                        <h6><a href="index.html">Make your Appointment</a></h6>
+                                                        <h6><a href="index.php">Make your Appointment</a></h6>
                                                     </div>
-                                                    <div class="email"><a href="mailto:appointment@example.com">appointment@example.com</a></div>
+                                                    <div class="email"><a href="mailto:info@mmgeneraltrading.com">info@mmgeneraltrading.com</a></div>
                                                     <div class="btn-box">
-                                                        <a href="index.html" class="theme-btn btn-two"><span>More Details</span></a>
+                                                        <a href="index.php" class="theme-btn btn-two"><span>More Details</span></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -520,11 +547,11 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
                                                     </ul>
                                                     <p>Lookout flogging bilge rat main shet bilge water nipper fluke to go on account heave down clap of thunder. Reef sails six pounders skysail code off conduct.</p>
                                                     <div class="link-box">
-                                                        <h6><a href="index.html">Make your Appointment</a></h6>
+                                                        <h6><a href="index.php">Make your Appointment</a></h6>
                                                     </div>
-                                                    <div class="email"><a href="mailto:appointment@example.com">appointment@example.com</a></div>
+                                                    <div class="email"><a href="mailto:info@mmgeneraltrading.com">info@mmgeneraltrading.com</a></div>
                                                     <div class="btn-box">
-                                                        <a href="index.html" class="theme-btn btn-two"><span>More Details</span></a>
+                                                        <a href="index.php" class="theme-btn btn-two"><span>More Details</span></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -551,11 +578,11 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
                                                     </ul>
                                                     <p>Lookout flogging bilge rat main shet bilge water nipper fluke to go on account heave down clap of thunder. Reef sails six pounders skysail code off conduct.</p>
                                                     <div class="link-box">
-                                                        <h6><a href="index.html">Make your Appointment</a></h6>
+                                                        <h6><a href="index.php">Make your Appointment</a></h6>
                                                     </div>
-                                                    <div class="email"><a href="mailto:appointment@example.com">appointment@example.com</a></div>
+                                                    <div class="email"><a href="mailto:info@mmgeneraltrading.com">info@mmgeneraltrading.com</a></div>
                                                     <div class="btn-box">
-                                                        <a href="index.html" class="theme-btn btn-two"><span>More Details</span></a>
+                                                        <a href="index.php" class="theme-btn btn-two"><span>More Details</span></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -586,11 +613,11 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
                                                     </ul>
                                                     <p>Lookout flogging bilge rat main shet bilge water nipper fluke to go on account heave down clap of thunder. Reef sails six pounders skysail code off conduct.</p>
                                                     <div class="link-box">
-                                                        <h6><a href="index.html">Make your Appointment</a></h6>
+                                                        <h6><a href="index.php">Make your Appointment</a></h6>
                                                     </div>
-                                                    <div class="email"><a href="mailto:appointment@example.com">appointment@example.com</a></div>
+                                                    <div class="email"><a href="mailto:info@mmgeneraltrading.com">info@mmgeneraltrading.com</a></div>
                                                     <div class="btn-box">
-                                                        <a href="index.html" class="theme-btn btn-two"><span>More Details</span></a>
+                                                        <a href="index.php" class="theme-btn btn-two"><span>More Details</span></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -617,11 +644,11 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
                                                     </ul>
                                                     <p>Lookout flogging bilge rat main shet bilge water nipper fluke to go on account heave down clap of thunder. Reef sails six pounders skysail code off conduct.</p>
                                                     <div class="link-box">
-                                                        <h6><a href="index.html">Make your Appointment</a></h6>
+                                                        <h6><a href="index.php">Make your Appointment</a></h6>
                                                     </div>
-                                                    <div class="email"><a href="mailto:appointment@example.com">appointment@example.com</a></div>
+                                                    <div class="email"><a href="mailto:info@mmgeneraltrading.com">info@mmgeneraltrading.com</a></div>
                                                     <div class="btn-box">
-                                                        <a href="index.html" class="theme-btn btn-two"><span>More Details</span></a>
+                                                        <a href="index.php" class="theme-btn btn-two"><span>More Details</span></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -648,11 +675,11 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
                                                     </ul>
                                                     <p>Lookout flogging bilge rat main shet bilge water nipper fluke to go on account heave down clap of thunder. Reef sails six pounders skysail code off conduct.</p>
                                                     <div class="link-box">
-                                                        <h6><a href="index.html">Make your Appointment</a></h6>
+                                                        <h6><a href="index.php">Make your Appointment</a></h6>
                                                     </div>
-                                                    <div class="email"><a href="mailto:appointment@example.com">appointment@example.com</a></div>
+                                                    <div class="email"><a href="mailto:info@mmgeneraltrading.com">info@mmgeneraltrading.com</a></div>
                                                     <div class="btn-box">
-                                                        <a href="index.html" class="theme-btn btn-two"><span>More Details</span></a>
+                                                        <a href="index.php" class="theme-btn btn-two"><span>More Details</span></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -683,11 +710,11 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
                                                     </ul>
                                                     <p>Lookout flogging bilge rat main shet bilge water nipper fluke to go on account heave down clap of thunder. Reef sails six pounders skysail code off conduct.</p>
                                                     <div class="link-box">
-                                                        <h6><a href="index.html">Make your Appointment</a></h6>
+                                                        <h6><a href="index.php">Make your Appointment</a></h6>
                                                     </div>
-                                                    <div class="email"><a href="mailto:appointment@example.com">appointment@example.com</a></div>
+                                                    <div class="email"><a href="mailto:info@mmgeneraltrading.com">info@mmgeneraltrading.com</a></div>
                                                     <div class="btn-box">
-                                                        <a href="index.html" class="theme-btn btn-two"><span>More Details</span></a>
+                                                        <a href="index.php" class="theme-btn btn-two"><span>More Details</span></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -714,11 +741,11 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
                                                     </ul>
                                                     <p>Lookout flogging bilge rat main shet bilge water nipper fluke to go on account heave down clap of thunder. Reef sails six pounders skysail code off conduct.</p>
                                                     <div class="link-box">
-                                                        <h6><a href="index.html">Make your Appointment</a></h6>
+                                                        <h6><a href="index.php">Make your Appointment</a></h6>
                                                     </div>
-                                                    <div class="email"><a href="mailto:appointment@example.com">appointment@example.com</a></div>
+                                                    <div class="email"><a href="mailto:info@mmgeneraltrading.com">info@mmgeneraltrading.com</a></div>
                                                     <div class="btn-box">
-                                                        <a href="index.html" class="theme-btn btn-two"><span>More Details</span></a>
+                                                        <a href="index.php" class="theme-btn btn-two"><span>More Details</span></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -745,11 +772,11 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
                                                     </ul>
                                                     <p>Lookout flogging bilge rat main shet bilge water nipper fluke to go on account heave down clap of thunder. Reef sails six pounders skysail code off conduct.</p>
                                                     <div class="link-box">
-                                                        <h6><a href="index.html">Make your Appointment</a></h6>
+                                                        <h6><a href="index.php">Make your Appointment</a></h6>
                                                     </div>
-                                                    <div class="email"><a href="mailto:appointment@example.com">appointment@example.com</a></div>
+                                                    <div class="email"><a href="mailto:info@mmgeneraltrading.com">info@mmgeneraltrading.com</a></div>
                                                     <div class="btn-box">
-                                                        <a href="index.html" class="theme-btn btn-two"><span>More Details</span></a>
+                                                        <a href="index.php" class="theme-btn btn-two"><span>More Details</span></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -787,10 +814,10 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
                 </div>
                 <div class="lower-box">
                     <div class="text">
-                        <p>Favor the more eloquent presidential days of yester year give ipsum a <br />whirl and get some engaging.</p>
+                        <p>Partner with Dubai's premier industrial metal trading & custom processing facility.<br />Fast delivery and mill certification across UAE & GCC.</p>
                     </div>
                     <div class="btn-box">
-                        <a href="index.html" class="theme-btn btn-one"><span>More Details</span></a>
+                        <a href="contact.php" class="theme-btn btn-one"><span>Request a Consultation</span></a>
                     </div>
                 </div>
             </div>
@@ -819,7 +846,7 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
                                             <h3>Request Quotation</h3>
                                             <p>Bilge rat main shet bilge water nipper fluketo go on account heave down clap of thunder. Reef sails six pounders skysail code off conduct.</p>
                                             <div class="btn-box">
-                                                <a href="index.html"><span>Request Your Quote</span></a>
+                                                <a href="index.php"><span>Request Your Quote</span></a>
                                             </div>
                                         </div>
                                     </div>
@@ -829,7 +856,7 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
                                             <h3>Planning Stage</h3>
                                             <p>Bilge rat main shet bilge water nipper fluketo go on account heave down clap of thunder. Reef sails six pounders skysail code off conduct.</p>
                                             <div class="btn-box">
-                                                <a href="index.html"><span>Request Your Quote</span></a>
+                                                <a href="index.php"><span>Request Your Quote</span></a>
                                             </div>
                                         </div>
                                     </div>
@@ -839,7 +866,7 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
                                             <h3>Product Development</h3>
                                             <p>Bilge rat main shet bilge water nipper fluketo go on account heave down clap of thunder. Reef sails six pounders skysail code off conduct.</p>
                                             <div class="btn-box">
-                                                <a href="index.html"><span>Request Your Quote</span></a>
+                                                <a href="index.php"><span>Request Your Quote</span></a>
                                             </div>
                                         </div>
                                     </div>
@@ -849,7 +876,7 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
                                             <h3>Production / Evaluation</h3>
                                             <p>Bilge rat main shet bilge water nipper fluketo go on account heave down clap of thunder. Reef sails six pounders skysail code off conduct.</p>
                                             <div class="btn-box">
-                                                <a href="index.html"><span>Request Your Quote</span></a>
+                                                <a href="index.php"><span>Request Your Quote</span></a>
                                             </div>
                                         </div>
                                     </div>
@@ -859,7 +886,7 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
                                             <h3>Inspection & Delivery</h3>
                                             <p>Bilge rat main shet bilge water nipper fluketo go on account heave down clap of thunder. Reef sails six pounders skysail code off conduct.</p>
                                             <div class="btn-box">
-                                                <a href="index.html"><span>Request Your Quote</span></a>
+                                                <a href="index.php"><span>Request Your Quote</span></a>
                                             </div>
                                         </div>
                                     </div>
@@ -919,7 +946,7 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
                                 <div class="view-btn"><a href="assets/images/case/case-1.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-zoom-in"></i></a></div>
                             </div>
                             <div class="lower-content centred">
-                                <h3><a href="project-details.html">Pipeline System</a></h3>
+                                <h3><a href="projects.php">Pipeline System</a></h3>
                             </div>
                         </div>
                     </div>
@@ -933,7 +960,7 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
                                 <div class="view-btn"><a href="assets/images/case/case-2.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-zoom-in"></i></a></div>
                             </div>
                             <div class="lower-content centred">
-                                <h3><a href="project-details.html">Sheet Metal Bending</a></h3>
+                                <h3><a href="projects.php">Sheet Metal Bending</a></h3>
                             </div>
                         </div>
                     </div>
@@ -947,7 +974,7 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
                                 <div class="view-btn"><a href="assets/images/case/case-3.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-zoom-in"></i></a></div>
                             </div>
                             <div class="lower-content centred">
-                                <h3><a href="project-details.html">Van Drilling Service</a></h3>
+                                <h3><a href="projects.php">Van Drilling Service</a></h3>
                             </div>
                         </div>
                     </div>
@@ -961,7 +988,7 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
                                 <div class="view-btn"><a href="assets/images/case/case-4.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-zoom-in"></i></a></div>
                             </div>
                             <div class="lower-content centred">
-                                <h3><a href="project-details.html">Steel Springs</a></h3>
+                                <h3><a href="projects.php">Steel Springs</a></h3>
                             </div>
                         </div>
                     </div>
@@ -975,7 +1002,7 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
                                 <div class="view-btn"><a href="assets/images/case/case-1.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-zoom-in"></i></a></div>
                             </div>
                             <div class="lower-content centred">
-                                <h3><a href="project-details.html">Pipeline System</a></h3>
+                                <h3><a href="projects.php">Pipeline System</a></h3>
                             </div>
                         </div>
                     </div>
@@ -989,7 +1016,7 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
                                 <div class="view-btn"><a href="assets/images/case/case-2.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-zoom-in"></i></a></div>
                             </div>
                             <div class="lower-content centred">
-                                <h3><a href="project-details.html">Sheet Metal Bending</a></h3>
+                                <h3><a href="projects.php">Sheet Metal Bending</a></h3>
                             </div>
                         </div>
                     </div>
@@ -1003,7 +1030,7 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
                                 <div class="view-btn"><a href="assets/images/case/case-3.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-zoom-in"></i></a></div>
                             </div>
                             <div class="lower-content centred">
-                                <h3><a href="project-details.html">Van Drilling Service</a></h3>
+                                <h3><a href="projects.php">Van Drilling Service</a></h3>
                             </div>
                         </div>
                     </div>
@@ -1017,7 +1044,7 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
                                 <div class="view-btn"><a href="assets/images/case/case-4.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-zoom-in"></i></a></div>
                             </div>
                             <div class="lower-content centred">
-                                <h3><a href="project-details.html">Steel Springs</a></h3>
+                                <h3><a href="projects.php">Steel Springs</a></h3>
                             </div>
                         </div>
                     </div>
@@ -1031,7 +1058,7 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
                                 <div class="view-btn"><a href="assets/images/case/case-1.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-zoom-in"></i></a></div>
                             </div>
                             <div class="lower-content centred">
-                                <h3><a href="project-details.html">Pipeline System</a></h3>
+                                <h3><a href="projects.php">Pipeline System</a></h3>
                             </div>
                         </div>
                     </div>
@@ -1045,7 +1072,7 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
                                 <div class="view-btn"><a href="assets/images/case/case-2.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-zoom-in"></i></a></div>
                             </div>
                             <div class="lower-content centred">
-                                <h3><a href="project-details.html">Sheet Metal Bending</a></h3>
+                                <h3><a href="projects.php">Sheet Metal Bending</a></h3>
                             </div>
                         </div>
                     </div>
@@ -1059,7 +1086,7 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
                                 <div class="view-btn"><a href="assets/images/case/case-3.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-zoom-in"></i></a></div>
                             </div>
                             <div class="lower-content centred">
-                                <h3><a href="project-details.html">Van Drilling Service</a></h3>
+                                <h3><a href="projects.php">Van Drilling Service</a></h3>
                             </div>
                         </div>
                     </div>
@@ -1073,7 +1100,7 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
                                 <div class="view-btn"><a href="assets/images/case/case-4.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-zoom-in"></i></a></div>
                             </div>
                             <div class="lower-content centred">
-                                <h3><a href="project-details.html">Steel Springs</a></h3>
+                                <h3><a href="projects.php">Steel Springs</a></h3>
                             </div>
                         </div>
                     </div>
@@ -1088,8 +1115,8 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
             <div class="auto-container">
                 <div class="sec-title">
                     <span class="sub-title">Testimonials</span>
-                    <h2>People Says About Machino</h2>
-                    <a href="index.html" class="theme-btn btn-two"><span>all Reviews</span></a>
+                    <h2>Client Trust & Industry Partnerships</h2>
+                    <a href="index.php" class="theme-btn btn-two"><span>all Reviews</span></a>
                 </div>
                 <div class="single-item-carousel owl-carousel owl-theme owl-dots-none">
                     <div class="testimonial-content">
@@ -1105,7 +1132,7 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
                                 <li><i class="flaticon-star"></i></li>
                                 <li><i class="flaticon-star"></i></li>
                             </ul>
-                            <p>Media Tech & Machino Manufacturers have been working together for over 10 years. Their staff is knowledgeable & their response time is prompt.</p>
+                            <p>MM General Trading L.L.C has been an exceptional partner for our architectural cladding and metal packages in Dubai. Their material quality and mill cert compliance are consistently flawless.</p>
                             <h3>Nathan Felix</h3>
                             <span class="designation">CEO, High Rise Construction</span>
                         </div>
@@ -1123,7 +1150,7 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
                                 <li><i class="flaticon-star"></i></li>
                                 <li><i class="flaticon-star"></i></li>
                             </ul>
-                            <p>Media Tech & Machino Manufacturers have been working together for over 10 years. Their staff is knowledgeable & their response time is prompt.</p>
+                            <p>MM General Trading L.L.C has been an exceptional partner for our architectural cladding and metal packages in Dubai. Their material quality and mill cert compliance are consistently flawless.</p>
                             <h3>Nathan Felix</h3>
                             <span class="designation">CEO, High Rise Construction</span>
                         </div>
@@ -1141,7 +1168,7 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
                                 <li><i class="flaticon-star"></i></li>
                                 <li><i class="flaticon-star"></i></li>
                             </ul>
-                            <p>Media Tech & Machino Manufacturers have been working together for over 10 years. Their staff is knowledgeable & their response time is prompt.</p>
+                            <p>MM General Trading L.L.C has been an exceptional partner for our architectural cladding and metal packages in Dubai. Their material quality and mill cert compliance are consistently flawless.</p>
                             <h3>Nathan Felix</h3>
                             <span class="designation">CEO, High Rise Construction</span>
                         </div>
@@ -1169,7 +1196,7 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
                                 <li class="tab-btn" data-tab="#tab-13">Tips & Tricks</li>
                             </ul>
                             <div class="btn-box">
-                                <a href="blog.html"><span>View All Post</span></a>
+                                <a href="products.php"><span>View All Post</span></a>
                             </div>
                         </div>
                     </div>
@@ -1183,15 +1210,15 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
                                         <div class="inner-box">
                                             <div class="image-box">
                                                 <figure class="image"><img src="assets/images/news/news-1.jpg" alt=""></figure>
-                                                <div class="category"><a href="blog-details.html">Manufacturing</a></div>
+                                                <div class="category"><a href="products.php">Manufacturing</a></div>
                                                 <div class="view-btn"><a href="assets/images/news/news-1.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-zoom-in"></i></a></div>
                                             </div>
                                             <div class="lower-content">
                                                 <ul class="post-info clearfix">
                                                     <li><i class="fa-regular fa-calendar"></i>14.10.2022</li>
-                                                    <li><i class="fa-regular fa-user"></i><a href="blog-details.html">Lillian Grace</a></li>
+                                                    <li><i class="fa-regular fa-user"></i><a href="products.php">Lillian Grace</a></li>
                                                 </ul>
-                                                <h3><a href="blog-details.html">Industry’s Imperatives For Sustainability in...</a></h3>
+                                                <h3><a href="products.php">Industry’s Imperatives For Sustainability in...</a></h3>
                                             </div>
                                         </div>
                                     </div>
@@ -1201,15 +1228,15 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
                                         <div class="inner-box">
                                             <div class="image-box">
                                                 <figure class="image"><img src="assets/images/news/news-2.jpg" alt=""></figure>
-                                                <div class="category"><a href="blog-details.html">Smart Factory</a></div>
+                                                <div class="category"><a href="products.php">Smart Factory</a></div>
                                                 <div class="view-btn"><a href="assets/images/news/news-2.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-zoom-in"></i></a></div>
                                             </div>
                                             <div class="lower-content">
                                                 <ul class="post-info clearfix">
                                                     <li><i class="fa-regular fa-calendar"></i>28.09.2022</li>
-                                                    <li><i class="fa-regular fa-user"></i><a href="blog-details.html">Oliver Jack</a></li>
+                                                    <li><i class="fa-regular fa-user"></i><a href="products.php">Oliver Jack</a></li>
                                                 </ul>
-                                                <h3><a href="blog-details.html">Digital Manufacturing Week 2020 – Leading the Way</a></h3>
+                                                <h3><a href="products.php">Digital Manufacturing Week 2020 – Leading the Way</a></h3>
                                             </div>
                                         </div>
                                     </div>
@@ -1219,15 +1246,15 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
                                         <div class="inner-box">
                                             <div class="image-box">
                                                 <figure class="image"><img src="assets/images/news/news-3.jpg" alt=""></figure>
-                                                <div class="category"><a href="blog-details.html">Innovation</a></div>
+                                                <div class="category"><a href="products.php">Innovation</a></div>
                                                 <div class="view-btn"><a href="assets/images/news/news-3.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-zoom-in"></i></a></div>
                                             </div>
                                             <div class="lower-content">
                                                 <ul class="post-info clearfix">
                                                     <li><i class="fa-regular fa-calendar"></i>06.09.2022</li>
-                                                    <li><i class="fa-regular fa-user"></i><a href="blog-details.html">Jacob Harry</a></li>
+                                                    <li><i class="fa-regular fa-user"></i><a href="products.php">Jacob Harry</a></li>
                                                 </ul>
-                                                <h3><a href="blog-details.html">Building Back a Sustainable Manufacturing Sector</a></h3>
+                                                <h3><a href="products.php">Building Back a Sustainable Manufacturing Sector</a></h3>
                                             </div>
                                         </div>
                                     </div>
@@ -1241,15 +1268,15 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
                                         <div class="inner-box">
                                             <div class="image-box">
                                                 <figure class="image"><img src="assets/images/news/news-2.jpg" alt=""></figure>
-                                                <div class="category"><a href="blog-details.html">Smart Factory</a></div>
+                                                <div class="category"><a href="products.php">Smart Factory</a></div>
                                                 <div class="view-btn"><a href="assets/images/news/news-2.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-zoom-in"></i></a></div>
                                             </div>
                                             <div class="lower-content">
                                                 <ul class="post-info clearfix">
                                                     <li><i class="fa-regular fa-calendar"></i>28.09.2022</li>
-                                                    <li><i class="fa-regular fa-user"></i><a href="blog-details.html">Oliver Jack</a></li>
+                                                    <li><i class="fa-regular fa-user"></i><a href="products.php">Oliver Jack</a></li>
                                                 </ul>
-                                                <h3><a href="blog-details.html">Digital Manufacturing Week 2020 – Leading the Way</a></h3>
+                                                <h3><a href="products.php">Digital Manufacturing Week 2020 – Leading the Way</a></h3>
                                             </div>
                                         </div>
                                     </div>
@@ -1259,15 +1286,15 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
                                         <div class="inner-box">
                                             <div class="image-box">
                                                 <figure class="image"><img src="assets/images/news/news-1.jpg" alt=""></figure>
-                                                <div class="category"><a href="blog-details.html">Manufacturing</a></div>
+                                                <div class="category"><a href="products.php">Manufacturing</a></div>
                                                 <div class="view-btn"><a href="assets/images/news/news-1.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-zoom-in"></i></a></div>
                                             </div>
                                             <div class="lower-content">
                                                 <ul class="post-info clearfix">
                                                     <li><i class="fa-regular fa-calendar"></i>14.10.2022</li>
-                                                    <li><i class="fa-regular fa-user"></i><a href="blog-details.html">Lillian Grace</a></li>
+                                                    <li><i class="fa-regular fa-user"></i><a href="products.php">Lillian Grace</a></li>
                                                 </ul>
-                                                <h3><a href="blog-details.html">Industry’s Imperatives For Sustainability in...</a></h3>
+                                                <h3><a href="products.php">Industry’s Imperatives For Sustainability in...</a></h3>
                                             </div>
                                         </div>
                                     </div>
@@ -1277,15 +1304,15 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
                                         <div class="inner-box">
                                             <div class="image-box">
                                                 <figure class="image"><img src="assets/images/news/news-3.jpg" alt=""></figure>
-                                                <div class="category"><a href="blog-details.html">Innovation</a></div>
+                                                <div class="category"><a href="products.php">Innovation</a></div>
                                                 <div class="view-btn"><a href="assets/images/news/news-3.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-zoom-in"></i></a></div>
                                             </div>
                                             <div class="lower-content">
                                                 <ul class="post-info clearfix">
                                                     <li><i class="fa-regular fa-calendar"></i>06.09.2022</li>
-                                                    <li><i class="fa-regular fa-user"></i><a href="blog-details.html">Jacob Harry</a></li>
+                                                    <li><i class="fa-regular fa-user"></i><a href="products.php">Jacob Harry</a></li>
                                                 </ul>
-                                                <h3><a href="blog-details.html">Building Back a Sustainable Manufacturing Sector</a></h3>
+                                                <h3><a href="products.php">Building Back a Sustainable Manufacturing Sector</a></h3>
                                             </div>
                                         </div>
                                     </div>
@@ -1299,15 +1326,15 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
                                         <div class="inner-box">
                                             <div class="image-box">
                                                 <figure class="image"><img src="assets/images/news/news-1.jpg" alt=""></figure>
-                                                <div class="category"><a href="blog-details.html">Manufacturing</a></div>
+                                                <div class="category"><a href="products.php">Manufacturing</a></div>
                                                 <div class="view-btn"><a href="assets/images/news/news-1.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-zoom-in"></i></a></div>
                                             </div>
                                             <div class="lower-content">
                                                 <ul class="post-info clearfix">
                                                     <li><i class="fa-regular fa-calendar"></i>14.10.2022</li>
-                                                    <li><i class="fa-regular fa-user"></i><a href="blog-details.html">Lillian Grace</a></li>
+                                                    <li><i class="fa-regular fa-user"></i><a href="products.php">Lillian Grace</a></li>
                                                 </ul>
-                                                <h3><a href="blog-details.html">Industry’s Imperatives For Sustainability in...</a></h3>
+                                                <h3><a href="products.php">Industry’s Imperatives For Sustainability in...</a></h3>
                                             </div>
                                         </div>
                                     </div>
@@ -1317,15 +1344,15 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
                                         <div class="inner-box">
                                             <div class="image-box">
                                                 <figure class="image"><img src="assets/images/news/news-3.jpg" alt=""></figure>
-                                                <div class="category"><a href="blog-details.html">Innovation</a></div>
+                                                <div class="category"><a href="products.php">Innovation</a></div>
                                                 <div class="view-btn"><a href="assets/images/news/news-3.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-zoom-in"></i></a></div>
                                             </div>
                                             <div class="lower-content">
                                                 <ul class="post-info clearfix">
                                                     <li><i class="fa-regular fa-calendar"></i>06.09.2022</li>
-                                                    <li><i class="fa-regular fa-user"></i><a href="blog-details.html">Jacob Harry</a></li>
+                                                    <li><i class="fa-regular fa-user"></i><a href="products.php">Jacob Harry</a></li>
                                                 </ul>
-                                                <h3><a href="blog-details.html">Building Back a Sustainable Manufacturing Sector</a></h3>
+                                                <h3><a href="products.php">Building Back a Sustainable Manufacturing Sector</a></h3>
                                             </div>
                                         </div>
                                     </div>
@@ -1335,15 +1362,15 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
                                         <div class="inner-box">
                                             <div class="image-box">
                                                 <figure class="image"><img src="assets/images/news/news-2.jpg" alt=""></figure>
-                                                <div class="category"><a href="blog-details.html">Smart Factory</a></div>
+                                                <div class="category"><a href="products.php">Smart Factory</a></div>
                                                 <div class="view-btn"><a href="assets/images/news/news-2.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-zoom-in"></i></a></div>
                                             </div>
                                             <div class="lower-content">
                                                 <ul class="post-info clearfix">
                                                     <li><i class="fa-regular fa-calendar"></i>28.09.2022</li>
-                                                    <li><i class="fa-regular fa-user"></i><a href="blog-details.html">Oliver Jack</a></li>
+                                                    <li><i class="fa-regular fa-user"></i><a href="products.php">Oliver Jack</a></li>
                                                 </ul>
-                                                <h3><a href="blog-details.html">Digital Manufacturing Week 2020 – Leading the Way</a></h3>
+                                                <h3><a href="products.php">Digital Manufacturing Week 2020 – Leading the Way</a></h3>
                                             </div>
                                         </div>
                                     </div>
@@ -1357,15 +1384,15 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
                                         <div class="inner-box">
                                             <div class="image-box">
                                                 <figure class="image"><img src="assets/images/news/news-1.jpg" alt=""></figure>
-                                                <div class="category"><a href="blog-details.html">Manufacturing</a></div>
+                                                <div class="category"><a href="products.php">Manufacturing</a></div>
                                                 <div class="view-btn"><a href="assets/images/news/news-1.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-zoom-in"></i></a></div>
                                             </div>
                                             <div class="lower-content">
                                                 <ul class="post-info clearfix">
                                                     <li><i class="fa-regular fa-calendar"></i>14.10.2022</li>
-                                                    <li><i class="fa-regular fa-user"></i><a href="blog-details.html">Lillian Grace</a></li>
+                                                    <li><i class="fa-regular fa-user"></i><a href="products.php">Lillian Grace</a></li>
                                                 </ul>
-                                                <h3><a href="blog-details.html">Industry’s Imperatives For Sustainability in...</a></h3>
+                                                <h3><a href="products.php">Industry’s Imperatives For Sustainability in...</a></h3>
                                             </div>
                                         </div>
                                     </div>
@@ -1375,15 +1402,15 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
                                         <div class="inner-box">
                                             <div class="image-box">
                                                 <figure class="image"><img src="assets/images/news/news-2.jpg" alt=""></figure>
-                                                <div class="category"><a href="blog-details.html">Smart Factory</a></div>
+                                                <div class="category"><a href="products.php">Smart Factory</a></div>
                                                 <div class="view-btn"><a href="assets/images/news/news-2.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-zoom-in"></i></a></div>
                                             </div>
                                             <div class="lower-content">
                                                 <ul class="post-info clearfix">
                                                     <li><i class="fa-regular fa-calendar"></i>28.09.2022</li>
-                                                    <li><i class="fa-regular fa-user"></i><a href="blog-details.html">Oliver Jack</a></li>
+                                                    <li><i class="fa-regular fa-user"></i><a href="products.php">Oliver Jack</a></li>
                                                 </ul>
-                                                <h3><a href="blog-details.html">Digital Manufacturing Week 2020 – Leading the Way</a></h3>
+                                                <h3><a href="products.php">Digital Manufacturing Week 2020 – Leading the Way</a></h3>
                                             </div>
                                         </div>
                                     </div>
@@ -1393,15 +1420,15 @@ $Page='home'; $PageTitle='MM Trading | Metal Fabrication & Industrial Manufactur
                                         <div class="inner-box">
                                             <div class="image-box">
                                                 <figure class="image"><img src="assets/images/news/news-3.jpg" alt=""></figure>
-                                                <div class="category"><a href="blog-details.html">Innovation</a></div>
+                                                <div class="category"><a href="products.php">Innovation</a></div>
                                                 <div class="view-btn"><a href="assets/images/news/news-3.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-zoom-in"></i></a></div>
                                             </div>
                                             <div class="lower-content">
                                                 <ul class="post-info clearfix">
                                                     <li><i class="fa-regular fa-calendar"></i>06.09.2022</li>
-                                                    <li><i class="fa-regular fa-user"></i><a href="blog-details.html">Jacob Harry</a></li>
+                                                    <li><i class="fa-regular fa-user"></i><a href="products.php">Jacob Harry</a></li>
                                                 </ul>
-                                                <h3><a href="blog-details.html">Building Back a Sustainable Manufacturing Sector</a></h3>
+                                                <h3><a href="products.php">Building Back a Sustainable Manufacturing Sector</a></h3>
                                             </div>
                                         </div>
                                     </div>

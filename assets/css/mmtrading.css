@@ -1,0 +1,1093 @@
+[hidden] {
+  display: none !important;
+}
+
+
+/* ==========================================================================
+   MM GENERAL TRADING L.L.C — OFFICIAL BRAND DESIGN SYSTEM
+   Aligned with MM Logo Guidelines
+   Colors:
+     Pantone 7563 C (Coated):   #D69A2D (Primary Accent Gold)
+     Pantone 7563 U (Uncoated): #DAA563 (Warm Gold)
+     Pantone 2167 C (Coated):   #506D85 (Steel Slate Blue)
+     Pantone 4160 U (Uncoated): #466171 (Deep Slate Teal)
+   Typography:
+     Font Family: D-DIN (Regular, Italic, Bold, Condensed)
+   ========================================================================== */
+
+/* 1. BRAND TYPOGRAPHY (D-DIN) */
+@font-face {
+  font-family: 'D-DIN';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/d-din/D-DIN.woff') format('woff'),
+       url('https://fonts.cdnfonts.com/s/23112/D-DIN.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'D-DIN';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/d-din/D-DIN-Italic.woff') format('woff'),
+       url('https://fonts.cdnfonts.com/s/23112/D-DIN-Italic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'D-DIN';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/d-din/D-DIN-Bold.woff') format('woff'),
+       url('https://fonts.cdnfonts.com/s/23112/D-DIN-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'D-DIN Condensed';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/d-din/D-DINCondensed.woff') format('woff'),
+       url('https://fonts.cdnfonts.com/s/23112/D-DINCondensed.woff') format('woff');
+}
+
+/* 2. DESIGN SYSTEM TOKENS */
+:root {
+  --mm-gold: #D69A2D;
+  --mm-gold-uncoated: #DAA563;
+  --mm-gold-light: #F4E2BD;
+  --mm-gold-dark: #B87F1C;
+  --mm-gold-gradient: linear-gradient(135deg, #E6B555 0%, #D69A2D 55%, #B87F1C 100%);
+  --mm-gold-glow: 0 8px 24px rgba(214, 154, 45, 0.28);
+
+  --mm-teal: #506D85;
+  --mm-teal-uncoated: #466171;
+  --mm-teal-light: #89A8BF;
+  --mm-teal-dark: #354D5E;
+  --mm-teal-gradient: linear-gradient(135deg, #6486A0 0%, #506D85 55%, #354D5E 100%);
+
+  --mm-navy-900: #0E1B26;
+  --mm-navy-850: #122230;
+  --mm-navy-800: #172C3D;
+  --mm-navy-700: #203A4E;
+  --mm-navy-card: #152636;
+
+  --mm-slate-50: #F8FAFC;
+  --mm-slate-100: #F1F5F9;
+  --mm-slate-200: #E2E8F0;
+  --mm-slate-300: #CBD5E1;
+
+  --mm-text-heading: #0F172A;
+  --mm-text-body: #334155;
+  --mm-text-muted: #64748B;
+  --mm-text-light: #E2E8F0;
+
+  --mm-radius-sm: 6px;
+  --mm-radius-md: 10px;
+  --mm-radius-lg: 16px;
+  --mm-radius-pill: 9999px;
+
+  --mm-transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  --mm-shadow-card: 0 6px 20px rgba(14, 27, 38, 0.06);
+  --mm-shadow-hover: 0 16px 36px rgba(14, 27, 38, 0.12);
+}
+
+/* 3. GLOBAL TYPOGRAPHY APPLICATION */
+body {
+  font-family: 'D-DIN', 'Manrope', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  color: var(--mm-text-body);
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6,
+.sec-title h2,
+.sec-title .sub-title,
+.main-menu .navigation > li > a,
+.page-title h1,
+.theme-btn,
+.btn-one,
+.banner-section .content-box h2 {
+  font-family: 'D-DIN', 'Inter Tight', sans-serif !important;
+  letter-spacing: 0.015em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--mm-navy-900);
+  font-weight: 700;
+}
+
+p {
+  font-family: 'D-DIN', 'Manrope', sans-serif !important;
+  color: var(--mm-text-body);
+  line-height: 1.68;
+}
+
+/* 4. BRAND PATTERN BACKGROUNDS */
+.mm-brand-pattern {
+  background-image: url('../images/shape/mm-pattern.svg');
+  background-repeat: repeat;
+}
+
+.mm-brand-pattern-dark {
+  background-image: url('../images/shape/mm-pattern-dark.svg');
+  background-repeat: repeat;
+}
+> a {
+  font-family: 'D-DIN', sans-serif !important;
+  font-weight: 600 !important;
+  color: var(--mm-navy-900) !important;
+  transition: var(--mm-transition) !important;
+  padding: 11px 24px !important;
+}
+
+.main-menu .navigation > li > ul > li > a:hover,
+.main-menu .navigation > li > ul > li.current > a {
+  background: var(--mm-slate-50) !important;
+  color: var(--mm-gold) !important;
+  padding-left: 28px !important;
+}
+
+/* Header Quote Button (.btn-box inside header) */
+.main-header .menu-right-content .btn-box,
+.sticky-header .menu-right-content .btn-box {
+  position: relative !important;
+  padding-left: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  margin: 0 !important;
+}
+
+.main-header .menu-right-content .btn-box a,
+.sticky-header .menu-right-content .btn-box a {
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  background: var(--mm-gold-gradient) !important;
+  color: #ffffff !important;
+  font-family: 'D-DIN', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 13.5px !important;
+  line-height: 1 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  padding: 10px 22px 10px 14px !important;
+  border-radius: var(--mm-radius-pill) !important;
+  box-shadow: 0 4px 18px rgba(214, 154, 45, 0.32) !important;
+  border: 1px solid rgba(255, 255, 255, 0.28) !important;
+  transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  text-decoration: none !important;
+  overflow: visible !important;
+  white-space: nowrap !important;
+}
+
+.main-header .menu-right-content .btn-box a:hover,
+.sticky-header .menu-right-content .btn-box a:hover {
+  background: linear-gradient(135deg, #ECC16D 0%, #E0A638 55%, #C28822 100%) !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 28px rgba(214, 154, 45, 0.48) !important;
+  border-color: rgba(255, 255, 255, 0.48) !important;
+}
+
+.main-header .menu-right-content .btn-box .icon-box,
+.sticky-header .menu-right-content .btn-box .icon-box {
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 32px !important;
+  height: 32px !important;
+  line-height: 1 !important;
+  text-align: center !important;
+  border-radius: 50% !important;
+  background: rgba(255, 255, 255, 0.22) !important;
+  color: #ffffff !important;
+  font-size: 14px !important;
+  margin: 0 !important;
+  flex-shrink: 0 !important;
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.3) !important;
+  transition: transform 0.28s ease, background 0.28s ease !important;
+}
+
+.main-header .menu-right-content .btn-box a:hover .icon-box,
+.sticky-header .menu-right-content .btn-box a:hover .icon-box {
+  background: rgba(255, 255, 255, 0.32) !important;
+  transform: scale(1.08) !important;
+}
+
+.main-header .menu-right-content .btn-box a span,
+.sticky-header .menu-right-content .btn-box a span {
+  font-family: 'D-DIN', sans-serif !important;
+  font-weight: 700 !important;
+  white-space: nowrap !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.main-header .menu-right-content .btn-box a i.flaticon-right-chevron,
+.sticky-header .menu-right-content .btn-box a i.flaticon-right-chevron,
+.main-header .menu-right-content .btn-box a > i,
+.sticky-header .menu-right-content .btn-box a > i {
+  position: static !important;
+  top: auto !important;
+  right: auto !important;
+  display: inline-block !important;
+  font-size: 11px !important;
+  line-height: 1 !important;
+  color: #ffffff !important;
+  margin-left: 2px !important;
+  transition: transform 0.25s ease !important;
+}
+
+.main-header .menu-right-content .btn-box a:hover i.flaticon-right-chevron,
+.sticky-header .menu-right-content .btn-box a:hover i.flaticon-right-chevron,
+.main-header .menu-right-content .btn-box a:hover > i,
+.sticky-header .menu-right-content .btn-box a:hover > i {
+  transform: translateX(4px) !important;
+}
+
+/* Ensure button stays visible on desktop and laptop screens (>= 1201px) */
+@media only screen and (max-width: 1499px) and (min-width: 1201px) {
+  .main-header .menu-right-content .btn-box {
+    display: inline-flex !important;
+  }
+  .main-header .menu-right-content .btn-box a {
+    padding: 8px 18px 8px 12px !important;
+    font-size: 12.5px !important;
+  }
+  .main-header .menu-right-content .btn-box .icon-box {
+    width: 28px !important;
+    height: 28px !important;
+    font-size: 12px !important;
+  }
+}
+
+/* Sticky Header */
+.sticky-header {
+  background: rgba(14, 27, 38, 0.96) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(214, 154, 45, 0.25);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25) !important;
+}
+
+.sticky-header .main-menu .navigation > li > a {
+  color: #ffffff !important;
+}
+
+.sticky-header .main-menu .navigation > li:hover > a,
+.sticky-header .main-menu .navigation > li.current > a {
+  color: var(--mm-gold) !important;
+}
+
+.sticky-header .logo-box img {
+  max-height: 50px;
+}
+
+/* ==========================================================================
+   8. .btn-box & BUTTON DESIGN SYSTEM (MM BRAND ALIGNED)
+   ========================================================================== */
+
+/* Universal .btn-box Container */
+.btn-box {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+}
+
+.centred .btn-box,
+.text-center .btn-box,
+.sec-title.centred ~ .btn-box {
+  justify-content: center;
+}
+
+/* Base Theme Button */
+.theme-btn {
+  font-family: 'D-DIN', sans-serif !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.055em !important;
+  border-radius: var(--mm-radius-pill) !important;
+  padding: 13px 30px !important;
+  font-size: 14px !important;
+  line-height: 22px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+  transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  position: relative !important;
+  overflow: hidden !important;
+  z-index: 1 !important;
+  border: 1.5px solid transparent !important;
+}
+
+.theme-btn span {
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  padding-right: 36px !important;
+  font-family: 'D-DIN', sans-serif !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.055em !important;
+}
+
+.theme-btn span:before {
+  position: absolute !important;
+  content: "\f105" !important;
+  font-family: 'flaticon' !important;
+  font-size: 10px !important;
+  font-weight: 900 !important;
+  width: 26px !important;
+  height: 26px !important;
+  line-height: 26px !important;
+  text-align: center !important;
+  border-radius: 50% !important;
+  top: 50% !important;
+  right: 0 !important;
+  transform: translateY(-50%) !important;
+  transition: all 0.28s ease !important;
+}
+
+/* Button One — Primary (Gold Gradient Pill) */
+.theme-btn.btn-one,
+.btn-one {
+  background: var(--mm-gold-gradient) !important;
+  color: #ffffff !important;
+  border: 1.5px solid transparent !important;
+  box-shadow: var(--mm-gold-glow) !important;
+}
+
+.theme-btn.btn-one span:before,
+.btn-one span:before {
+  background: rgba(255, 255, 255, 0.24) !important;
+  color: #ffffff !important;
+}
+
+.theme-btn.btn-one:hover,
+.btn-one:hover {
+  background: linear-gradient(135deg, #ECC16D 0%, #E0A638 55%, #C28822 100%) !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 12px 30px rgba(214, 154, 45, 0.44) !important;
+}
+
+.theme-btn.btn-one:hover span:before,
+.btn-one:hover span:before {
+  background: #ffffff !important;
+  color: var(--mm-gold-dark) !important;
+  transform: translateY(-50%) translateX(3px) !important;
+}
+
+.theme-btn.btn-one:before,
+.btn-one:before {
+  display: none !important;
+}
+
+/* Button Two — Secondary (Steel Navy Pill with Gold Border) */
+.theme-btn.btn-two,
+.btn-two {
+  background: var(--mm-navy-900) !important;
+  color: #ffffff !important;
+  border: 1.5px solid var(--mm-gold) !important;
+  box-shadow: 0 4px 16px rgba(14, 27, 38, 0.22) !important;
+}
+
+.theme-btn.btn-two span:before,
+.btn-two span:before {
+  background: rgba(214, 154, 45, 0.25) !important;
+  color: var(--mm-gold) !important;
+}
+
+.theme-btn.btn-two:hover,
+.btn-two:hover {
+  background: var(--mm-gold-gradient) !important;
+  border-color: transparent !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) !important;
+  box-shadow: var(--mm-gold-glow) !important;
+}
+
+.theme-btn.btn-two:hover span:before,
+.btn-two:hover span:before {
+  background: #ffffff !important;
+  color: var(--mm-gold-dark) !important;
+  transform: translateY(-50%) translateX(3px) !important;
+}
+
+.theme-btn.btn-two:before,
+.btn-two:before {
+  display: none !important;
+}
+
+/* Action Link Buttons inside Cards & Content Tabs (.btn-box a) */
+.service-block-one .inner-box .lower-content .btn-box a,
+.working-section .content-box .btn-box a,
+.service-block-two .inner-box .lower-content .btn-box a,
+.case-block-two .inner-box .content-box .btn-box a,
+.industry-style-two .single-item .overlay-content .btn-box a {
+  font-family: 'D-DIN', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 13.5px !important;
+  letter-spacing: 0.055em !important;
+  text-transform: uppercase !important;
+  color: var(--mm-navy-900) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  transition: all 0.25s ease !important;
+  text-decoration: none !important;
+}
+
+.service-block-one .inner-box .lower-content .btn-box a span,
+.working-section .content-box .btn-box a span,
+.service-block-two .inner-box .lower-content .btn-box a span,
+.case-block-two .inner-box .content-box .btn-box a span,
+.industry-style-two .single-item .overlay-content .btn-box a span {
+  position: relative !important;
+  padding-left: 48px !important;
+  display: inline-block !important;
+}
+
+.service-block-one .inner-box .lower-content .btn-box a span:before,
+.working-section .content-box .btn-box a span:before,
+.service-block-two .inner-box .lower-content .btn-box a span:before,
+.case-block-two .inner-box .content-box .btn-box a span:before,
+.industry-style-two .single-item .overlay-content .btn-box a span:before {
+  position: absolute !important;
+  content: "\f105" !important;
+  font-family: 'flaticon' !important;
+  font-size: 14px !important;
+  width: 36px !important;
+  height: 36px !important;
+  line-height: 34px !important;
+  text-align: center !important;
+  border-radius: 50% !important;
+  left: 0 !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  border: 1.5px solid var(--mm-gold) !important;
+  color: var(--mm-gold) !important;
+  background: rgba(214, 154, 45, 0.08) !important;
+  transition: all 0.28s ease !important;
+}
+
+.service-block-one .inner-box .lower-content .btn-box a:hover,
+.working-section .content-box .btn-box a:hover,
+.service-block-two .inner-box .lower-content .btn-box a:hover,
+.case-block-two .inner-box .content-box .btn-box a:hover,
+.industry-style-two .single-item .overlay-content .btn-box a:hover {
+  color: var(--mm-gold) !important;
+}
+
+.service-block-one .inner-box .lower-content .btn-box a:hover span:before,
+.working-section .content-box .btn-box a:hover span:before,
+.service-block-two .inner-box .lower-content .btn-box a:hover span:before,
+.case-block-two .inner-box .content-box .btn-box a:hover span:before,
+.industry-style-two .single-item .overlay-content .btn-box a:hover span:before {
+  background: var(--mm-gold-gradient) !important;
+  border-color: transparent !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(214, 154, 45, 0.35) !important;
+  transform: translateY(-50%) scale(1.08) !important;
+}
+
+.news-section .tab-btn-box .btn-box a {
+  font-family: 'D-DIN', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 13px !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  color: var(--mm-navy-900) !important;
+  transition: all 0.25s ease !important;
+}
+
+.news-section .tab-btn-box .btn-box a span {
+  position: relative !important;
+  padding-left: 32px !important;
+}
+
+.news-section .tab-btn-box .btn-box a span:before {
+  position: absolute !important;
+  content: "\f105" !important;
+  font-family: 'flaticon' !important;
+  width: 24px !important;
+  height: 24px !important;
+  line-height: 22px !important;
+  font-size: 10px !important;
+  top: 50% !important;
+  left: 0 !important;
+  transform: translateY(-50%) !important;
+  border: 1.5px solid var(--mm-gold) !important;
+  color: var(--mm-gold) !important;
+  background: rgba(214, 154, 45, 0.08) !important;
+  transition: all 0.28s ease !important;
+}
+
+.news-section .tab-btn-box .btn-box a:hover {
+  color: var(--mm-gold) !important;
+}
+
+.news-section .tab-btn-box .btn-box a:hover span:before {
+  background: var(--mm-gold-gradient) !important;
+  border-color: transparent !important;
+  color: #ffffff !important;
+  transform: translateY(-50%) scale(1.08) !important;
+}
+
+/* Button size modifiers */
+.theme-btn.btn-sm {
+  padding: 9px 20px !important;
+  font-size: 12.5px !important;
+}
+
+.theme-btn.btn-lg {
+  padding: 16px 36px !important;
+  font-size: 15px !important;
+}
+
+/* Mobile responsive adjustments for .btn-box */
+@media (max-width: 575px) {
+  .btn-box {
+    gap: 10px;
+    width: 100%;
+  }
+  .btn-box .theme-btn {
+    width: 100%;
+  }
+}
+
+
+/* 9. HERO / BANNER SECTION */
+.banner-section .content-box h2 {
+  font-size: 58px;
+  line-height: 1.15;
+  font-weight: 700;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.4);
+}
+
+.banner-section .content-box h2 span {
+  color: #ffffff;
+}
+
+/* .banner-section .content-box .special-text {
+  color: var(--mm-gold) !important;
+  font-family: 'D-DIN', sans-serif !important;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+} */
+
+.banner-section .text-box {
+  background: rgba(14, 27, 38, 0.92) !important;
+  border-top: 2px solid var(--mm-gold);
+}
+
+.banner-section .text-box h3 {
+  color: #ffffff !important;
+  font-family: 'D-DIN', sans-serif !important;
+  font-weight: 700;
+}
+
+/* 10. SECTION TITLES */
+.sec-title .sub-title {
+  color: var(--mm-gold) !important;
+  font-family: 'D-DIN', sans-serif !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sec-title .sub-title:before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background: var(--mm-gold);
+}
+
+.sec-title h2 {
+  font-size: 40px;
+  line-height: 1.25;
+  color: var(--mm-navy-900);
+  font-weight: 700;
+  margin-top: 6px;
+}
+
+/* 11. ABOUT SECTION ENHANCEMENTS */
+.about-section .image-box .text {
+  background: var(--mm-gold-gradient) !important;
+  box-shadow: var(--mm-gold-glow);
+  border-radius: var(--mm-radius-sm);
+}
+
+.about-section .image-box .text h5 {
+  color: #ffffff;
+  font-family: 'D-DIN', sans-serif;
+  font-weight: 700;
+}
+
+.about-section .content-box .inner-box {
+  border-left: 4px solid var(--mm-gold);
+  background: var(--mm-slate-50);
+  border-radius: 0 var(--mm-radius-md) var(--mm-radius-md) 0;
+  padding: 24px;
+}
+
+.about-section .content-box .inner-box .icon-box {
+  background: var(--mm-gold) !important;
+  color: #ffffff !important;
+}
+
+.about-section .content-box .inner-box button {
+  background: var(--mm-teal) !important;
+  color: #ffffff !important;
+  border-radius: var(--mm-radius-pill);
+  font-family: 'D-DIN', sans-serif;
+  font-weight: 700;
+  transition: var(--mm-transition);
+}
+
+.about-section .content-box .inner-box button:hover {
+  background: var(--mm-gold) !important;
+}
+
+/* 12. SERVICE & PRODUCT CARDS */
+.service-block-one .inner-box,
+.industries-block-one .inner-box,
+.project-block-one .inner-box,
+.feature-block-one .inner-box {
+  border-radius: var(--mm-radius-md);
+  overflow: hidden;
+  transition: var(--mm-transition);
+  border: 1px solid var(--mm-slate-200);
+  box-shadow: var(--mm-shadow-card);
+  background: #ffffff;
+}
+
+.service-block-one .inner-box:hover,
+.industries-block-one .inner-box:hover,
+.project-block-one .inner-box:hover,
+.feature-block-one .inner-box:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--mm-shadow-hover);
+  border-color: var(--mm-gold);
+}
+
+.service-block-one .inner-box .icon-box,
+.feature-block-one .inner-box .icon-box {
+  background: rgba(214, 154, 45, 0.1) !important;
+  color: var(--mm-gold) !important;
+  border: 1px solid rgba(214, 154, 45, 0.2);
+  transition: var(--mm-transition);
+}
+
+.service-block-one .inner-box:hover .icon-box,
+.feature-block-one .inner-box:hover .icon-box {
+  background: var(--mm-gold) !important;
+  color: #ffffff !important;
+}
+
+/* 13. STATS & FUNFACT COUNTER */
+.funfact-section {
+  background-color: var(--mm-navy-900) !important;
+  position: relative;
+}
+
+.counter-block-one .count-outer {
+  color: var(--mm-gold) !important;
+  font-family: 'D-DIN', sans-serif !important;
+  font-weight: 700;
+}
+
+.counter-block-one h4 {
+  color: #ffffff !important;
+  font-family: 'D-DIN', sans-serif !important;
+}
+
+/* 14. MAIN FOOTER */
+.main-footer {
+  background: var(--mm-navy-900) !important;
+  color: #94A3B8;
+  position: relative;
+  border-top: 3px solid transparent;
+  border-image: linear-gradient(90deg, #D69A2D 0%, #506D85 50%, #D69A2D 100%) 1;
+}
+
+.main-footer .footer-top {
+  border-bottom: 1px solid rgba(80, 109, 133, 0.2) !important;
+  padding: 45px 0 !important;
+}
+
+.main-footer .footer-logo img {
+  max-height: 68px;
+  width: auto;
+  object-fit: contain;
+}
+
+.main-footer .subscribe-form form input[type="email"] {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(80, 109, 133, 0.3) !important;
+  color: #ffffff !important;
+  border-radius: var(--mm-radius-pill) 0 0 var(--mm-radius-pill) !important;
+  font-family: 'D-DIN', sans-serif !important;
+}
+
+.main-footer .subscribe-form form input[type="email"]::placeholder {
+  color: #64748B;
+}
+
+.main-footer .subscribe-form form button {
+  background: var(--mm-gold-gradient) !important;
+  color: #ffffff !important;
+  border-radius: 0 var(--mm-radius-pill) var(--mm-radius-pill) 0 !important;
+  transition: var(--mm-transition);
+}
+
+.main-footer .subscribe-form form button:hover {
+  background: var(--mm-gold-dark) !important;
+}
+
+.main-footer .widget-title h3 {
+  color: #ffffff !important;
+  font-family: 'D-DIN', sans-serif !important;
+  font-weight: 700;
+  font-size: 20px;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.main-footer .widget-title h3:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 32px;
+  height: 2px;
+  background: var(--mm-gold);
+}
+
+.main-footer .contact-widget .info-box .single-item h4,
+.main-footer .contact-widget .info-box .single-item h3 {
+  color: var(--mm-gold) !important;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+
+.main-footer .contact-widget .info-box .single-item p,
+.main-footer .contact-widget .info-box .single-item a {
+  color: #CBD5E1 !important;
+  font-size: 14px;
+  transition: var(--mm-transition);
+}
+
+.main-footer .contact-widget .info-box .single-item a:hover {
+  color: var(--mm-gold) !important;
+}
+
+.main-footer .links-widget .links-list li a {
+  color: #CBD5E1 !important;
+  font-family: 'D-DIN', sans-serif;
+  font-size: 14.5px;
+  transition: var(--mm-transition);
+}
+
+.main-footer .links-widget .links-list li a:hover {
+  color: var(--mm-gold) !important;
+  padding-left: 6px;
+}
+
+.main-footer .links-widget .links-list li a:before {
+  color: var(--mm-gold) !important;
+}
+
+.main-footer .footer-bottom {
+  background: #09121A !important;
+  border-top: 1px solid rgba(80, 109, 133, 0.15) !important;
+  padding: 20px 0 !important;
+}
+
+.main-footer .footer-bottom p {
+  color: #94A3B8;
+  font-size: 13.5px;
+  margin: 0;
+}
+
+.main-footer .footer-bottom p a {
+  color: var(--mm-gold);
+  font-weight: 700;
+}
+
+/* 15. CONTACT & FORMS */
+.contact-info-section .title-box h3 a {
+  color: var(--mm-gold) !important;
+}
+
+.contact-info-section .info-block-one .inner-box {
+  border-radius: var(--mm-radius-md);
+  border: 1px solid var(--mm-slate-200);
+  transition: var(--mm-transition);
+  background: #ffffff;
+  padding: 35px 25px;
+}
+
+.contact-info-section .info-block-one .inner-box:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--mm-shadow-hover);
+  border-color: var(--mm-gold);
+}
+
+.contact-info-section .info-block-one .icon-box {
+  background: rgba(214, 154, 45, 0.1) !important;
+  color: var(--mm-gold) !important;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  margin: 0 auto 20px auto;
+  transition: var(--mm-transition);
+}
+
+.contact-info-section .info-block-one .inner-box:hover .icon-box {
+  background: var(--mm-gold) !important;
+  color: #ffffff !important;
+}
+
+/* 16. SCROLL TO TOP */
+.scroll-top {
+  background: var(--mm-gold-gradient) !important;
+  color: #ffffff !important;
+  border-radius: 50% !important;
+  box-shadow: var(--mm-gold-glow);
+  transition: var(--mm-transition);
+}
+
+.scroll-top:hover {
+  background: var(--mm-navy-900) !important;
+  color: var(--mm-gold) !important;
+  transform: translateY(-4px);
+}
+
+/* 17. PRODUCTS CATALOGUE STYLING */
+.product-item-card {
+  transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.28s ease, border-color 0.28s ease !important;
+}
+
+.product-item-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 32px rgba(15, 28, 38, 0.12) !important;
+  border-color: rgba(214, 154, 45, 0.45) !important;
+}
+
+.product-item-card:hover .image-box img {
+  transform: scale(1.05);
+}
+
+.product-filter-btn {
+  background: #ffffff;
+  color: #1E293B;
+  border: 1px solid #CBD5E1;
+  padding: 8px 18px;
+  border-radius: 9999px;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.22s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.product-filter-btn:hover,
+.product-filter-btn.is-active {
+  background: #0F1C26 !important;
+  color: #D69A2D !important;
+  border-color: #0F1C26 !important;
+  box-shadow: 0 4px 14px rgba(15, 28, 38, 0.18);
+}
+
+.product-filter-btn .badge-count {
+  background: rgba(80, 109, 133, 0.15);
+  color: #506D85;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 9999px;
+  transition: all 0.22s ease;
+}
+
+/* 18. DINCO-STYLE PRODUCTS SHOWCASE (https://dinco.ae/products/) */
+.project-cards {
+  padding: 40px 0 60px 0;
+}
+
+.section-title-1 {
+  font-size: min(5vw, 32px);
+  color: var(--mm-navy-900);
+  font-weight: 700;
+  margin-top: 0;
+  line-height: 1.3;
+  margin-bottom: 8px;
+  position: relative;
+  display: inline-block;
+  text-decoration: none !important;
+}
+
+.section-title-1:after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: var(--mm-gold);
+  margin: 10px auto 0 auto;
+  border-radius: 2px;
+}
+
+.category-lead-text {
+  max-width: 780px;
+  margin: 8px auto 30px auto;
+  font-size: 14.5px;
+  line-height: 1.68;
+  color: var(--mm-text-muted);
+  text-align: center;
+}
+
+.home-product-box {
+  margin-bottom: 30px;
+  position: relative;
+  display: block;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid var(--mm-slate-200);
+  box-shadow: 0 4px 16px rgba(15, 28, 38, 0.06);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+  text-decoration: none !important;
+}
+
+.home-product-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(15, 28, 38, 0.14);
+  border-color: var(--mm-gold);
+}
+
+.home-product-box .img-wrapper {
+  position: relative;
+  height: 230px;
+  background: var(--mm-slate-50);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.home-product-box img {
+  max-height: 100%;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  padding: 18px;
+  transition: transform 0.35s ease;
+}
+
+.home-product-box:hover img {
+  transform: scale(1.08);
+}
+
+.home-product-box .overlay-gradient {
+  background: transparent linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(15, 28, 38, 0.15) 30%, rgba(15, 28, 38, 0.65) 65%, rgba(15, 28, 38, 0.95) 100%) 0 0 no-repeat padding-box;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.home-product-box h3,
+.home-product-box .home-prod-title {
+  position: absolute;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  padding: 24px 12px 16px 12px;
+  color: #FFFFFF !important;
+  font-size: 15.5px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: 0.01em;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.home-product-box .brand-tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(15, 28, 38, 0.88);
+  backdrop-filter: blur(4px);
+  color: var(--mm-gold);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 3px 9px;
+  border-radius: 9999px;
+  border: 1px solid rgba(214, 154, 45, 0.3);
+  z-index: 3;
+}
+
+.closerbox {
+  background: linear-gradient(135deg, #0F1C26 0%, #172C3D 60%, #354D5E 100%);
+  color: #ffffff;
+  padding: 55px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.closerbox h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.closerbox p {
+  color: #CBD5E1;
+  font-size: 15px;
+  margin: 0;
+  line-height: 1.65;
+}
+
+.product-filter-btn:hover .badge-count,
+.product-filter-btn.is-active .badge-count {
+  background: rgba(214, 154, 45, 0.25);
+  color: #D69A2D;
+}
+

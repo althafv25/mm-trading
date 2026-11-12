@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="90" viewBox="0 0 120 90">
+  <defs>
+    <g id="m-mark" opacity="0.045">
+      <!-- Top M -->
+      <polygon fill="#D69A2D" points="16,3 27,3 36,21 45,3 56,3 56,25 47,25 47,11 39,27 33,27 25,11 25,25 16,25" />
+      <!-- Bottom M -->
+      <polygon fill="#506D85" points="16,29 27,29 36,47 45,29 56,29 56,51 47,51 47,37 39,53 33,53 25,37 25,51 16,51" />
+    </g>
+  </defs>
+  <!-- Offset repeating tiles for isometric texture -->
+  <use href="#m-mark" x="0" y="0" />
+  <use href="#m-mark" x="60" y="45" />
+  <use href="#m-mark" x="120" y="0" />
+  <use href="#m-mark" x="-60" y="45" />
+  <use href="#m-mark" x="0" y="90" />
+  <use href="#m-mark" x="60" y="-45" />
+</svg>
