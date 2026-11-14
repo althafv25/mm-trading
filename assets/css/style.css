@@ -982,10 +982,10 @@ img {
 }
 
 .main-header .menu-right-content .btn-box a i{
-  position: absolute;
-  top: 1px;
-  right: 0px;
-  font-size: 12px;
+  font-size: 20px;
+    top: auto;
+    position: relative;
+    padding-top: 5px;
 }
 
 .main-header .menu-right-content .btn-box a:hover{
@@ -2146,7 +2146,7 @@ div#mCSB_1_container{
 .about-section .content-box .inner-box .curve-text{
   position: absolute;
   left: 58px;
-  top: -10px;
+  /* top: -10px; */
 }
 
 .about-section .content-box .inner-box .curve-text:before{
@@ -2719,6 +2719,7 @@ div#mCSB_1_container{
   width: 960px;
   height: 855px;
   background-repeat: no-repeat;
+  top:10px;
 }
 
 

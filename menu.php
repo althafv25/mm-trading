@@ -76,7 +76,7 @@ $safe = static fn($value) => htmlspecialchars((string) $value, ENT_QUOTES, 'UTF-
                         <div class="menu-left-content">
                             <figure class="logo-box">
                                 <a href="<?= $safe($PageRoot) ?>index.php" title="MM GENERAL TRADING L.L.C">
-                                    <img src="<?= $safe($PageRoot) ?>assets/images/logo.png" alt="MM GENERAL TRADING L.L.C" style="max-height: 58px; width: auto;">
+                                    <img src="<?= $safe($PageRoot) ?>assets/images/logo.png" alt="MM GENERAL TRADING L.L.C" style="max-height: 78px; width: auto;">
                                 </a>
                             </figure>
                         </div>

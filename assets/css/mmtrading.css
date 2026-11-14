@@ -646,7 +646,7 @@ p {
   border-left: 4px solid var(--mm-gold);
   background: var(--mm-slate-50);
   border-radius: 0 var(--mm-radius-md) var(--mm-radius-md) 0;
-  padding: 24px;
+  padding: 20px 0px 20px 135px;
 }
 
 .about-section .content-box .inner-box .icon-box {
@@ -704,10 +704,10 @@ p {
 }
 
 /* 13. STATS & FUNFACT COUNTER */
-.funfact-section {
+/* .funfact-section {
   background-color: var(--mm-navy-900) !important;
   position: relative;
-}
+} */
 
 .counter-block-one .count-outer {
   color: var(--mm-gold) !important;
@@ -1090,4 +1090,161 @@ p {
   background: rgba(214, 154, 45, 0.25);
   color: #D69A2D;
 }
+
+/* 16. CASE / PRODUCT CAROUSEL ENHANCEMENTS */
+.case-section {
+  position: relative;
+  padding-top: 85px;
+  padding-bottom: 25px;
+}
+
+.case-section .sec-title {
+  margin-bottom: 35px;
+}
+
+.case-section .case-block-one .inner-box {
+  padding: 30px 0px 35px 0px;
+  position: relative;
+}
+
+.case-section .case-block-one .inner-box .upper-content {
+  margin-bottom: 14px;
+}
+
+.case-section .case-block-one .inner-box .upper-content h5 {
+  font-family: 'D-DIN', sans-serif;
+  font-size: 12.5px;
+  line-height: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--mm-gold);
+  padding-left: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+}
+
+.case-section .case-block-one .inner-box .upper-content h5:before {
+  width: 8px;
+  height: 8px;
+  top: 6px;
+  border-radius: 50%;
+  background: var(--mm-gold);
+}
+
+.case-section .case-block-one .inner-box .image-box {
+  position: relative;
+  display: block;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid var(--mm-slate-200);
+  box-shadow: 0 4px 14px rgba(15, 28, 38, 0.04);
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.case-section .case-block-one .inner-box:hover .image-box {
+  transform: translateY(-4px);
+  border-color: var(--mm-gold);
+  box-shadow: 0 14px 28px rgba(15, 28, 38, 0.12);
+}
+
+.case-section .case-block-one .inner-box .image-box .image {
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8fafc;
+  padding: 18px;
+  margin-bottom: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.case-section .case-block-one .inner-box .image-box .image a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.case-section .case-block-one .inner-box .image-box .image img {
+  max-height: 220px;
+  max-width: 90%;
+  width: auto !important;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.case-section .case-block-one .inner-box:hover .image-box .image img {
+  transform: scale(1.08);
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+}
+
+.case-section .case-block-one .inner-box .view-btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  pointer-events: auto;
+}
+
+.case-section .case-block-one .inner-box .view-btn a {
+  width: 56px;
+  height: 56px;
+  line-height: 56px;
+  font-size: 18px;
+  background: rgba(18, 34, 48, 0.92);
+  color: var(--mm-gold);
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.case-section .case-block-one .inner-box .view-btn a:hover {
+  background: var(--mm-gold);
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+.case-section .case-block-one .inner-box .lower-content {
+  padding-top: 18px;
+}
+
+.case-section .case-block-one .inner-box .lower-content h3 {
+  font-size: 17px;
+  line-height: 25px;
+  font-weight: 700;
+  min-height: 50px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin: 0;
+  text-align: center;
+}
+
+.case-section .case-block-one .inner-box .lower-content h3 a {
+  color: var(--mm-dark);
+  transition: color 0.3s ease;
+}
+
+.case-section .case-block-one .inner-box .lower-content h3 a:hover {
+  color: var(--mm-gold);
+}
+
+.case-section .case-block-one .inner-box:before {
+  display: none;
+}
+
 

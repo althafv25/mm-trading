@@ -150,7 +150,7 @@
 <script src="<?= $safe($PageRoot) ?>assets/js/jquery.circleType.js"></script>
 <script src="<?= $safe($PageRoot) ?>assets/js/text_animation.js"></script>
 <script src="<?= $safe($PageRoot) ?>assets/js/text_plugins.js"></script>
-<script src="<?= $safe($PageRoot) ?>assets/js/script.js"></script>
+<script src="<?= $safe($PageRoot) ?>assets/js/script.js?v=2"></script>
 <script src="<?= $safe($PageRoot) ?>assets/js/mmtrading.js"></script>
 
 </body>

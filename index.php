@@ -22,6 +22,7 @@ $PageSchema = json_encode([
     'email' => 'info@mmgeneraltrading.com'
 ]);
 include __DIR__ . '/header.php';
+$PRODUCTS_DB = include __DIR__ . '/products-data.php';
 ?>
 
 
@@ -83,13 +84,45 @@ include __DIR__ . '/header.php';
         <!-- banner-section end -->
 
 
+        <!-- Product-section -->
+        <section class="case-section">
+            <div class="auto-container">
+                <div class="sec-title">
+                    <span class="sub-title">Our Products</span>
+                    <h2>Explore Our Core Materials &amp; Products</h2>
+                </div>
+            </div>
+            <div class="outer-container border-top">
+                <div class="case-carousel owl-carousel owl-theme">
+                    <?php foreach ($PRODUCTS_DB as $slug => $product): ?>
+                    <div class="case-block-one">
+                        <div class="inner-box">
+                            <div class="upper-content">
+                                <h5><?= htmlspecialchars($product['category'], ENT_QUOTES, 'UTF-8') ?></h5>
+                            </div>
+                            <div class="image-box">
+                                <figure class="image"><a href="<?= htmlspecialchars($slug, ENT_QUOTES, 'UTF-8') ?>.php"><img src="<?= htmlspecialchars($product['hero_image'], ENT_QUOTES, 'UTF-8') ?>" alt="<?= htmlspecialchars($product['title'], ENT_QUOTES, 'UTF-8') ?>"></a></figure>
+                                <div class="view-btn"><a href="<?= htmlspecialchars($product['hero_image'], ENT_QUOTES, 'UTF-8') ?>" class="lightbox-image" data-fancybox="gallery" title="<?= htmlspecialchars($product['title'], ENT_QUOTES, 'UTF-8') ?>"><i class="flaticon-zoom-in"></i></a></div>
+                            </div>
+                            <div class="lower-content centred">
+                                <h3><a href="<?= htmlspecialchars($slug, ENT_QUOTES, 'UTF-8') ?>.php" title="<?= htmlspecialchars($product['title'], ENT_QUOTES, 'UTF-8') ?>"><?= htmlspecialchars($product['title'], ENT_QUOTES, 'UTF-8') ?></a></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </section>
+        <!-- case-section end -->
+
+
         <!-- about-section -->
         <section class="about-section">
             <div class="auto-container">
                 <div class="row clearfix">
                     <div class="col-lg-6 col-md-12 col-sm-12 image-column">
                         <div class="image-box">
-                            <figure class="image"><img src="assets/images/resource/about-1.jpg" alt=""></figure>
+                            <figure class="image"><img src="assets/images/resource/about1.png" alt=""></figure>
                             <div class="text">
                                 <h5>12+ Years Experienced</h5>
                             </div>
@@ -178,79 +211,7 @@ include __DIR__ . '/header.php';
         <!-- funfact-section end -->
 
 
-        <!-- service-section -->
-        <section class="service-section sec-pad bg-color-1">
-            <div class="line-box">
-                <div class="line line-1"></div>
-                <div class="line line-2"></div>
-                <div class="line line-3"></div>
-                <div class="line line-4"></div>
-            </div>
-            <div class="auto-container">
-                <div class="sec-title centred">
-                    <span class="sub-title">2026 Core Product Portfolio</span>
-                    <h2>Premium Metals, Architectural Sealants & Industrial Solutions</h2>
-                    <p style="max-width: 680px; margin: 10px auto 0 auto;">Supplying certified, mill-tested materials direct from Dubai Investments Park 2 to projects across the UAE and GCC.</p>
-                </div>
-                <div class="row clearfix">
-                    <div class="col-lg-4 col-md-6 col-sm-12 service-block">
-                        <div class="service-block-one">
-                            <div class="inner-box">
-                                <div class="image-box">
-                                    <figure class="image"><img src="assets/images/products/plain-aluminium-sheets-plates.png" alt="Plain Aluminium Sheets & Plates" style="height: 220px; object-fit: contain; padding: 15px; background: #F8FAFC;"></figure>
-                                    <div class="shape" style="background-image: url(assets/images/shape/shape-1.png);"></div>
-                                </div>
-                                <div class="lower-content">
-                                    <span class="big-text">AL</span>
-                                    <h3><a href="plain-aluminium-sheets-plates.php">Plain Aluminium Sheets & Plates</a></h3>
-                                    <p>Thickness 0.3mm to 150mm in 1100, 3003, 5083, 6082, and 7075 alloys with mill test certs.</p>
-                                    <div class="btn-box">
-                                        <a href="plain-aluminium-sheets-plates.php"><span>View Specifications</span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 service-block">
-                        <div class="service-block-one">
-                            <div class="inner-box">
-                                <div class="image-box">
-                                    <figure class="image"><img src="assets/images/products/aluminium-chequered-sheets.png" alt="Aluminium Chequered Sheets" style="height: 220px; object-fit: contain; padding: 15px; background: #F8FAFC;"></figure>
-                                    <div class="shape" style="background-image: url(assets/images/shape/shape-2.png);"></div>
-                                </div>
-                                <div class="lower-content">
-                                    <span class="big-text">CH</span>
-                                    <h3><a href="aluminium-chequered-sheets.php">Chequered & Tread Plates</a></h3>
-                                    <p>High-traction 5-bar and diamond pattern sheets in 5754-H114, 1100, and 3003 for walkways and vehicles.</p>
-                                    <div class="btn-box">
-                                        <a href="aluminium-chequered-sheets.php"><span>View Specifications</span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 service-block">
-                        <div class="service-block-one">
-                            <div class="inner-box">
-                                <div class="image-box">
-                                    <figure class="image"><img src="assets/images/products/guibao-1092-structural-silicone.png" alt="GUIBAO Structural Glazing Silicone" style="height: 220px; object-fit: contain; padding: 15px; background: #F8FAFC;"></figure>
-                                    <div class="shape" style="background-image: url(assets/images/shape/shape-3.png);"></div>
-                                </div>
-                                <div class="lower-content">
-                                    <span class="big-text">GB</span>
-                                    <h3><a href="guibao-1092-structural-silicone.php">GUIBAO® Structural Silicone</a></h3>
-                                    <p>High performance two-part neutral cure silicone for skyscraper curtain walls (ASTM C1184 & ETAG 002).</p>
-                                    <div class="btn-box">
-                                        <a href="guibao-1092-structural-silicone.php"><span>View Specifications</span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- service-section end -->
+     
 
 
         <!-- clients-section -->
@@ -799,7 +760,7 @@ include __DIR__ . '/header.php';
 
         <!-- video-section -->
         <section class="video-section">
-            <div class="bg-layer" style="background-image: url(assets/images/background/video-bg.jpg);"></div>
+            <div class="bg-layer" style="background-image: url(assets/images/banner/banner2.jpg);"></div>
             <div class="auto-container">
                 <div class="sec-title light">
                     <span class="sub-title">produce the best</span>
@@ -925,189 +886,6 @@ include __DIR__ . '/header.php';
         </section>
         <!-- working-section end -->
 
-
-        <!-- case-section -->
-        <section class="case-section">
-            <div class="auto-container">
-                <div class="sec-title">
-                    <span class="sub-title">Case Studies</span>
-                    <h2>Explore Our Recent Projects</h2>
-                </div>
-            </div>
-            <div class="outer-container border-top">
-                <div class="case-carousel owl-carousel owl-theme">
-                    <div class="case-block-one">
-                        <div class="inner-box">
-                            <div class="upper-content">
-                                <h5>Construction & Engineering</h5>
-                            </div>
-                            <div class="image-box">
-                                <figure class="image"><img src="assets/images/case/case-1.jpg" alt=""></figure>
-                                <div class="view-btn"><a href="assets/images/case/case-1.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-zoom-in"></i></a></div>
-                            </div>
-                            <div class="lower-content centred">
-                                <h3><a href="projects.php">Pipeline System</a></h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="case-block-one">
-                        <div class="inner-box">
-                            <div class="upper-content">
-                                <h5>Technology</h5>
-                            </div>
-                            <div class="image-box">
-                                <figure class="image"><img src="assets/images/case/case-2.jpg" alt=" "></figure>
-                                <div class="view-btn"><a href="assets/images/case/case-2.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-zoom-in"></i></a></div>
-                            </div>
-                            <div class="lower-content centred">
-                                <h3><a href="projects.php">Sheet Metal Bending</a></h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="case-block-one">
-                        <div class="inner-box">
-                            <div class="upper-content">
-                                <h5>Mechanical</h5>
-                            </div>
-                            <div class="image-box">
-                                <figure class="image"><img src="assets/images/case/case-3.jpg" alt=""></figure>
-                                <div class="view-btn"><a href="assets/images/case/case-3.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-zoom-in"></i></a></div>
-                            </div>
-                            <div class="lower-content centred">
-                                <h3><a href="projects.php">Van Drilling Service</a></h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="case-block-one">
-                        <div class="inner-box">
-                            <div class="upper-content">
-                                <h5>Material, Mechanical</h5>
-                            </div>
-                            <div class="image-box">
-                                <figure class="image"><img src="assets/images/case/case-4.jpg" alt=""></figure>
-                                <div class="view-btn"><a href="assets/images/case/case-4.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-zoom-in"></i></a></div>
-                            </div>
-                            <div class="lower-content centred">
-                                <h3><a href="projects.php">Steel Springs</a></h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="case-block-one">
-                        <div class="inner-box">
-                            <div class="upper-content">
-                                <h5>Construction & Engineering</h5>
-                            </div>
-                            <div class="image-box">
-                                <figure class="image"><img src="assets/images/case/case-1.jpg" alt=""></figure>
-                                <div class="view-btn"><a href="assets/images/case/case-1.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-zoom-in"></i></a></div>
-                            </div>
-                            <div class="lower-content centred">
-                                <h3><a href="projects.php">Pipeline System</a></h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="case-block-one">
-                        <div class="inner-box">
-                            <div class="upper-content">
-                                <h5>Technology</h5>
-                            </div>
-                            <div class="image-box">
-                                <figure class="image"><img src="assets/images/case/case-2.jpg" alt=""></figure>
-                                <div class="view-btn"><a href="assets/images/case/case-2.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-zoom-in"></i></a></div>
-                            </div>
-                            <div class="lower-content centred">
-                                <h3><a href="projects.php">Sheet Metal Bending</a></h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="case-block-one">
-                        <div class="inner-box">
-                            <div class="upper-content">
-                                <h5>Mechanical</h5>
-                            </div>
-                            <div class="image-box">
-                                <figure class="image"><img src="assets/images/case/case-3.jpg" alt=""></figure>
-                                <div class="view-btn"><a href="assets/images/case/case-3.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-zoom-in"></i></a></div>
-                            </div>
-                            <div class="lower-content centred">
-                                <h3><a href="projects.php">Van Drilling Service</a></h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="case-block-one">
-                        <div class="inner-box">
-                            <div class="upper-content">
-                                <h5>Material, Mechanical</h5>
-                            </div>
-                            <div class="image-box">
-                                <figure class="image"><img src="assets/images/case/case-4.jpg" alt=""></figure>
-                                <div class="view-btn"><a href="assets/images/case/case-4.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-zoom-in"></i></a></div>
-                            </div>
-                            <div class="lower-content centred">
-                                <h3><a href="projects.php">Steel Springs</a></h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="case-block-one">
-                        <div class="inner-box">
-                            <div class="upper-content">
-                                <h5>Construction & Engineering</h5>
-                            </div>
-                            <div class="image-box">
-                                <figure class="image"><img src="assets/images/case/case-1.jpg" alt=""></figure>
-                                <div class="view-btn"><a href="assets/images/case/case-1.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-zoom-in"></i></a></div>
-                            </div>
-                            <div class="lower-content centred">
-                                <h3><a href="projects.php">Pipeline System</a></h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="case-block-one">
-                        <div class="inner-box">
-                            <div class="upper-content">
-                                <h5>Technology</h5>
-                            </div>
-                            <div class="image-box">
-                                <figure class="image"><img src="assets/images/case/case-2.jpg" alt=""></figure>
-                                <div class="view-btn"><a href="assets/images/case/case-2.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-zoom-in"></i></a></div>
-                            </div>
-                            <div class="lower-content centred">
-                                <h3><a href="projects.php">Sheet Metal Bending</a></h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="case-block-one">
-                        <div class="inner-box">
-                            <div class="upper-content">
-                                <h5>Mechanical</h5>
-                            </div>
-                            <div class="image-box">
-                                <figure class="image"><img src="assets/images/case/case-3.jpg" alt=""></figure>
-                                <div class="view-btn"><a href="assets/images/case/case-3.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-zoom-in"></i></a></div>
-                            </div>
-                            <div class="lower-content centred">
-                                <h3><a href="projects.php">Van Drilling Service</a></h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="case-block-one">
-                        <div class="inner-box">
-                            <div class="upper-content">
-                                <h5>Material, Mechanical</h5>
-                            </div>
-                            <div class="image-box">
-                                <figure class="image"><img src="assets/images/case/case-4.jpg" alt=""></figure>
-                                <div class="view-btn"><a href="assets/images/case/case-4.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-zoom-in"></i></a></div>
-                            </div>
-                            <div class="lower-content centred">
-                                <h3><a href="projects.php">Steel Springs</a></h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- case-section end -->
 
 
         <!-- testimonial-section -->

@@ -59,7 +59,7 @@ $safe = static fn($value) => htmlspecialchars((string) $value, ENT_QUOTES, 'UTF-
   <link href="<?= $safe($PageRoot) ?>assets/css/color.css" rel="stylesheet">
   <link href="<?= $safe($PageRoot) ?>assets/css/style.css" rel="stylesheet">
   <link href="<?= $safe($PageRoot) ?>assets/css/responsive.css" rel="stylesheet">
-  <link href="<?= $safe($PageRoot) ?>assets/css/mmtrading.css?v=3" rel="stylesheet">
+  <link href="<?= $safe($PageRoot) ?>assets/css/mmtrading.css?v=4" rel="stylesheet">
 
   <?php if ($PageSchema): ?><script type="application/ld+json"><?= $PageSchema ?></script><?php endif; ?>
 </head>

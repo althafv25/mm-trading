@@ -451,26 +451,31 @@
 	if ($('.case-carousel').length) {
 		$('.case-carousel').owlCarousel({
 			loop:true,
-			margin:110,
+			margin:30,
 			nav:true,
 			smartSpeed: 500,
-			autoplay: 1000,
+			autoplay: 3000,
 			navText: [ '<span class="flaticon-thin-right-straight-arrow"></span>', '<span class="flaticon-thin-right-straight-arrow"></span>' ],
 			responsive:{
 				0:{
-					items:1
+					items:1,
+					margin:15
 				},
 				480:{
-					items:1
+					items:1,
+					margin:15
 				},
 				600:{
-					items:2
+					items:2,
+					margin:20
 				},
 				800:{
-					items:3
+					items:3,
+					margin:25
 				},			
 				1200:{
-					items:4
+					items:4,
+					margin:30
 				}
 
 			}

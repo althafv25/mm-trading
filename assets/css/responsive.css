@@ -13,7 +13,7 @@
 
   .main-header .menu-left-content{
     border: none;
-    padding-right: 0px;
+    padding: 0px;
   }
 
   .main-header .menu-left-content .logo-box:before{
@@ -1593,6 +1593,11 @@
 
   .header-top .social-links li{
     margin-right: 15px;
+  }
+
+  .main-header .menu-left-content{
+    border: none;
+    padding: 10px 0px 10px 0px;
   }
 
   .header-top .social-links li:before{
