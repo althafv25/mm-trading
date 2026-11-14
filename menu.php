@@ -100,7 +100,7 @@ $safe = static fn($value) => htmlspecialchars((string) $value, ENT_QUOTES, 'UTF-
                                                 <li><a href="<?= $safe($PageRoot) ?>products.php?cat=adhesives">Wood & Industrial Adhesives</a></li>
                                                 <li><a href="<?= $safe($PageRoot) ?>products.php?cat=fire-acoustic">Passive Fire & Acoustic Solutions</a></li>
                                                 <li><a href="<?= $safe($PageRoot) ?>products.php?cat=hardware">Hardware & Accessories</a></li>
-                                                <li><a href="<?= $safe($PageRoot) ?>products.php?cat=services">Coating & Processing Services</a></li>
+                                                <li><a href="<?= $safe($PageRoot) ?>services/coating-processing-services.php">Coating & Processing Services</a></li>
                                             </ul>
                                         </li>
                                         <li class="<?= $Page === 'projects' ? 'current' : '' ?>"><a href="<?= $safe($PageRoot) ?>projects.php">Projects</a></li>

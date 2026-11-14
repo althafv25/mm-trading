@@ -81,13 +81,14 @@
                         </div>
                         <div class="widget-content">
                             <ul class="links-list clearfix">
-                                <li><a href="<?= $safe($PageRoot) ?>plain-aluminium-sheets-plates.php">Aluminium Sheets & Plates</a></li>
-                                <li><a href="<?= $safe($PageRoot) ?>aluminium-chequered-sheets.php">Chequered & Tread Plates</a></li>
-                                <li><a href="<?= $safe($PageRoot) ?>aluminium-stucco-sheets.php">Stucco Embossed Sheets</a></li>
-                                <li><a href="<?= $safe($PageRoot) ?>stainless-steel-sheets.php">Stainless Steel Sheets</a></li>
-                                <li><a href="<?= $safe($PageRoot) ?>guibao-1092-structural-silicone.php">GUIBAO Structural Silicone</a></li>
-                                <li><a href="<?= $safe($PageRoot) ?>tkk-pu-foam.php">TKK PU Foam</a></li>
-                                <li><a href="<?= $safe($PageRoot) ?>sealz-drop-seals.php">SEALz Fire & Acoustic Seals</a></li>
+                                <li><a href="<?= $safe($PageRoot) ?>products/plain-aluminium-sheets-plates.php">Aluminium Sheets & Plates</a></li>
+                                <li><a href="<?= $safe($PageRoot) ?>products/aluminium-chequered-sheets.php">Chequered & Tread Plates</a></li>
+                                <li><a href="<?= $safe($PageRoot) ?>products/aluminium-stucco-sheets.php">Stucco Embossed Sheets</a></li>
+                                <li><a href="<?= $safe($PageRoot) ?>products/stainless-steel-sheets.php">Stainless Steel Sheets</a></li>
+                                <li><a href="<?= $safe($PageRoot) ?>products/guibao-1092-structural-silicone.php">GUIBAO Structural Silicone</a></li>
+                                <li><a href="<?= $safe($PageRoot) ?>products/tkk-pu-foam.php">TKK PU Foam</a></li>
+                                <li><a href="<?= $safe($PageRoot) ?>products/sealz-drop-seals.php">SEALz Fire & Acoustic Seals</a></li>
+                                <li><a href="<?= $safe($PageRoot) ?>services/coating-processing-services.php">Coating & Processing Services</a></li>
                             </ul>
                         </div>
                     </div>

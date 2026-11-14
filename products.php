@@ -84,9 +84,13 @@ if (!isset($divisions[$activeFilter])) {
 }
 
 function renderProductBox($slug, $product) {
+    global $PageRoot, $safe;
+    $root = $safe ? $safe($PageRoot ?? './') : ($PageRoot ?? './');
+    $targetDir = ($product['division'] === 'services') ? 'services/' : 'products/';
+    $targetUrl = $root . $targetDir . $slug . '.php';
     ?>
     <div class="col-6 col-sm-6 col-md-4 col-lg-3">
-        <a href="<?= htmlspecialchars($slug, ENT_QUOTES, 'UTF-8') ?>.php" class="d-block home-product-box">
+        <a href="<?= $targetUrl ?>" class="d-block home-product-box">
             <span class="brand-tag"><?= htmlspecialchars($product['brand'], ENT_QUOTES, 'UTF-8') ?></span>
             <div class="img-wrapper">
                 <img src="<?= htmlspecialchars($product['hero_image'], ENT_QUOTES, 'UTF-8') ?>" class="img-fluid w-100" alt="<?= htmlspecialchars($product['title'], ENT_QUOTES, 'UTF-8') ?>">
@@ -101,7 +105,7 @@ function renderProductBox($slug, $product) {
 
 <!-- page-title -->
 <section class="page-title centred">
-    <div class="bg-layer" style="background-image: url(assets/images/background/page-title.jpg);"></div>
+    <div class="bg-layer" style="background-image: url(<?= $safe($PageRoot) ?>assets/images/background/page-title.jpg);"></div>
     <div class="line-box">
         <div class="line-1"></div>
         <div class="line-2"></div>
@@ -110,8 +114,8 @@ function renderProductBox($slug, $product) {
         <div class="content-box">
             <h1>Product Catalogue & Materials</h1>
             <ul class="bread-crumb clearfix">
-                <li><a href="index.php">Home</a></li>
-                <li><a href="products.php">Products</a></li>
+                <li><a href="<?= $safe($PageRoot) ?>index.php">Home</a></li>
+                <li><a href="<?= $safe($PageRoot) ?>products.php">Products</a></li>
                 <li id="breadcrumb-division-label"><?= $activeFilter !== 'all' ? htmlspecialchars($divisions[$activeFilter]['short_name'], ENT_QUOTES, 'UTF-8') : 'All Products' ?></li>
             </ul>
         </div>
@@ -169,7 +173,7 @@ function renderProductBox($slug, $product) {
                 <p>With expansive warehouse and processing facilities in Dubai Investments Park 2 (DIP - 2), MM General Trading L.L.C ensures speedy deliveries of certified industrial metals, sealants, and fire protection systems across the UAE and GCC.</p>
             </div>
             <div class="col-lg-4 col-md-12 col-12 text-lg-right text-center" style="margin-top: 20px;">
-                <a href="contact.php" class="theme-btn btn-one" style="padding: 14px 34px; font-size: 14px;">
+                <a href="<?= $safe($PageRoot) ?>contact.php" class="theme-btn btn-one" style="padding: 14px 34px; font-size: 14px;">
                     <span>Contact Sales Engineers</span>
                 </a>
             </div>

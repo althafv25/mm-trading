@@ -55,7 +55,7 @@ $PRODUCTS_DB = include __DIR__ . '/products-data.php';
                            <h2><span>Aluminium Sheets,</span> <br /><span>Plates & Extrusions</span></h2>
                             <p>Extensive inventory of plain sheets, 5-bar chequered plates, stucco coils, and marine alloys ready for prompt dispatch.</p>
                             <div class="btn-box">
-                                <a href="plain-aluminium-sheets-plates.php" class="theme-btn btn-one"><span>View Specifications</span></a>
+                                <a href="products/plain-aluminium-sheets-plates.php" class="theme-btn btn-one"><span>View Specifications</span></a>
                                 <a href="contact.php" class="theme-btn btn-two"><span>Contact Sales</span></a>
                             </div>
                         </div> 
@@ -94,18 +94,21 @@ $PRODUCTS_DB = include __DIR__ . '/products-data.php';
             </div>
             <div class="outer-container border-top">
                 <div class="case-carousel owl-carousel owl-theme">
-                    <?php foreach ($PRODUCTS_DB as $slug => $product): ?>
+                    <?php foreach ($PRODUCTS_DB as $slug => $product): 
+                        $targetDir = ($product['division'] === 'services') ? 'services/' : 'products/';
+                        $prodUrl = htmlspecialchars($targetDir . $slug . '.php', ENT_QUOTES, 'UTF-8');
+                    ?>
                     <div class="case-block-one">
                         <div class="inner-box">
                             <div class="upper-content">
                                 <h5><?= htmlspecialchars($product['category'], ENT_QUOTES, 'UTF-8') ?></h5>
                             </div>
                             <div class="image-box">
-                                <figure class="image"><a href="<?= htmlspecialchars($slug, ENT_QUOTES, 'UTF-8') ?>.php"><img src="<?= htmlspecialchars($product['hero_image'], ENT_QUOTES, 'UTF-8') ?>" alt="<?= htmlspecialchars($product['title'], ENT_QUOTES, 'UTF-8') ?>"></a></figure>
+                                <figure class="image"><a href="<?= $prodUrl ?>"><img src="<?= htmlspecialchars($product['hero_image'], ENT_QUOTES, 'UTF-8') ?>" alt="<?= htmlspecialchars($product['title'], ENT_QUOTES, 'UTF-8') ?>"></a></figure>
                                 <div class="view-btn"><a href="<?= htmlspecialchars($product['hero_image'], ENT_QUOTES, 'UTF-8') ?>" class="lightbox-image" data-fancybox="gallery" title="<?= htmlspecialchars($product['title'], ENT_QUOTES, 'UTF-8') ?>"><i class="flaticon-zoom-in"></i></a></div>
                             </div>
                             <div class="lower-content centred">
-                                <h3><a href="<?= htmlspecialchars($slug, ENT_QUOTES, 'UTF-8') ?>.php" title="<?= htmlspecialchars($product['title'], ENT_QUOTES, 'UTF-8') ?>"><?= htmlspecialchars($product['title'], ENT_QUOTES, 'UTF-8') ?></a></h3>
+                                <h3><a href="<?= $prodUrl ?>" title="<?= htmlspecialchars($product['title'], ENT_QUOTES, 'UTF-8') ?>"><?= htmlspecialchars($product['title'], ENT_QUOTES, 'UTF-8') ?></a></h3>
                             </div>
                         </div>
                     </div>

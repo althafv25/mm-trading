@@ -9,9 +9,14 @@ if (!isset($PRODUCTS_DB[$currentSlug])) {
 $product = $PRODUCTS_DB[$currentSlug];
 
 $Page = 'products';
+$PageRoot = $PageRoot ?? (
+    (isset($_SERVER['SCRIPT_FILENAME']) && in_array(basename(dirname($_SERVER['SCRIPT_FILENAME'])), ['products', 'services'], true))
+    ? '../' : './'
+);
 $PageTitle = $product['title'] . ' | MM General Trading L.L.C Dubai';
 $PageDescription = $product['summary'];
-$PageCanonical = 'https://www.mmgeneraltrading.com/' . $product['slug'] . '.php';
+$folder = ($product['division'] === 'services') ? 'services/' : 'products/';
+$PageCanonical = 'https://www.mmgeneraltrading.com/' . $folder . $product['slug'] . '.php';
 $PageOgImage = 'https://www.mmgeneraltrading.com/' . $product['hero_image'];
 $PageSchema = json_encode([
     '@context' => 'https://schema.org',
@@ -40,7 +45,7 @@ $allProductsInDivision = array_filter($PRODUCTS_DB, fn($p) => $p['division'] ===
 
 <!-- page-title -->
 <section class="page-title centred">
-    <div class="bg-layer" style="background-image: url(assets/images/background/page-title.jpg);"></div>
+    <div class="bg-layer" style="background-image: url(<?= $safe($PageRoot) ?>assets/images/background/page-title.jpg);"></div>
     <div class="line-box">
         <div class="line-1"></div>
         <div class="line-2"></div>
@@ -49,8 +54,8 @@ $allProductsInDivision = array_filter($PRODUCTS_DB, fn($p) => $p['division'] ===
         <div class="content-box">
             <h1><?= htmlspecialchars($product['title'], ENT_QUOTES, 'UTF-8') ?></h1>
             <ul class="bread-crumb clearfix">
-                <li><a href="index.php">Home</a></li>
-                <li><a href="products.php">Products</a></li>
+                <li><a href="<?= $safe($PageRoot) ?>index.php">Home</a></li>
+                <li><a href="<?= $safe($PageRoot) ?>products.php">Products</a></li>
                 <li><?= htmlspecialchars($product['category'], ENT_QUOTES, 'UTF-8') ?></li>
             </ul>
         </div>
@@ -90,7 +95,7 @@ $allProductsInDivision = array_filter($PRODUCTS_DB, fn($p) => $p['division'] ===
 
                     <!-- Main Product Hero Image Card -->
                     <div class="image-box" style="margin-bottom: 35px; border-radius: 12px; overflow: hidden; border: 1px solid #E2E8F0; background: #F8FAFC; text-align: center; position: relative;">
-                        <img src="<?= htmlspecialchars($product['hero_image'], ENT_QUOTES, 'UTF-8') ?>" alt="<?= htmlspecialchars($product['title'], ENT_QUOTES, 'UTF-8') ?>" style="max-height: 440px; width: auto; max-width: 100%; object-fit: contain; margin: 0 auto; display: block; padding: 20px;">
+                        <img src="<?= $safe($PageRoot) . htmlspecialchars($product['hero_image'], ENT_QUOTES, 'UTF-8') ?>" alt="<?= htmlspecialchars($product['title'], ENT_QUOTES, 'UTF-8') ?>" style="max-height: 440px; width: auto; max-width: 100%; object-fit: contain; margin: 0 auto; display: block; padding: 20px;">
                     </div>
 
                     <!-- Product Summary & Full Description -->
@@ -165,7 +170,7 @@ $allProductsInDivision = array_filter($PRODUCTS_DB, fn($p) => $p['division'] ===
                             <h5 style="color: #ffffff; font-size: 18px; font-weight: 700; margin: 0;">Featured on Page <?= (int)$product['catalogue_page'] ?> of MM Trading 2026 Catalogue</h5>
                             <p style="color: #94A3B8; font-size: 13px; margin: 4px 0 0 0;">Complete engineering diagrams, tolerances and alloy compositions available.</p>
                         </div>
-                        <a href="<?= htmlspecialchars($product['catalogue_page_img'], ENT_QUOTES, 'UTF-8') ?>" target="_blank" class="theme-btn btn-one" style="padding: 10px 22px; font-size: 13px;">
+                        <a href="<?= $safe($PageRoot) . htmlspecialchars($product['catalogue_page_img'], ENT_QUOTES, 'UTF-8') ?>" target="_blank" class="theme-btn btn-one" style="padding: 10px 22px; font-size: 13px;">
                             <span>View Catalogue Sheet</span>
                         </a>
                     </div>
@@ -178,7 +183,7 @@ $allProductsInDivision = array_filter($PRODUCTS_DB, fn($p) => $p['division'] ===
                         <p style="font-size: 13.5px; color: #64748B; margin-bottom: 20px;">
                             Fill in your quantity, alloy/grade, and delivery destination. Our technical sales engineers in Dubai DIP - 2 will respond within 24 hours.
                         </p>
-                        <form method="post" action="sendemail.php">
+                        <form method="post" action="<?= $safe($PageRoot) ?>sendemail.php">
                             <input type="hidden" name="interest" value="<?= htmlspecialchars($product['title'], ENT_QUOTES, 'UTF-8') ?>">
                             <div class="row clearfix">
                                 <div class="col-lg-6 col-md-6 col-sm-12 form-group">
@@ -218,9 +223,12 @@ $allProductsInDivision = array_filter($PRODUCTS_DB, fn($p) => $p['division'] ===
                         </div>
                         <div class="widget-content">
                             <ul class="category-list clearfix" style="list-style: none; padding: 0; margin: 0;">
-                                <?php foreach ($allProductsInDivision as $pSlug => $pItem): ?>
+                                <?php foreach ($allProductsInDivision as $pSlug => $pItem): 
+                                    $targetDir = ($pItem['division'] === 'services') ? 'services/' : 'products/';
+                                    $targetUrl = $safe($PageRoot) . $targetDir . $pSlug . '.php';
+                                ?>
                                     <li style="margin-bottom: 8px;">
-                                        <a href="<?= htmlspecialchars($pSlug, ENT_QUOTES, 'UTF-8') ?>.php" style="display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; border-radius: 6px; font-size: 14px; font-weight: 600; text-decoration: none; transition: all 0.2s; <?= $pSlug === $currentSlug ? 'background: #D69A2D; color: #ffffff;' : 'background: #F8FAFC; color: #1E293B;' ?>">
+                                        <a href="<?= $targetUrl ?>" style="display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; border-radius: 6px; font-size: 14px; font-weight: 600; text-decoration: none; transition: all 0.2s; <?= $pSlug === $currentSlug ? 'background: #D69A2D; color: #ffffff;' : 'background: #F8FAFC; color: #1E293B;' ?>">
                                             <span><?= htmlspecialchars($pItem['title'], ENT_QUOTES, 'UTF-8') ?></span>
                                             <i class="fa-solid fa-chevron-right" style="font-size: 11px;"></i>
                                         </a>
