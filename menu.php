@@ -93,17 +93,97 @@ $safe = static fn($value) => htmlspecialchars((string) $value, ENT_QUOTES, 'UTF-
                                         <li class="<?= $Page === 'home' ? 'current' : '' ?>"><a href="<?= $safe($PageRoot) ?>index.php">Home</a></li>
                                         <li class="<?= $Page === 'about' ? 'current' : '' ?>"><a href="<?= $safe($PageRoot) ?>about.php">About Us</a></li>
                                         <li class="dropdown <?= $Page === 'products' ? 'current' : '' ?>"><a href="<?= $safe($PageRoot) ?>products.php">Products & Materials</a>
-                                            <ul>
-                                                <li><a href="<?= $safe($PageRoot) ?>products.php">All Products (26)</a></li>
-                                                <li><a href="<?= $safe($PageRoot) ?>products.php?cat=metals">Aluminium & Metal Products</a></li>
-                                                <li><a href="<?= $safe($PageRoot) ?>products.php?cat=chemicals">Construction Chemicals & Sealants</a></li>
-                                                <li><a href="<?= $safe($PageRoot) ?>products.php?cat=adhesives">Wood & Industrial Adhesives</a></li>
-                                                <li><a href="<?= $safe($PageRoot) ?>products.php?cat=fire-acoustic">Passive Fire & Acoustic Solutions</a></li>
-                                                <li><a href="<?= $safe($PageRoot) ?>products.php?cat=hardware">Hardware & Accessories</a></li>
-                                                <li><a href="<?= $safe($PageRoot) ?>services/coating-processing-services.php">Coating & Processing Services</a></li>
-                                            </ul>
+                                            <div class="megamenu">
+                                                <div class="mega-grid">
+                                                    <?php
+                                                    $megaMenu = [
+                                                        ['Aluminium & Metals', 'metals', [
+                                                            ['Plain Aluminium Sheets & Plates', 'plain-aluminium-sheets-plates'],
+                                                            ['Chequered Sheets & Tread Plates', 'aluminium-chequered-sheets'],
+                                                            ['Stucco Embossed Sheets & Coils', 'aluminium-stucco-sheets'],
+                                                            ['Perforated Metal Sheets', 'perforated-metal-sheets'],
+                                                            ['Stainless Steel Sheets & Plates', 'stainless-steel-sheets'],
+                                                            ['Stainless Steel Profiles & Pipes', 'stainless-steel-profiles'],
+                                                            ['Architectural Aluminium Profiles', 'architectural-aluminium-profiles'],
+                                                            ['Standard Aluminium Extrusions', 'standard-aluminium-extrusions'],
+                                                        ]],
+                                                        ['Profile Systems', 'profile-systems', [
+                                                            ['Sliding Doors & Windows', 'sliding-doors-windows'],
+                                                            ['Hinged Series', 'hinged-series'],
+                                                            ['Curtain Wall Systems', 'curtain-wall-systems'],
+                                                            ['Thermal Break Systems', 'thermal-break-systems'],
+                                                            ['Louvers & Accessories', 'louvers-accessories'],
+                                                        ]],
+                                                        ['Sealants & Chemicals', 'chemicals', [
+                                                            ['GUIBAO 1092 Structural Glazing Silicone', 'guibao-1092-structural-silicone'],
+                                                            ['GUIBAO 992 Structural Glazing Sealant', 'guibao-992-structural-silicone'],
+                                                            ['GUIBAO 1098 Weatherproofing Sealant', 'guibao-1098-weatherproofing-sealant'],
+                                                            ['GUIBAO 998 Weatherproofing Sealant', 'guibao-998-silicone-sealant'],
+                                                            ['GUIBAO 995 Total Vision System Sealant', 'guibao-995-total-vision-sealant'],
+                                                            ['GUIBAO Fire-Resistant & Specialty', 'guibao-specialty-sealants'],
+                                                            ['TKK Polyurethane PU Foam', 'tkk-pu-foam'],
+                                                        ]],
+                                                        ['Wood & Adhesives', 'adhesives', [
+                                                            ['BONDTITE Edge D', 'bondtite-edge-d'],
+                                                            ['BONDTITE Deluxe D3', 'bondtite-deluxe-d3'],
+                                                            ['BONDTITE Multibond Contact Adhesive', 'bondtite-multibond'],
+                                                            ['MONSTER High-Strength Wood Adhesive', 'monster-wood-adhesive'],
+                                                            ['BONDTITE Multifix No-Nail Adhesive', 'bondtite-multifix'],
+                                                        ]],
+                                                        ['Passive Fire & Acoustic', 'fire-acoustic', [
+                                                            ['SEALz Concealed Drop Seals', 'sealz-drop-seals'],
+                                                            ['SEALz Perimeter & Astragal Seals', 'sealz-perimeter-astragal-seals'],
+                                                            ['SEALz Intumescent Fire Seals', 'sealz-intumescent-fire-seals'],
+                                                            ['SEALz VTape & Hardware Pads', 'sealz-vtape-hardware-pads'],
+                                                        ]],
+                                                        ['Hardware & Accessories', 'hardware', [
+                                                            ['Architectural Hardware & Closure Accessories', 'architectural-hardware-fittings'],
+                                                        ]],
+                                                        ['Coating & Processing', 'services', [
+                                                            ['Metal Coating & Coil Processing', 'coating-processing-services'],
+                                                        ]],
+                                                    ];
+                                                    foreach ($megaMenu as [$catLabel, $catKey, $items]):
+                                                        $dir = $catKey === 'services' ? 'services' : 'products';
+                                                    ?>
+                                                    <div class="mega-col">
+                                                        <h4><a href="<?= $safe($PageRoot) ?>products.php?cat=<?= $safe($catKey) ?>"><?= $safe($catLabel) ?></a></h4>
+                                                        <ul>
+                                                            <?php foreach ($items as [$label, $slug]): ?>
+                                                                <li><a href="<?= $safe($PageRoot) . $dir . '/' . $slug ?>.php"><?= $safe($label) ?></a></li>
+                                                            <?php endforeach; ?>
+                                                        </ul>
+                                                    </div>
+                                                    <?php endforeach; ?>
+                                                </div>
+                                                <div class="mega-footer">
+                                                    <a href="<?= $safe($PageRoot) ?>products.php">View all 36 products</a>
+                                                </div>
+                                            </div>
                                         </li>
-                                        <li class="<?= $Page === 'projects' ? 'current' : '' ?>"><a href="<?= $safe($PageRoot) ?>projects.php">Projects</a></li>
+                                        <li class="dropdown"><a href="<?= $safe($PageRoot) ?>services/coating-processing-services.php">Services</a>
+                                            <div class="megamenu mega-narrow">
+                                                <div class="mega-grid">
+                                                    <div class="mega-col">
+                                                        <h4><a href="<?= $safe($PageRoot) ?>services/polyester-powder-coating.php">Powder Coating</a></h4>
+                                                        <ul>
+                                                            <li><a href="<?= $safe($PageRoot) ?>services/polyester-powder-coating.php">Polyester Powder Coating</a></li>
+                                                            <li><a href="<?= $safe($PageRoot) ?>services/sdf-coating.php">SDF Coating</a></li>
+                                                            <li><a href="<?= $safe($PageRoot) ?>services/pvdf-coating.php">PVDF Coating</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="mega-col">
+                                                        <h4><a href="<?= $safe($PageRoot) ?>services/pvd-coating-stainless-steel.php">PVD Coating for Stainless Steel</a></h4>
+                                                    </div>
+                                                    <div class="mega-col">
+                                                        <h4><a href="<?= $safe($PageRoot) ?>services/coil-cutting-cut-to-length.php">Coil Cutting &amp; Cut-to-Length Services</a></h4>
+                                                    </div>
+                                                </div>
+                                                <div class="mega-footer">
+                                                    <a href="<?= $safe($PageRoot) ?>services/coating-processing-services.php">View all services</a>
+                                                </div>
+                                            </div>
+                                        </li>
                                         <li class="<?= $Page === 'blog' ? 'current' : '' ?>"><a href="<?= $safe($PageRoot) ?>blog.php">Blog</a></li>
                                         <li class="<?= $Page === 'contact' ? 'current' : '' ?>"><a href="<?= $safe($PageRoot) ?>contact.php">Contact</a></li>
                                     </ul>

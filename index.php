@@ -63,7 +63,7 @@ $BLOG_POSTS = include __DIR__ . '/blog-data.php';
                     </div>
                 </div>
                 <div class="slide-item">
-                    <div class="image-layer" style="background-image:url(assets/images/banner/banner-3.jpg)"></div>
+                    <div class="image-layer" style="background-image:url(assets/images/banner/banner3.jpg)"></div>
                     <div class="auto-container">
                         <div class="content-box">
                             <span class="special-text animation_text_word"></span>
@@ -172,7 +172,7 @@ $BLOG_POSTS = include __DIR__ . '/blog-data.php';
                             <div class="inner-box">
                                 <div class="icon-box"><i class="flaticon-factory"></i></div>
                                 <div class="count-outer count-box">
-                                    <span class="count-text" data-speed="1500" data-stop="26">0</span>
+                                    <span class="count-text" data-speed="1500" data-stop="36">0</span>
                                 </div>
                                 <div class="text">
                                     <h3>Product Lines</h3>
@@ -226,12 +226,12 @@ $BLOG_POSTS = include __DIR__ . '/blog-data.php';
                     <h2>Our Vendors</h2>
                 </div>
                 <div class="five-item-carousel owl-carousel owl-theme owl-nav-none owl-dots-none">
-                    <figure class="clients-logo"><a href="products.php"><img src="assets/images/vendors/1.png" alt="Vendor logo 1"></a></figure>
-                    <figure class="clients-logo"><a href="products.php"><img src="assets/images/vendors/2.png" alt="Vendor logo 2"></a></figure>
+                    
+                    <figure class="clients-logo"><a href="products.php"><img src="assets/images/vendors/5.png" alt="Vendor logo 2"></a></figure>
                     <figure class="clients-logo"><a href="products.php"><img src="assets/images/vendors/3.png" alt="Vendor logo 3"></a></figure>
                     <figure class="clients-logo"><a href="products.php"><img src="assets/images/vendors/4.png" alt="Vendor logo 4"></a></figure>
-                    <figure class="clients-logo"><a href="products.php"><img src="assets/images/vendors/5.png" alt="Vendor logo 5"></a></figure>
-                    <figure class="clients-logo"><a href="products.php"><img src="assets/images/vendors/6.png" alt="Vendor logo 6"></a></figure>
+                    <figure class="clients-logo"><a href="products.php"><img src="assets/images/vendors/2.png" alt="Vendor logo 5"></a></figure>
+                    
                     <figure class="clients-logo"><a href="products.php"><img src="assets/images/vendors/7.png" alt="Vendor logo 7"></a></figure>
                     <figure class="clients-logo"><a href="products.php"><img src="assets/images/vendors/8.png" alt="Vendor logo 8"></a></figure>
                     <figure class="clients-logo"><a href="products.php"><img src="assets/images/vendors/9.png" alt="Vendor logo 9"></a></figure>
@@ -242,6 +242,8 @@ $BLOG_POSTS = include __DIR__ . '/blog-data.php';
                     <figure class="clients-logo"><a href="products.php"><img src="assets/images/vendors/14.png" alt="Vendor logo 14"></a></figure>
                     <figure class="clients-logo"><a href="products.php"><img src="assets/images/vendors/15.png" alt="Vendor logo 15"></a></figure>
                     <figure class="clients-logo"><a href="products.php"><img src="assets/images/vendors/16.png" alt="Vendor logo 16"></a></figure>
+                    <figure class="clients-logo"><a href="products.php"><img src="assets/images/vendors/1.png" alt="Vendor logo 1"></a></figure>
+                    <figure class="clients-logo"><a href="products.php"><img src="assets/images/vendors/6.png" alt="Vendor logo 6"></a></figure>
                 </div>
             </div>
         </section>

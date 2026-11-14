@@ -132,7 +132,7 @@ The global layout (`header.php`, `menu.php`, `footer.php`) relies on `$PageRoot`
 The following elements inside `product-detail.php` were audited and adjusted:
 1. **Canonical URLs:** Updated to include the folder prefix:
    `https://www.mmgeneraltrading.com/{products|services}/{slug}.php`
-2. **Page Title Background Image:** Prepended `$safe($PageRoot)` to `assets/images/background/page-title.jpg`.
+2. **Page Title Background Image:** Prepended `$safe($PageRoot)` to `assets/images/banner/banner-inner.jpg`.
 3. **Breadcrumbs:**
    - Home link: `<?= $safe($PageRoot) ?>index.php`
    - Products link: `<?= $safe($PageRoot) ?>products.php`

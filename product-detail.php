@@ -45,7 +45,7 @@ $allProductsInDivision = array_filter($PRODUCTS_DB, fn($p) => $p['division'] ===
 
 <!-- page-title -->
 <section class="page-title centred">
-    <div class="bg-layer" style="background-image: url(<?= $safe($PageRoot) ?>assets/images/background/page-title.jpg);"></div>
+    <div class="bg-layer" style="background-image: url(<?= $safe($PageRoot) ?>assets/images/banner/banner-inner.jpg);"></div>
     <div class="line-box">
         <div class="line-1"></div>
         <div class="line-2"></div>
@@ -163,6 +163,7 @@ $allProductsInDivision = array_filter($PRODUCTS_DB, fn($p) => $p['division'] ===
                         </ul>
                     </div>
 
+                    <?php if (!empty($product['catalogue_page_img'])): ?>
                     <!-- Catalogue Reference Box -->
                     <div style="background: linear-gradient(135deg, #0F1C26 0%, #172C3D 100%); border-radius: 12px; padding: 24px; color: #ffffff; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 30px;">
                         <div>
@@ -175,37 +176,51 @@ $allProductsInDivision = array_filter($PRODUCTS_DB, fn($p) => $p['division'] ===
                         </a>
                     </div>
 
+                    <?php endif; ?>
+
                     <!-- Direct Request for Quotation Form -->
-                    <div id="product-rfq" style="background: #F8FAFC; border-radius: 12px; border: 1px solid #E2E8F0; padding: 28px;">
-                        <h4 style="font-size: 20px; font-weight: 700; color: #0F1C26; margin-bottom: 6px;">
-                            Request Quotation for <?= htmlspecialchars($product['title'], ENT_QUOTES, 'UTF-8') ?>
-                        </h4>
-                        <p style="font-size: 13.5px; color: #64748B; margin-bottom: 20px;">
-                            Fill in your quantity, alloy/grade, and delivery destination. Our technical sales engineers in Dubai DIP - 2 will respond within 24 hours.
-                        </p>
+                    <div id="product-rfq" class="rfq-card">
+                        <div class="rfq-head">
+                            <span class="rfq-kicker">Request for Quotation</span>
+                            <h4>Request Quotation for <?= htmlspecialchars($product['title'], ENT_QUOTES, 'UTF-8') ?></h4>
+                            <p>Share your quantity, alloy or grade, and delivery destination. Our sales engineers in Dubai DIP - 2 reply within 24 hours.</p>
+                            <ul class="rfq-points">
+                                <li><i class="fa-solid fa-clock"></i>Reply within 24 hours</li>
+                                <li><i class="fa-solid fa-shield-halved"></i>Mill certificates on request</li>
+                                <li><i class="fa-solid fa-warehouse"></i>Ready stock in DIP - 2</li>
+                            </ul>
+                        </div>
                         <form method="post" action="<?= $safe($PageRoot) ?>sendemail.php">
                             <input type="hidden" name="interest" value="<?= htmlspecialchars($product['title'], ENT_QUOTES, 'UTF-8') ?>">
-                            <div class="row clearfix">
-                                <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                    <input type="text" name="name" placeholder="Your Name *" required style="background: #ffffff; border: 1px solid #CBD5E1; border-radius: 6px; padding: 10px 14px; width: 100%;">
+                            <div class="rfq-body">
+                                <div class="rfq-row">
+                                    <div class="rfq-field">
+                                        <label for="rfq-name">Full Name <span>*</span></label>
+                                        <input id="rfq-name" type="text" name="name" placeholder="e.g. Ahmed Al Mansoori" required>
+                                    </div>
+                                    <div class="rfq-field">
+                                        <label for="rfq-email">Business Email <span>*</span></label>
+                                        <input id="rfq-email" type="email" name="email" placeholder="name@company.com" required>
+                                    </div>
+                                    <div class="rfq-field">
+                                        <label for="rfq-phone">Phone Number</label>
+                                        <input id="rfq-phone" type="text" name="phone" placeholder="+971 __ ___ ____">
+                                    </div>
+                                    <div class="rfq-field">
+                                        <label for="rfq-company">Company / Project Name</label>
+                                        <input id="rfq-company" type="text" name="company" placeholder="Organization or project">
+                                    </div>
+                                    <div class="rfq-field full">
+                                        <label for="rfq-message">Specifications &amp; Requirements <span>*</span></label>
+                                        <textarea id="rfq-message" name="message" rows="4" placeholder="Alloy grade, thickness or dimensions, quantity, and delivery requirements..." required></textarea>
+                                    </div>
                                 </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                    <input type="email" name="email" placeholder="Business Email *" required style="background: #ffffff; border: 1px solid #CBD5E1; border-radius: 6px; padding: 10px 14px; width: 100%;">
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                    <input type="text" name="phone" placeholder="Phone Number" style="background: #ffffff; border: 1px solid #CBD5E1; border-radius: 6px; padding: 10px 14px; width: 100%;">
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                    <input type="text" name="company" placeholder="Company / Project Name" style="background: #ffffff; border: 1px solid #CBD5E1; border-radius: 6px; padding: 10px 14px; width: 100%;">
-                                </div>
-                                <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                    <textarea name="message" placeholder="Please specify alloy grade, dimensions, quantity, or delivery requirements..." rows="3" required style="background: #ffffff; border: 1px solid #CBD5E1; border-radius: 6px; padding: 10px 14px; width: 100%;"></textarea>
-                                </div>
-                                <div class="col-lg-12 col-md-12 col-sm-12 form-group" style="margin: 0;">
-                                    <button type="submit" class="theme-btn btn-one" style="padding: 12px 28px; width: 100%;">
-                                        <span>Submit RFQ to Sales Engineers</span>
-                                    </button>
-                                </div>
+                            </div>
+                            <div class="rfq-foot">
+                                <small>Fields marked <span style="color:#D69A2D;">*</span> are required.</small>
+                                <button type="submit" class="rfq-submit">
+                                    <i class="fa-solid fa-paper-plane"></i> Submit RFQ to Sales Engineers
+                                </button>
                             </div>
                         </form>
                     </div>

@@ -23,7 +23,7 @@ $divisions = [
         'name' => 'All Product Families',
         'short_name' => 'All Products',
         'icon' => 'fa-solid fa-boxes-stacked',
-        'badge' => '26 Verified Product Lines'
+        'badge' => '36 Verified Product Lines'
     ],
     'metals' => [
         'name' => 'Aluminium & Metal Products',
@@ -59,6 +59,13 @@ $divisions = [
         'icon' => 'fa-solid fa-toolbox',
         'badge' => 'Façade & Door Solutions',
         'lead' => 'Heavy-duty architectural glazing hardware, concealed door closers, floor springs, stainless steel patch fittings, and high-performance silicone applicator tooling for commercial and residential façades and architectural glass systems.'
+    ],
+    'profile-systems' => [
+        'name' => 'Aluminium Profile Systems',
+        'short_name' => 'Profile Systems',
+        'icon' => 'fa-solid fa-table-cells-large',
+        'badge' => '5 Systems · Full Profile Codes',
+        'lead' => 'Complete aluminium profile systems for sliding doors and windows, hinged doors, curtain walls, thermal break frames, and louvers, with the profile codes listed in the MM General Trading catalogue.'
     ],
     'services' => [
         'name' => 'Coating & Processing Services',
@@ -105,7 +112,7 @@ function renderProductBox($slug, $product) {
 
 <!-- page-title -->
 <section class="page-title centred">
-    <div class="bg-layer" style="background-image: url(<?= $safe($PageRoot) ?>assets/images/background/page-title.jpg);"></div>
+    <div class="bg-layer" style="background-image: url(<?= $safe($PageRoot) ?>assets/images/banner/banner-inner.jpg);"></div>
     <div class="line-box">
         <div class="line-1"></div>
         <div class="line-2"></div>
@@ -129,7 +136,7 @@ function renderProductBox($slug, $product) {
         <!-- Filter Bar -->
         <div class="filter-bar text-center" style="margin-bottom: 45px; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;">
             <button type="button" class="product-filter-btn <?= $activeFilter === 'all' ? 'is-active' : '' ?>" data-division="all">
-                <i class="fa-solid fa-boxes-stacked"></i> All Products <span class="badge-count">26</span>
+                <i class="fa-solid fa-boxes-stacked"></i> All Products <span class="badge-count">36</span>
             </button>
             <?php foreach ($divisions as $divKey => $divInfo): ?>
                 <?php if ($divKey === 'all') continue; ?>
@@ -195,6 +202,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'adhesives': 'Wood & Adhesives',
         'fire-acoustic': 'Passive Fire & Acoustic',
         'hardware': 'Hardware & Accessories',
+        'profile-systems': 'Profile Systems',
         'services': 'Coating & Processing'
     };
 
