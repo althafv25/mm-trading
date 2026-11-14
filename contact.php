@@ -167,7 +167,7 @@ $status = $_GET['status'] ?? '';
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-12 form-group">
                                 <label style="font-size: 13px; font-weight: 600; color: #0F1C26;">Email Address *</label>
-                                <input type="email" name="email" placeholder="name@company.com" required>
+                                <input type="email" name="email" placeholder="name@company.com" value="<?= $safe($_GET['email'] ?? '') ?>" required>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-12 form-group">
                                 <label style="font-size: 13px; font-weight: 600; color: #0F1C26;">Phone Number</label>

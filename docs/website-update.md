@@ -25,6 +25,8 @@ The web root maintains core site-level templates, controllers, and pages:
 - `about.php` — Corporate profile and quality certifications
 - `products.php` — Central catalogue filtering grid (26 lines across 6 divisions)
 - `projects.php` — Project showcase and case studies
+- `blog.php` — Blog listing with category filter and a call-to-action banner
+- `blog-data.php` — Blog post list shared by `blog.php` and the blog section on `index.php`
 - `contact.php` — Contact information, DIP-2 headquarters map, and inquiry form
 - `product-detail.php` — Universal detail template controller for all products and services
 - `products-data.php` — Structured catalog database array (metadata, specs, applications, images)

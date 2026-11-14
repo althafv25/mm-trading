@@ -172,11 +172,11 @@ $BLOG_POSTS = include __DIR__ . '/blog-data.php';
                             <div class="inner-box">
                                 <div class="icon-box"><i class="flaticon-factory"></i></div>
                                 <div class="count-outer count-box">
-                                    <span class="count-text" data-speed="1500" data-stop="45">0</span>
+                                    <span class="count-text" data-speed="1500" data-stop="26">0</span>
                                 </div>
                                 <div class="text">
-                                    <h3>Branches</h3>
-                                    <p>Branches Across The World</p>
+                                    <h3>Product Lines</h3>
+                                    <p>Metals, chemicals, adhesives, fire seals, and hardware in stock</p>
                                 </div>
                             </div>
                         </div>
@@ -186,11 +186,11 @@ $BLOG_POSTS = include __DIR__ . '/blog-data.php';
                             <div class="inner-box">
                                 <div class="icon-box"><i class="flaticon-gas"></i></div>
                                 <div class="count-outer count-box">
-                                    <span class="count-text" data-speed="1500" data-stop="32">0</span><span>k</span>
+                                    <span class="count-text" data-speed="1500" data-stop="12">0</span><span>+</span>
                                 </div>
                                 <div class="text">
-                                    <h3>Projects</h3>
-                                    <p>Projects with 100% Satisfaction</p>
+                                    <h3>Years Experience</h3>
+                                    <p>Serving industrial clients across the UAE and GCC</p>
                                 </div>
                             </div>
                         </div>
@@ -200,11 +200,11 @@ $BLOG_POSTS = include __DIR__ . '/blog-data.php';
                             <div class="inner-box">
                                 <div class="icon-box"><i class="flaticon-engineer"></i></div>
                                 <div class="count-outer count-box">
-                                    <span class="count-text" data-speed="1500" data-stop="867">0</span>
+                                    <span class="count-text" data-speed="1500" data-stop="6">0</span>
                                 </div>
                                 <div class="text">
-                                    <h3>Engineers</h3>
-                                    <p>Top Engineers around the World</p>
+                                    <h3>Divisions</h3>
+                                    <p>Metals, chemicals, adhesives, fire seals, hardware, and services</p>
                                 </div>
                             </div>
                         </div>
@@ -221,12 +221,27 @@ $BLOG_POSTS = include __DIR__ . '/blog-data.php';
         <!-- clients-section -->
         <section class="clients-section bg-color-1">
             <div class="auto-container">
+                <div class="sec-title centred">
+                    <span class="sub-title">Trusted Partners</span>
+                    <h2>Our Vendors</h2>
+                </div>
                 <div class="five-item-carousel owl-carousel owl-theme owl-nav-none owl-dots-none">
-                    <figure class="clients-logo"><a href="index.php"><img src="assets/images/clients/clients-1.png" alt=""></a></figure>
-                    <figure class="clients-logo"><a href="index.php"><img src="assets/images/clients/clients-2.png" alt=""></a></figure>
-                    <figure class="clients-logo"><a href="index.php"><img src="assets/images/clients/clients-3.png" alt=""></a></figure>
-                    <figure class="clients-logo"><a href="index.php"><img src="assets/images/clients/clients-4.png" alt=""></a></figure>
-                    <figure class="clients-logo"><a href="index.php"><img src="assets/images/clients/clients-5.png" alt=""></a></figure>
+                    <figure class="clients-logo"><a href="products.php"><img src="assets/images/vendors/1.png" alt="Vendor logo 1"></a></figure>
+                    <figure class="clients-logo"><a href="products.php"><img src="assets/images/vendors/2.png" alt="Vendor logo 2"></a></figure>
+                    <figure class="clients-logo"><a href="products.php"><img src="assets/images/vendors/3.png" alt="Vendor logo 3"></a></figure>
+                    <figure class="clients-logo"><a href="products.php"><img src="assets/images/vendors/4.png" alt="Vendor logo 4"></a></figure>
+                    <figure class="clients-logo"><a href="products.php"><img src="assets/images/vendors/5.png" alt="Vendor logo 5"></a></figure>
+                    <figure class="clients-logo"><a href="products.php"><img src="assets/images/vendors/6.png" alt="Vendor logo 6"></a></figure>
+                    <figure class="clients-logo"><a href="products.php"><img src="assets/images/vendors/7.png" alt="Vendor logo 7"></a></figure>
+                    <figure class="clients-logo"><a href="products.php"><img src="assets/images/vendors/8.png" alt="Vendor logo 8"></a></figure>
+                    <figure class="clients-logo"><a href="products.php"><img src="assets/images/vendors/9.png" alt="Vendor logo 9"></a></figure>
+                    <figure class="clients-logo"><a href="products.php"><img src="assets/images/vendors/10.png" alt="Vendor logo 10"></a></figure>
+                    <figure class="clients-logo"><a href="products.php"><img src="assets/images/vendors/11.png" alt="Vendor logo 11"></a></figure>
+                    <figure class="clients-logo"><a href="products.php"><img src="assets/images/vendors/12.png" alt="Vendor logo 12"></a></figure>
+                    <figure class="clients-logo"><a href="products.php"><img src="assets/images/vendors/13.png" alt="Vendor logo 13"></a></figure>
+                    <figure class="clients-logo"><a href="products.php"><img src="assets/images/vendors/14.png" alt="Vendor logo 14"></a></figure>
+                    <figure class="clients-logo"><a href="products.php"><img src="assets/images/vendors/15.png" alt="Vendor logo 15"></a></figure>
+                    <figure class="clients-logo"><a href="products.php"><img src="assets/images/vendors/16.png" alt="Vendor logo 16"></a></figure>
                 </div>
             </div>
         </section>
@@ -241,8 +256,8 @@ $BLOG_POSTS = include __DIR__ . '/blog-data.php';
                     <div class="col-xl-6 col-lg-12 col-md-12 title-column">
                         <div class="sec-title">
                             <span class="sub-title">Why Choose Us</span>
-                            <h2>Certified Materials and Fast Dispatch from Dubai</h2>
-                            <p>MM General Trading L.L.C supplies certified industrial metals, sealants, and fire seals from our DIP - 2 base, with the technical support to specify the right product for your project.</p>
+                            <h2>Certified Materials, Fast Dispatch</h2>
+                            <p>Certified industrial metals and sealants, stocked at our DIP - 2 base in Dubai.</p>
                             <a href="about.php" class="theme-btn btn-two"><span>More Details</span></a>
                         </div>
                     </div>
@@ -251,8 +266,8 @@ $BLOG_POSTS = include __DIR__ . '/blog-data.php';
             <div class="right-column">
                 <div class="scroll-text">
                     <ul class="text-list clearfix">
-                        <li>certified mill sources & full traceability</li>
-                        <li>fast dispatch from DIP - 2 Dubai</li>
+                        <li>certified mill sources</li>
+                        <li>fast dispatch from Dubai</li>
                     </ul>
                 </div>
                 <div class="content-box">
@@ -261,14 +276,14 @@ $BLOG_POSTS = include __DIR__ . '/blog-data.php';
                             <span class="count-text">01</span>
                             <div class="text">
                                 <h3>Certified Mill Sources</h3>
-                                <p>Every product is supplied from certified mill sources with full traceability and technical compliance documentation.</p>
+                                <p>Full traceability and technical compliance documents with every order.</p>
                             </div>
                         </div>
                         <div class="overlay-content">
                             <div class="icon-box"><i class="flaticon-manufacture"></i></div>
                             <div class="text">
                                 <h3>Certified Mill Sources</h3>
-                                <p>Every product is supplied from certified mill sources with full traceability and technical compliance documentation.</p>
+                                <p>Full traceability and technical compliance documents with every order.</p>
                             </div>
                         </div>
                     </div>
@@ -277,14 +292,14 @@ $BLOG_POSTS = include __DIR__ . '/blog-data.php';
                             <span class="count-text">02</span>
                             <div class="text">
                                 <h3>Dubai DIP - 2 Hub</h3>
-                                <p>Stock held in Dubai Investments Park 2 gives fast turnaround across the UAE and GCC, with direct access to major highways and Jebel Ali Port.</p>
+                                <p>Fast turnaround across the UAE and GCC via major highways and Jebel Ali Port.</p>
                             </div>
                         </div>
                         <div class="overlay-content">
                             <div class="icon-box"><i class="flaticon-manufacture"></i></div>
                             <div class="text">
                                 <h3>Dubai DIP - 2 Hub</h3>
-                                <p>Stock held in Dubai Investments Park 2 gives fast turnaround across the UAE and GCC, with direct access to major highways and Jebel Ali Port.</p>
+                                <p>Fast turnaround across the UAE and GCC via major highways and Jebel Ali Port.</p>
                             </div>
                         </div>
                     </div>
@@ -293,14 +308,14 @@ $BLOG_POSTS = include __DIR__ . '/blog-data.php';
                             <span class="count-text">03</span>
                             <div class="text">
                                 <h3>One Supplier, Full Scope</h3>
-                                <p>Plain sheets, chequered plates, stucco coils, perforated metal, extrusions, sealants, adhesives, and fire seals from a single source.</p>
+                                <p>Sheets, plates, extrusions, sealants, adhesives, and fire seals in one place.</p>
                             </div>
                         </div>
                         <div class="overlay-content">
                             <div class="icon-box"><i class="flaticon-manufacture"></i></div>
                             <div class="text">
                                 <h3>One Supplier, Full Scope</h3>
-                                <p>Plain sheets, chequered plates, stucco coils, perforated metal, extrusions, sealants, adhesives, and fire seals from a single source.</p>
+                                <p>Sheets, plates, extrusions, sealants, adhesives, and fire seals in one place.</p>
                             </div>
                         </div>
                     </div>
@@ -308,23 +323,23 @@ $BLOG_POSTS = include __DIR__ . '/blog-data.php';
                         <div class="static-content">
                             <span class="count-text">04</span>
                             <div class="text">
-                                <h3>Engineering & Processing Support</h3>
-                                <p>Sales engineers help with alloy, temper, and product selection, and coating and coil slitting services are available.</p>
+                                <h3>Engineering & Processing</h3>
+                                <p>Help with alloy and temper selection, plus slitting and coating services.</p>
                             </div>
                         </div>
                         <div class="overlay-content">
                             <div class="icon-box"><i class="flaticon-manufacture"></i></div>
                             <div class="text">
-                                <h3>Engineering & Processing Support</h3>
-                                <p>Sales engineers help with alloy, temper, and product selection, and coating and coil slitting services are available.</p>
+                                <h3>Engineering & Processing</h3>
+                                <p>Help with alloy and temper selection, plus slitting and coating services.</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="scroll-text">
                     <ul class="text-list clearfix">
-                        <li>certified mill sources & full traceability</li>
-                        <li>fast dispatch from DIP - 2 Dubai</li>
+                        <li>certified mill sources</li>
+                        <li>fast dispatch from Dubai</li>
                     </ul>
                 </div>
             </div>
@@ -352,404 +367,156 @@ $BLOG_POSTS = include __DIR__ . '/blog-data.php';
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-12 single-btn">
                                 <div class="p-tab-btn" data-tab="#tab-3">
-                                    <div class="icon-box"><i class="flaticon-vaccine"></i></div>
-                                    <h4>Heath Care & Pharma</h4>
+                                    <div class="icon-box"><i class="flaticon-globe"></i></div>
+                                    <h4>Marine & Offshore</h4>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-12 single-btn">
                                 <div class="p-tab-btn" data-tab="#tab-4">
                                     <div class="icon-box"><i class="flaticon-radiator"></i></div>
-                                    <h4>Automotive Chains</h4>
+                                    <h4>Industrial & HVAC</h4>
                                 </div>
                             </div>
-                        </div> 
+                        </div>
                     </div>
                 </div>
                 <div class="auto-container">
                     <div class="p-tabs-content">
                         <div class="p-tab active-tab" id="tab-1">
-                            <div class="single-item-carousel owl-carousel owl-theme owl-dots-none">
-                                <div class="content-inner">
-                                    <div class="row clearfix">
-                                        <div class="col-lg-6 col-md-12 col-sm-12 content-column">
-                                            <div class="content-box">
-                                                <div class="sec-title">
-                                                    <span class="sub-title">Industry</span>
-                                                    <h2>Construction Sector</h2>
-                                                </div>
-                                                <div class="inner-box">
-                                                    <ul class="list-style-one clearfix">
-                                                        <li>Mechanized Bridge Construction</li>
-                                                        <li>Movable Scaffolding Systems</li>
-                                                    </ul>
-                                                    <p>Lookout flogging bilge rat main shet bilge water nipper fluke to go on account heave down clap of thunder. Reef sails six pounders skysail code off conduct.</p>
-                                                    <div class="link-box">
-                                                        <h6><a href="index.php">Make your Appointment</a></h6>
-                                                    </div>
-                                                    <div class="email"><a href="mailto:info@mmgeneraltrading.com">info@mmgeneraltrading.com</a></div>
-                                                    <div class="btn-box">
-                                                        <a href="index.php" class="theme-btn btn-two"><span>More Details</span></a>
-                                                    </div>
-                                                </div>
+                            <div class="content-inner">
+                                <div class="row clearfix">
+                                    <div class="col-lg-6 col-md-12 col-sm-12 content-column">
+                                        <div class="content-box">
+                                            <div class="sec-title">
+                                                <span class="sub-title">Industry</span>
+                                                <h2>Construction Sector</h2>
                                             </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-12 col-sm-12 image-column">
-                                            <div class="image-box">
-                                                <figure class="image"><img src="assets/images/resource/industry-2.jpg" alt=""></figure>
+                                            <div class="inner-box">
+                                                <ul class="list-style-one clearfix">
+                                                    <li>Architectural building cladding and curtain wall backing panels</li>
+                                                    <li>Commercial curtain walls, unitized façades, and shopfronts</li>
+                                                    <li>Structural glazing and façade joint sealing</li>
+                                                    <li>Window frame insulation and perimeter fire and acoustic sealing</li>
+                                                </ul>
+                                                <p>Products used: <a href="products/plain-aluminium-sheets-plates.php">plain aluminium sheets</a>, <a href="products/architectural-aluminium-profiles.php">architectural aluminium profiles</a>, <a href="products/guibao-1092-structural-silicone.php">GUIBAO structural silicones</a>, <a href="products/tkk-pu-foam.php">TKK PU foam</a>, and <a href="products/sealz-perimeter-astragal-seals.php">SEALz perimeter seals</a>.</p>
+                                                <div class="link-box">
+                                                    <h6><a href="contact.php">Request a Quote</a></h6>
+                                                </div>
+                                                <div class="email"><a href="mailto:info@mmgeneraltrading.com">info@mmgeneraltrading.com</a></div>
+                                                <div class="btn-box">
+                                                    <a href="products.php" class="theme-btn btn-two"><span>View Products</span></a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="content-inner">
-                                    <div class="row clearfix">
-                                        <div class="col-lg-6 col-md-12 col-sm-12 content-column">
-                                            <div class="content-box">
-                                                <div class="sec-title">
-                                                    <span class="sub-title">Industry</span>
-                                                    <h2>Construction Sector</h2>
-                                                </div>
-                                                <div class="inner-box">
-                                                    <ul class="list-style-one clearfix">
-                                                        <li>Mechanized Bridge Construction</li>
-                                                        <li>Movable Scaffolding Systems</li>
-                                                    </ul>
-                                                    <p>Lookout flogging bilge rat main shet bilge water nipper fluke to go on account heave down clap of thunder. Reef sails six pounders skysail code off conduct.</p>
-                                                    <div class="link-box">
-                                                        <h6><a href="index.php">Make your Appointment</a></h6>
-                                                    </div>
-                                                    <div class="email"><a href="mailto:info@mmgeneraltrading.com">info@mmgeneraltrading.com</a></div>
-                                                    <div class="btn-box">
-                                                        <a href="index.php" class="theme-btn btn-two"><span>More Details</span></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-12 col-sm-12 image-column">
-                                            <div class="image-box">
-                                                <figure class="image"><img src="assets/images/resource/industry-2.jpg" alt=""></figure>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="content-inner">
-                                    <div class="row clearfix">
-                                        <div class="col-lg-6 col-md-12 col-sm-12 content-column">
-                                            <div class="content-box">
-                                                <div class="sec-title">
-                                                    <span class="sub-title">Industry</span>
-                                                    <h2>Construction Sector</h2>
-                                                </div>
-                                                <div class="inner-box">
-                                                    <ul class="list-style-one clearfix">
-                                                        <li>Mechanized Bridge Construction</li>
-                                                        <li>Movable Scaffolding Systems</li>
-                                                    </ul>
-                                                    <p>Lookout flogging bilge rat main shet bilge water nipper fluke to go on account heave down clap of thunder. Reef sails six pounders skysail code off conduct.</p>
-                                                    <div class="link-box">
-                                                        <h6><a href="index.php">Make your Appointment</a></h6>
-                                                    </div>
-                                                    <div class="email"><a href="mailto:info@mmgeneraltrading.com">info@mmgeneraltrading.com</a></div>
-                                                    <div class="btn-box">
-                                                        <a href="index.php" class="theme-btn btn-two"><span>More Details</span></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-12 col-sm-12 image-column">
-                                            <div class="image-box">
-                                                <figure class="image"><img src="assets/images/resource/industry-2.jpg" alt=""></figure>
-                                            </div>
+                                    <div class="col-lg-6 col-md-12 col-sm-12 image-column">
+                                        <div class="image-box">
+                                            <figure class="image"><img src="assets/images/products/architectural-aluminium-profiles.png" alt="Architectural aluminium profiles"></figure>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="p-tab" id="tab-2">
-                            <div class="single-item-carousel owl-carousel owl-theme owl-dots-none">
-                                <div class="content-inner">
-                                    <div class="row clearfix">
-                                        <div class="col-lg-6 col-md-12 col-sm-12 content-column">
-                                            <div class="content-box">
-                                                <div class="sec-title">
-                                                    <span class="sub-title">Industry</span>
-                                                    <h2>Oil & Gas Energy</h2>
-                                                </div>
-                                                <div class="inner-box">
-                                                    <ul class="list-style-one clearfix">
-                                                        <li>Mechanized Bridge Construction</li>
-                                                        <li>Movable Scaffolding Systems</li>
-                                                    </ul>
-                                                    <p>Lookout flogging bilge rat main shet bilge water nipper fluke to go on account heave down clap of thunder. Reef sails six pounders skysail code off conduct.</p>
-                                                    <div class="link-box">
-                                                        <h6><a href="index.php">Make your Appointment</a></h6>
-                                                    </div>
-                                                    <div class="email"><a href="mailto:info@mmgeneraltrading.com">info@mmgeneraltrading.com</a></div>
-                                                    <div class="btn-box">
-                                                        <a href="index.php" class="theme-btn btn-two"><span>More Details</span></a>
-                                                    </div>
-                                                </div>
+                            <div class="content-inner">
+                                <div class="row clearfix">
+                                    <div class="col-lg-6 col-md-12 col-sm-12 content-column">
+                                        <div class="content-box">
+                                            <div class="sec-title">
+                                                <span class="sub-title">Industry</span>
+                                                <h2>Oil & Gas Energy</h2>
                                             </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-12 col-sm-12 image-column">
-                                            <div class="image-box">
-                                                <figure class="image"><img src="assets/images/resource/industry-2.jpg" alt=""></figure>
+                                            <div class="inner-box">
+                                                <ul class="list-style-one clearfix">
+                                                    <li>Pipeline weather jacketing and refinery storage tank cladding</li>
+                                                    <li>Chemical storage tanks and process equipment</li>
+                                                    <li>Petrochemical catwalks, stair treads, and access decks</li>
+                                                    <li>Offshore structural framing</li>
+                                                </ul>
+                                                <p>Products used: <a href="products/aluminium-stucco-sheets.php">stucco embossed sheets</a>, <a href="products/stainless-steel-sheets.php">stainless steel sheets</a>, <a href="products/aluminium-chequered-sheets.php">chequered tread plates</a>, and <a href="products/stainless-steel-profiles.php">stainless steel profiles</a>.</p>
+                                                <div class="link-box">
+                                                    <h6><a href="contact.php">Request a Quote</a></h6>
+                                                </div>
+                                                <div class="email"><a href="mailto:info@mmgeneraltrading.com">info@mmgeneraltrading.com</a></div>
+                                                <div class="btn-box">
+                                                    <a href="products.php" class="theme-btn btn-two"><span>View Products</span></a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="content-inner">
-                                    <div class="row clearfix">
-                                        <div class="col-lg-6 col-md-12 col-sm-12 content-column">
-                                            <div class="content-box">
-                                                <div class="sec-title">
-                                                    <span class="sub-title">Industry</span>
-                                                    <h2>Oil & Gas Energy</h2>
-                                                </div>
-                                                <div class="inner-box">
-                                                    <ul class="list-style-one clearfix">
-                                                        <li>Mechanized Bridge Construction</li>
-                                                        <li>Movable Scaffolding Systems</li>
-                                                    </ul>
-                                                    <p>Lookout flogging bilge rat main shet bilge water nipper fluke to go on account heave down clap of thunder. Reef sails six pounders skysail code off conduct.</p>
-                                                    <div class="link-box">
-                                                        <h6><a href="index.php">Make your Appointment</a></h6>
-                                                    </div>
-                                                    <div class="email"><a href="mailto:info@mmgeneraltrading.com">info@mmgeneraltrading.com</a></div>
-                                                    <div class="btn-box">
-                                                        <a href="index.php" class="theme-btn btn-two"><span>More Details</span></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-12 col-sm-12 image-column">
-                                            <div class="image-box">
-                                                <figure class="image"><img src="assets/images/resource/industry-2.jpg" alt=""></figure>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="content-inner">
-                                    <div class="row clearfix">
-                                        <div class="col-lg-6 col-md-12 col-sm-12 content-column">
-                                            <div class="content-box">
-                                                <div class="sec-title">
-                                                    <span class="sub-title">Industry</span>
-                                                    <h2>Oil & Gas Energy</h2>
-                                                </div>
-                                                <div class="inner-box">
-                                                    <ul class="list-style-one clearfix">
-                                                        <li>Mechanized Bridge Construction</li>
-                                                        <li>Movable Scaffolding Systems</li>
-                                                    </ul>
-                                                    <p>Lookout flogging bilge rat main shet bilge water nipper fluke to go on account heave down clap of thunder. Reef sails six pounders skysail code off conduct.</p>
-                                                    <div class="link-box">
-                                                        <h6><a href="index.php">Make your Appointment</a></h6>
-                                                    </div>
-                                                    <div class="email"><a href="mailto:info@mmgeneraltrading.com">info@mmgeneraltrading.com</a></div>
-                                                    <div class="btn-box">
-                                                        <a href="index.php" class="theme-btn btn-two"><span>More Details</span></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-12 col-sm-12 image-column">
-                                            <div class="image-box">
-                                                <figure class="image"><img src="assets/images/resource/industry-2.jpg" alt=""></figure>
-                                            </div>
+                                    <div class="col-lg-6 col-md-12 col-sm-12 image-column">
+                                        <div class="image-box">
+                                            <figure class="image"><img src="assets/images/products/aluminium-stucco-sheets.png" alt="Aluminium stucco embossed sheets"></figure>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="p-tab" id="tab-3">
-                            <div class="single-item-carousel owl-carousel owl-theme owl-dots-none">
-                                <div class="content-inner">
-                                    <div class="row clearfix">
-                                        <div class="col-lg-6 col-md-12 col-sm-12 content-column">
-                                            <div class="content-box">
-                                                <div class="sec-title">
-                                                    <span class="sub-title">Industry</span>
-                                                    <h2>Heath Care & Pharma</h2>
-                                                </div>
-                                                <div class="inner-box">
-                                                    <ul class="list-style-one clearfix">
-                                                        <li>Mechanized Bridge Construction</li>
-                                                        <li>Movable Scaffolding Systems</li>
-                                                    </ul>
-                                                    <p>Lookout flogging bilge rat main shet bilge water nipper fluke to go on account heave down clap of thunder. Reef sails six pounders skysail code off conduct.</p>
-                                                    <div class="link-box">
-                                                        <h6><a href="index.php">Make your Appointment</a></h6>
-                                                    </div>
-                                                    <div class="email"><a href="mailto:info@mmgeneraltrading.com">info@mmgeneraltrading.com</a></div>
-                                                    <div class="btn-box">
-                                                        <a href="index.php" class="theme-btn btn-two"><span>More Details</span></a>
-                                                    </div>
-                                                </div>
+                            <div class="content-inner">
+                                <div class="row clearfix">
+                                    <div class="col-lg-6 col-md-12 col-sm-12 content-column">
+                                        <div class="content-box">
+                                            <div class="sec-title">
+                                                <span class="sub-title">Industry</span>
+                                                <h2>Marine & Offshore</h2>
                                             </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-12 col-sm-12 image-column">
-                                            <div class="image-box">
-                                                <figure class="image"><img src="assets/images/resource/industry-2.jpg" alt=""></figure>
+                                            <div class="inner-box">
+                                                <ul class="list-style-one clearfix">
+                                                    <li>Marine hulls, offshore superstructures, and fuel tanks</li>
+                                                    <li>Maritime gangways, offshore platforms, and ship deck covers</li>
+                                                    <li>Marine deck fittings and coastal handrails</li>
+                                                    <li>Marine railings and offshore structural framing</li>
+                                                </ul>
+                                                <p>Products used: <a href="products/plain-aluminium-sheets-plates.php">plain aluminium plate (5083)</a>, <a href="products/aluminium-chequered-sheets.php">chequered tread plates</a>, <a href="products/stainless-steel-sheets.php">stainless steel sheets</a>, and <a href="products/stainless-steel-profiles.php">stainless steel profiles</a>.</p>
+                                                <div class="link-box">
+                                                    <h6><a href="contact.php">Request a Quote</a></h6>
+                                                </div>
+                                                <div class="email"><a href="mailto:info@mmgeneraltrading.com">info@mmgeneraltrading.com</a></div>
+                                                <div class="btn-box">
+                                                    <a href="products.php" class="theme-btn btn-two"><span>View Products</span></a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="content-inner">
-                                    <div class="row clearfix">
-                                        <div class="col-lg-6 col-md-12 col-sm-12 content-column">
-                                            <div class="content-box">
-                                                <div class="sec-title">
-                                                    <span class="sub-title">Industry</span>
-                                                    <h2>Heath Care & Pharma</h2>
-                                                </div>
-                                                <div class="inner-box">
-                                                    <ul class="list-style-one clearfix">
-                                                        <li>Mechanized Bridge Construction</li>
-                                                        <li>Movable Scaffolding Systems</li>
-                                                    </ul>
-                                                    <p>Lookout flogging bilge rat main shet bilge water nipper fluke to go on account heave down clap of thunder. Reef sails six pounders skysail code off conduct.</p>
-                                                    <div class="link-box">
-                                                        <h6><a href="index.php">Make your Appointment</a></h6>
-                                                    </div>
-                                                    <div class="email"><a href="mailto:info@mmgeneraltrading.com">info@mmgeneraltrading.com</a></div>
-                                                    <div class="btn-box">
-                                                        <a href="index.php" class="theme-btn btn-two"><span>More Details</span></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-12 col-sm-12 image-column">
-                                            <div class="image-box">
-                                                <figure class="image"><img src="assets/images/resource/industry-2.jpg" alt=""></figure>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="content-inner">
-                                    <div class="row clearfix">
-                                        <div class="col-lg-6 col-md-12 col-sm-12 content-column">
-                                            <div class="content-box">
-                                                <div class="sec-title">
-                                                    <span class="sub-title">Industry</span>
-                                                    <h2>Heath Care & Pharma</h2>
-                                                </div>
-                                                <div class="inner-box">
-                                                    <ul class="list-style-one clearfix">
-                                                        <li>Mechanized Bridge Construction</li>
-                                                        <li>Movable Scaffolding Systems</li>
-                                                    </ul>
-                                                    <p>Lookout flogging bilge rat main shet bilge water nipper fluke to go on account heave down clap of thunder. Reef sails six pounders skysail code off conduct.</p>
-                                                    <div class="link-box">
-                                                        <h6><a href="index.php">Make your Appointment</a></h6>
-                                                    </div>
-                                                    <div class="email"><a href="mailto:info@mmgeneraltrading.com">info@mmgeneraltrading.com</a></div>
-                                                    <div class="btn-box">
-                                                        <a href="index.php" class="theme-btn btn-two"><span>More Details</span></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-12 col-sm-12 image-column">
-                                            <div class="image-box">
-                                                <figure class="image"><img src="assets/images/resource/industry-2.jpg" alt=""></figure>
-                                            </div>
+                                    <div class="col-lg-6 col-md-12 col-sm-12 image-column">
+                                        <div class="image-box">
+                                            <figure class="image"><img src="assets/images/products/plain-aluminium-sheets-plates.png" alt="Plain aluminium sheets and plates"></figure>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="p-tab" id="tab-4">
-                            <div class="single-item-carousel owl-carousel owl-theme owl-dots-none">
-                                <div class="content-inner">
-                                    <div class="row clearfix">
-                                        <div class="col-lg-6 col-md-12 col-sm-12 content-column">
-                                            <div class="content-box">
-                                                <div class="sec-title">
-                                                    <span class="sub-title">Industry</span>
-                                                    <h2>Automotive Chains</h2>
-                                                </div>
-                                                <div class="inner-box">
-                                                    <ul class="list-style-one clearfix">
-                                                        <li>Mechanized Bridge Construction</li>
-                                                        <li>Movable Scaffolding Systems</li>
-                                                    </ul>
-                                                    <p>Lookout flogging bilge rat main shet bilge water nipper fluke to go on account heave down clap of thunder. Reef sails six pounders skysail code off conduct.</p>
-                                                    <div class="link-box">
-                                                        <h6><a href="index.php">Make your Appointment</a></h6>
-                                                    </div>
-                                                    <div class="email"><a href="mailto:info@mmgeneraltrading.com">info@mmgeneraltrading.com</a></div>
-                                                    <div class="btn-box">
-                                                        <a href="index.php" class="theme-btn btn-two"><span>More Details</span></a>
-                                                    </div>
-                                                </div>
+                            <div class="content-inner">
+                                <div class="row clearfix">
+                                    <div class="col-lg-6 col-md-12 col-sm-12 content-column">
+                                        <div class="content-box">
+                                            <div class="sec-title">
+                                                <span class="sub-title">Industry</span>
+                                                <h2>Industrial & HVAC</h2>
                                             </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-12 col-sm-12 image-column">
-                                            <div class="image-box">
-                                                <figure class="image"><img src="assets/images/resource/industry-2.jpg" alt=""></figure>
+                                            <div class="inner-box">
+                                                <ul class="list-style-one clearfix">
+                                                    <li>HVAC ductwork protection and chilled water pipe insulation</li>
+                                                    <li>HVAC intake grilles, exhaust louvers, and chiller plant screening</li>
+                                                    <li>Cold storage rooms, walk-in freezers, and refrigerated containers</li>
+                                                    <li>Factory walkways, conveyor screens, and machine safety guards</li>
+                                                </ul>
+                                                <p>Products used: <a href="products/aluminium-stucco-sheets.php">stucco embossed sheets</a>, <a href="products/perforated-metal-sheets.php">perforated metal sheets</a>, <a href="products/aluminium-chequered-sheets.php">chequered plates</a>, and <a href="products/standard-aluminium-extrusions.php">standard aluminium extrusions</a>.</p>
+                                                <div class="link-box">
+                                                    <h6><a href="contact.php">Request a Quote</a></h6>
+                                                </div>
+                                                <div class="email"><a href="mailto:info@mmgeneraltrading.com">info@mmgeneraltrading.com</a></div>
+                                                <div class="btn-box">
+                                                    <a href="products.php" class="theme-btn btn-two"><span>View Products</span></a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="content-inner">
-                                    <div class="row clearfix">
-                                        <div class="col-lg-6 col-md-12 col-sm-12 content-column">
-                                            <div class="content-box">
-                                                <div class="sec-title">
-                                                    <span class="sub-title">Industry</span>
-                                                    <h2>Automotive Chains</h2>
-                                                </div>
-                                                <div class="inner-box">
-                                                    <ul class="list-style-one clearfix">
-                                                        <li>Mechanized Bridge Construction</li>
-                                                        <li>Movable Scaffolding Systems</li>
-                                                    </ul>
-                                                    <p>Lookout flogging bilge rat main shet bilge water nipper fluke to go on account heave down clap of thunder. Reef sails six pounders skysail code off conduct.</p>
-                                                    <div class="link-box">
-                                                        <h6><a href="index.php">Make your Appointment</a></h6>
-                                                    </div>
-                                                    <div class="email"><a href="mailto:info@mmgeneraltrading.com">info@mmgeneraltrading.com</a></div>
-                                                    <div class="btn-box">
-                                                        <a href="index.php" class="theme-btn btn-two"><span>More Details</span></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-12 col-sm-12 image-column">
-                                            <div class="image-box">
-                                                <figure class="image"><img src="assets/images/resource/industry-2.jpg" alt=""></figure>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="content-inner">
-                                    <div class="row clearfix">
-                                        <div class="col-lg-6 col-md-12 col-sm-12 content-column">
-                                            <div class="content-box">
-                                                <div class="sec-title">
-                                                    <span class="sub-title">Industry</span>
-                                                    <h2>Automotive Chains</h2>
-                                                </div>
-                                                <div class="inner-box">
-                                                    <ul class="list-style-one clearfix">
-                                                        <li>Mechanized Bridge Construction</li>
-                                                        <li>Movable Scaffolding Systems</li>
-                                                    </ul>
-                                                    <p>Lookout flogging bilge rat main shet bilge water nipper fluke to go on account heave down clap of thunder. Reef sails six pounders skysail code off conduct.</p>
-                                                    <div class="link-box">
-                                                        <h6><a href="index.php">Make your Appointment</a></h6>
-                                                    </div>
-                                                    <div class="email"><a href="mailto:info@mmgeneraltrading.com">info@mmgeneraltrading.com</a></div>
-                                                    <div class="btn-box">
-                                                        <a href="index.php" class="theme-btn btn-two"><span>More Details</span></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-12 col-sm-12 image-column">
-                                            <div class="image-box">
-                                                <figure class="image"><img src="assets/images/resource/industry-2.jpg" alt=""></figure>
-                                            </div>
+                                    <div class="col-lg-6 col-md-12 col-sm-12 image-column">
+                                        <div class="image-box">
+                                            <figure class="image"><img src="assets/images/products/perforated-metal-sheets.png" alt="Perforated metal sheets"></figure>
                                         </div>
                                     </div>
                                 </div>
@@ -795,7 +562,7 @@ $BLOG_POSTS = include __DIR__ . '/blog-data.php';
             <div class="auto-container">
                 <div class="sec-title centred">
                     <span class="sub-title">How We Work</span>
-                    <h2>Manufacturing Processes</h2>
+                    <h2>From Enquiry to Delivery</h2>
                 </div>
             </div>
             <div class="outer-container border-top border-bottom">
@@ -808,40 +575,40 @@ $BLOG_POSTS = include __DIR__ . '/blog-data.php';
                                     <div class="tab active-tab" id="tab-5">
                                         <div class="content-box">
                                             <span>Step 01</span>
-                                            <h3>Request Quotation</h3>
-                                            <p>Bilge rat main shet bilge water nipper fluketo go on account heave down clap of thunder. Reef sails six pounders skysail code off conduct.</p>
+                                            <h3>Send Your Requirement</h3>
+                                            <p>Share your drawings, bill of quantities, dimensions, alloy grade, or product name. Our sales team reviews the request and confirms what is needed.</p>
                                             <div class="btn-box">
-                                                <a href="index.php"><span>Request Your Quote</span></a>
+                                                <a href="contact.php"><span>Request Your Quote</span></a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="tab" id="tab-6">
                                         <div class="content-box">
                                             <span>Step 02</span>
-                                            <h3>Planning Stage</h3>
-                                            <p>Bilge rat main shet bilge water nipper fluketo go on account heave down clap of thunder. Reef sails six pounders skysail code off conduct.</p>
+                                            <h3>Technical Review</h3>
+                                            <p>Our sales engineers confirm alloy, temper, thickness, and finish, and recommend the right sealant, adhesive, or fire seal for the application.</p>
                                             <div class="btn-box">
-                                                <a href="index.php"><span>Request Your Quote</span></a>
+                                                <a href="contact.php"><span>Request Your Quote</span></a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="tab" id="tab-7">
                                         <div class="content-box">
                                             <span>Step 03</span>
-                                            <h3>Product Development</h3>
-                                            <p>Bilge rat main shet bilge water nipper fluketo go on account heave down clap of thunder. Reef sails six pounders skysail code off conduct.</p>
+                                            <h3>Stock Check & Quotation</h3>
+                                            <p>We check stock at our DIP - 2 Dubai facility and send a certified material quotation, typically within 24 hours.</p>
                                             <div class="btn-box">
-                                                <a href="index.php"><span>Request Your Quote</span></a>
+                                                <a href="contact.php"><span>Request Your Quote</span></a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="tab" id="tab-8">
                                         <div class="content-box">
                                             <span>Step 04</span>
-                                            <h3>Production / Evaluation</h3>
-                                            <p>Bilge rat main shet bilge water nipper fluketo go on account heave down clap of thunder. Reef sails six pounders skysail code off conduct.</p>
+                                            <h3>Processing</h3>
+                                            <p>Cut-to-length, coil slitting, and powder, PVDF, or PVD coating are carried out to your specification before dispatch.</p>
                                             <div class="btn-box">
-                                                <a href="index.php"><span>Request Your Quote</span></a>
+                                                <a href="contact.php"><span>Request Your Quote</span></a>
                                             </div>
                                         </div>
                                     </div>
@@ -849,9 +616,9 @@ $BLOG_POSTS = include __DIR__ . '/blog-data.php';
                                         <div class="content-box">
                                             <span>Step 05</span>
                                             <h3>Inspection & Delivery</h3>
-                                            <p>Bilge rat main shet bilge water nipper fluketo go on account heave down clap of thunder. Reef sails six pounders skysail code off conduct.</p>
+                                            <p>Every order ships with mill test reports, dimensional checks, and protective packaging for site delivery across the UAE and GCC.</p>
                                             <div class="btn-box">
-                                                <a href="index.php"><span>Request Your Quote</span></a>
+                                                <a href="contact.php"><span>Request Your Quote</span></a>
                                             </div>
                                         </div>
                                     </div>
@@ -862,23 +629,23 @@ $BLOG_POSTS = include __DIR__ . '/blog-data.php';
                                     <ul class="tab-btns tab-buttons clearfix">
                                         <li class="tab-btn active-btn" data-tab="#tab-5">
                                             <span>01</span>
-                                            <h4>Request&nbsp;Quotation</h4>
+                                            <h4>Send Your Requirement</h4>
                                         </li>
                                         <li class="tab-btn" data-tab="#tab-6">
                                             <span>02</span>
-                                            <h4>Planning&nbsp;Stage</h4>
+                                            <h4>Technical Review</h4>
                                         </li>
                                         <li class="tab-btn" data-tab="#tab-7">
                                             <span>03</span>
-                                            <h4>Product&nbsp;Development</h4>
+                                            <h4>Stock &amp; Quotation</h4>
                                         </li>
                                         <li class="tab-btn" data-tab="#tab-8">
                                             <span>04</span>
-                                            <h4>Production&nbsp;/&nbsp;Evaluation</h4>
+                                            <h4>Processing</h4>
                                         </li>
                                         <li class="tab-btn" data-tab="#tab-9">
                                             <span>05</span>
-                                            <h4>Inspection&nbsp;&&nbsp;Delivery</h4>
+                                            <h4>Inspection &amp; Delivery</h4>
                                         </li>
                                     </ul>
                                 </div>

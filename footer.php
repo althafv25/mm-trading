@@ -4,34 +4,16 @@
 <!-- main-footer -->
 <footer class="main-footer">
     <div class="auto-container">
-        <div class="footer-top">
-            <div class="row align-items-center">
-                <div class="col-lg-5 col-md-12 col-sm-12 logo-column">
+        
+        <div class="widget-section">
+            <div class="row clearfix">
+                <!-- Contact & Location Widget -->
+                <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
                     <figure class="footer-logo">
                         <a href="<?= $safe($PageRoot) ?>index.php">
                             <img src="<?= $safe($PageRoot) ?>assets/images/logo-white-text.png" alt="MM GENERAL TRADING L.L.C" style="max-height: 68px; width: auto;">
                         </a>
                     </figure>
-                    <!-- <div class="footer-company-tag">MM GENERAL TRADING L.L.C</div>
-                    <div class="footer-arabic-title">ام ام للتجاره العامه ذ.م.م</div> -->
-                </div>
-                <div class="col-lg-7 col-md-12 col-sm-12 form-column">
-                    <div class="subscribe-form">
-                        <form action="<?= $safe($PageRoot) ?>contact.php" method="get">
-                            <div class="form-group">
-                                <label style="color:#CBD5E1; font-weight: 600; font-family: 'D-DIN', sans-serif;">Subscribe for Industrial Product Catalog & Enquiries</label>
-                                <input type="email" name="email" placeholder="Enter your business email address..." required>
-                                <button type="submit"><i class="flaticon-send"></i></button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="widget-section">
-            <div class="row clearfix">
-                <!-- Contact & Location Widget -->
-                <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
                     <div class="footer-widget contact-widget">
                         <div class="widget-title">
                             <h3>Corporate Office</h3>
