@@ -23,6 +23,7 @@ $PageSchema = json_encode([
 ]);
 include __DIR__ . '/header.php';
 $PRODUCTS_DB = include __DIR__ . '/products-data.php';
+$BLOG_POSTS = include __DIR__ . '/blog-data.php';
 ?>
 
 
@@ -240,18 +241,18 @@ $PRODUCTS_DB = include __DIR__ . '/products-data.php';
                     <div class="col-xl-6 col-lg-12 col-md-12 title-column">
                         <div class="sec-title">
                             <span class="sub-title">Why Choose Us</span>
-                            <h2>Deliver On Time and On Budget</h2>
-                            <p>Onethose defining moments a moment when our nation is at war our economy turmoil.</p>
-                            <a href="index.php" class="theme-btn btn-two"><span>More Details</span></a>
+                            <h2>Certified Materials and Fast Dispatch from Dubai</h2>
+                            <p>MM General Trading L.L.C supplies certified industrial metals, sealants, and fire seals from our DIP - 2 base, with the technical support to specify the right product for your project.</p>
+                            <a href="about.php" class="theme-btn btn-two"><span>More Details</span></a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="right-column">
                 <div class="scroll-text">
-                    <ul class="text-list clearfix"> 
-                        <li>deliver on time & on budget</li>
-                        <li>A dedicated service</li>
+                    <ul class="text-list clearfix">
+                        <li>certified mill sources & full traceability</li>
+                        <li>fast dispatch from DIP - 2 Dubai</li>
                     </ul>
                 </div>
                 <div class="content-box">
@@ -259,15 +260,15 @@ $PRODUCTS_DB = include __DIR__ . '/products-data.php';
                         <div class="static-content">
                             <span class="count-text">01</span>
                             <div class="text">
-                                <h3>Smart Technology</h3>
-                                <p>Lookout flogging bilge rat main shet bilge water fluke to go on account heave down.</p>
+                                <h3>Certified Mill Sources</h3>
+                                <p>Every product is supplied from certified mill sources with full traceability and technical compliance documentation.</p>
                             </div>
                         </div>
                         <div class="overlay-content">
                             <div class="icon-box"><i class="flaticon-manufacture"></i></div>
                             <div class="text">
-                                <h3>Smart Technology</h3>
-                                <p>Lookout flogging bilge rat main shet bilge water fluke to go on account heave down.</p>
+                                <h3>Certified Mill Sources</h3>
+                                <p>Every product is supplied from certified mill sources with full traceability and technical compliance documentation.</p>
                             </div>
                         </div>
                     </div>
@@ -275,15 +276,15 @@ $PRODUCTS_DB = include __DIR__ . '/products-data.php';
                         <div class="static-content">
                             <span class="count-text">02</span>
                             <div class="text">
-                                <h3>On-Time Delivery</h3>
-                                <p>Get swash buckling with this trendy looking</p>
+                                <h3>Dubai DIP - 2 Hub</h3>
+                                <p>Stock held in Dubai Investments Park 2 gives fast turnaround across the UAE and GCC, with direct access to major highways and Jebel Ali Port.</p>
                             </div>
                         </div>
                         <div class="overlay-content">
                             <div class="icon-box"><i class="flaticon-manufacture"></i></div>
                             <div class="text">
-                                <h3>On-Time Delivery</h3>
-                                <p>Get swash buckling with this trendy looking</p>
+                                <h3>Dubai DIP - 2 Hub</h3>
+                                <p>Stock held in Dubai Investments Park 2 gives fast turnaround across the UAE and GCC, with direct access to major highways and Jebel Ali Port.</p>
                             </div>
                         </div>
                     </div>
@@ -291,15 +292,15 @@ $PRODUCTS_DB = include __DIR__ . '/products-data.php';
                         <div class="static-content">
                             <span class="count-text">03</span>
                             <div class="text">
-                                <h3>Easy & Affordable</h3>
-                                <p>Sheet bilge water nipper fluke to go on account </p>
+                                <h3>One Supplier, Full Scope</h3>
+                                <p>Plain sheets, chequered plates, stucco coils, perforated metal, extrusions, sealants, adhesives, and fire seals from a single source.</p>
                             </div>
                         </div>
                         <div class="overlay-content">
                             <div class="icon-box"><i class="flaticon-manufacture"></i></div>
                             <div class="text">
-                                <h3>Easy & Affordable</h3>
-                                <p>Sheet bilge water nipper fluke to go on account </p>
+                                <h3>One Supplier, Full Scope</h3>
+                                <p>Plain sheets, chequered plates, stucco coils, perforated metal, extrusions, sealants, adhesives, and fire seals from a single source.</p>
                             </div>
                         </div>
                     </div>
@@ -307,23 +308,23 @@ $PRODUCTS_DB = include __DIR__ . '/products-data.php';
                         <div class="static-content">
                             <span class="count-text">04</span>
                             <div class="text">
-                                <h3>24/7 Support</h3>
-                                <p>Coast schooner poop deck main sheet</p>
+                                <h3>Engineering & Processing Support</h3>
+                                <p>Sales engineers help with alloy, temper, and product selection, and coating and coil slitting services are available.</p>
                             </div>
                         </div>
                         <div class="overlay-content">
                             <div class="icon-box"><i class="flaticon-manufacture"></i></div>
                             <div class="text">
-                                <h3>24/7 Support</h3>
-                                <p>Coast schooner poop deck main sheet</p>
+                                <h3>Engineering & Processing Support</h3>
+                                <p>Sales engineers help with alloy, temper, and product selection, and coating and coil slitting services are available.</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="scroll-text">
-                    <ul class="text-list clearfix"> 
-                        <li>deliver on time & on budget</li>
-                        <li>A dedicated service</li>
+                    <ul class="text-list clearfix">
+                        <li>certified mill sources & full traceability</li>
+                        <li>fast dispatch from DIP - 2 Dubai</li>
                     </ul>
                 </div>
             </div>
@@ -962,261 +963,32 @@ $PRODUCTS_DB = include __DIR__ . '/products-data.php';
 
         <!-- news-section -->
         <section class="news-section sec-pad">
-            <div class="tabs-box">
-                <div class="upper-box">
-                    <div class="auto-container">
-                        <div class="sec-title centred">
-                            <span class="sub-title">News & Updates</span>
-                            <h2>Latest From Our Blog</h2>
-                        </div>
-                        <div class="tab-btn-box">
-                            <ul class="tab-btns tab-buttons clearfix">
-                                <li class="tab-btn active-btn" data-tab="#tab-10">View All</li>
-                                <li class="tab-btn" data-tab="#tab-11">News</li>
-                                <li class="tab-btn" data-tab="#tab-12">Press Realease</li>
-                                <li class="tab-btn" data-tab="#tab-13">Tips & Tricks</li>
-                            </ul>
-                            <div class="btn-box">
-                                <a href="products.php"><span>View All Post</span></a>
-                            </div>
-                        </div>
-                    </div>
+            <div class="auto-container">
+                <div class="sec-title centred">
+                    <span class="sub-title">News & Updates</span>
+                    <h2>Latest From Our Blog</h2>
                 </div>
-                <div class="tabs-content">
-                    <div class="auto-container">
-                        <div class="tab active-tab" id="tab-10">
-                            <div class="row clearfix">
-                                <div class="col-lg-4 col-md-6 col-sm-12 news-block">
-                                    <div class="news-block-one">
-                                        <div class="inner-box">
-                                            <div class="image-box">
-                                                <figure class="image"><img src="assets/images/news/news-1.jpg" alt=""></figure>
-                                                <div class="category"><a href="products.php">Manufacturing</a></div>
-                                                <div class="view-btn"><a href="assets/images/news/news-1.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-zoom-in"></i></a></div>
-                                            </div>
-                                            <div class="lower-content">
-                                                <ul class="post-info clearfix">
-                                                    <li><i class="fa-regular fa-calendar"></i>14.10.2022</li>
-                                                    <li><i class="fa-regular fa-user"></i><a href="products.php">Lillian Grace</a></li>
-                                                </ul>
-                                                <h3><a href="products.php">Industry’s Imperatives For Sustainability in...</a></h3>
-                                            </div>
-                                        </div>
+                <div class="row clearfix">
+                    <?php foreach (array_slice($BLOG_POSTS, 0, 3) as $post): ?>
+                        <div class="col-lg-4 col-md-6 col-sm-12 news-block">
+                            <div class="news-block-one">
+                                <div class="inner-box">
+                                    <div class="image-box">
+                                        <figure class="image"><img src="assets/images/<?= $safe($post['image']) ?>" alt="<?= $safe($post['title']) ?>"></figure>
+                                        <div class="category"><a href="blog.php"><?= $safe($post['categoryLabel']) ?></a></div>
                                     </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-12 news-block">
-                                    <div class="news-block-one">
-                                        <div class="inner-box">
-                                            <div class="image-box">
-                                                <figure class="image"><img src="assets/images/news/news-2.jpg" alt=""></figure>
-                                                <div class="category"><a href="products.php">Smart Factory</a></div>
-                                                <div class="view-btn"><a href="assets/images/news/news-2.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-zoom-in"></i></a></div>
-                                            </div>
-                                            <div class="lower-content">
-                                                <ul class="post-info clearfix">
-                                                    <li><i class="fa-regular fa-calendar"></i>28.09.2022</li>
-                                                    <li><i class="fa-regular fa-user"></i><a href="products.php">Oliver Jack</a></li>
-                                                </ul>
-                                                <h3><a href="products.php">Digital Manufacturing Week 2020 – Leading the Way</a></h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-12 news-block">
-                                    <div class="news-block-one">
-                                        <div class="inner-box">
-                                            <div class="image-box">
-                                                <figure class="image"><img src="assets/images/news/news-3.jpg" alt=""></figure>
-                                                <div class="category"><a href="products.php">Innovation</a></div>
-                                                <div class="view-btn"><a href="assets/images/news/news-3.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-zoom-in"></i></a></div>
-                                            </div>
-                                            <div class="lower-content">
-                                                <ul class="post-info clearfix">
-                                                    <li><i class="fa-regular fa-calendar"></i>06.09.2022</li>
-                                                    <li><i class="fa-regular fa-user"></i><a href="products.php">Jacob Harry</a></li>
-                                                </ul>
-                                                <h3><a href="products.php">Building Back a Sustainable Manufacturing Sector</a></h3>
-                                            </div>
-                                        </div>
+                                    <div class="lower-content">
+                                        <h3><a href="<?= $safe($post['link']) ?>"><?= $safe($post['title']) ?></a></h3>
+                                        <p><?= $safe($post['excerpt']) ?></p>
+                                        <a href="<?= $safe($post['link']) ?>" class="read-more">Read more <i class="fa-solid fa-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="tab" id="tab-11">
-                            <div class="row clearfix">
-                                <div class="col-lg-4 col-md-6 col-sm-12 news-block">
-                                    <div class="news-block-one">
-                                        <div class="inner-box">
-                                            <div class="image-box">
-                                                <figure class="image"><img src="assets/images/news/news-2.jpg" alt=""></figure>
-                                                <div class="category"><a href="products.php">Smart Factory</a></div>
-                                                <div class="view-btn"><a href="assets/images/news/news-2.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-zoom-in"></i></a></div>
-                                            </div>
-                                            <div class="lower-content">
-                                                <ul class="post-info clearfix">
-                                                    <li><i class="fa-regular fa-calendar"></i>28.09.2022</li>
-                                                    <li><i class="fa-regular fa-user"></i><a href="products.php">Oliver Jack</a></li>
-                                                </ul>
-                                                <h3><a href="products.php">Digital Manufacturing Week 2020 – Leading the Way</a></h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-12 news-block">
-                                    <div class="news-block-one">
-                                        <div class="inner-box">
-                                            <div class="image-box">
-                                                <figure class="image"><img src="assets/images/news/news-1.jpg" alt=""></figure>
-                                                <div class="category"><a href="products.php">Manufacturing</a></div>
-                                                <div class="view-btn"><a href="assets/images/news/news-1.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-zoom-in"></i></a></div>
-                                            </div>
-                                            <div class="lower-content">
-                                                <ul class="post-info clearfix">
-                                                    <li><i class="fa-regular fa-calendar"></i>14.10.2022</li>
-                                                    <li><i class="fa-regular fa-user"></i><a href="products.php">Lillian Grace</a></li>
-                                                </ul>
-                                                <h3><a href="products.php">Industry’s Imperatives For Sustainability in...</a></h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-12 news-block">
-                                    <div class="news-block-one">
-                                        <div class="inner-box">
-                                            <div class="image-box">
-                                                <figure class="image"><img src="assets/images/news/news-3.jpg" alt=""></figure>
-                                                <div class="category"><a href="products.php">Innovation</a></div>
-                                                <div class="view-btn"><a href="assets/images/news/news-3.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-zoom-in"></i></a></div>
-                                            </div>
-                                            <div class="lower-content">
-                                                <ul class="post-info clearfix">
-                                                    <li><i class="fa-regular fa-calendar"></i>06.09.2022</li>
-                                                    <li><i class="fa-regular fa-user"></i><a href="products.php">Jacob Harry</a></li>
-                                                </ul>
-                                                <h3><a href="products.php">Building Back a Sustainable Manufacturing Sector</a></h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab" id="tab-12">
-                            <div class="row clearfix">
-                                <div class="col-lg-4 col-md-6 col-sm-12 news-block">
-                                    <div class="news-block-one">
-                                        <div class="inner-box">
-                                            <div class="image-box">
-                                                <figure class="image"><img src="assets/images/news/news-1.jpg" alt=""></figure>
-                                                <div class="category"><a href="products.php">Manufacturing</a></div>
-                                                <div class="view-btn"><a href="assets/images/news/news-1.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-zoom-in"></i></a></div>
-                                            </div>
-                                            <div class="lower-content">
-                                                <ul class="post-info clearfix">
-                                                    <li><i class="fa-regular fa-calendar"></i>14.10.2022</li>
-                                                    <li><i class="fa-regular fa-user"></i><a href="products.php">Lillian Grace</a></li>
-                                                </ul>
-                                                <h3><a href="products.php">Industry’s Imperatives For Sustainability in...</a></h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-12 news-block">
-                                    <div class="news-block-one">
-                                        <div class="inner-box">
-                                            <div class="image-box">
-                                                <figure class="image"><img src="assets/images/news/news-3.jpg" alt=""></figure>
-                                                <div class="category"><a href="products.php">Innovation</a></div>
-                                                <div class="view-btn"><a href="assets/images/news/news-3.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-zoom-in"></i></a></div>
-                                            </div>
-                                            <div class="lower-content">
-                                                <ul class="post-info clearfix">
-                                                    <li><i class="fa-regular fa-calendar"></i>06.09.2022</li>
-                                                    <li><i class="fa-regular fa-user"></i><a href="products.php">Jacob Harry</a></li>
-                                                </ul>
-                                                <h3><a href="products.php">Building Back a Sustainable Manufacturing Sector</a></h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-12 news-block">
-                                    <div class="news-block-one">
-                                        <div class="inner-box">
-                                            <div class="image-box">
-                                                <figure class="image"><img src="assets/images/news/news-2.jpg" alt=""></figure>
-                                                <div class="category"><a href="products.php">Smart Factory</a></div>
-                                                <div class="view-btn"><a href="assets/images/news/news-2.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-zoom-in"></i></a></div>
-                                            </div>
-                                            <div class="lower-content">
-                                                <ul class="post-info clearfix">
-                                                    <li><i class="fa-regular fa-calendar"></i>28.09.2022</li>
-                                                    <li><i class="fa-regular fa-user"></i><a href="products.php">Oliver Jack</a></li>
-                                                </ul>
-                                                <h3><a href="products.php">Digital Manufacturing Week 2020 – Leading the Way</a></h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab" id="tab-13">
-                            <div class="row clearfix">
-                                <div class="col-lg-4 col-md-6 col-sm-12 news-block">
-                                    <div class="news-block-one">
-                                        <div class="inner-box">
-                                            <div class="image-box">
-                                                <figure class="image"><img src="assets/images/news/news-1.jpg" alt=""></figure>
-                                                <div class="category"><a href="products.php">Manufacturing</a></div>
-                                                <div class="view-btn"><a href="assets/images/news/news-1.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-zoom-in"></i></a></div>
-                                            </div>
-                                            <div class="lower-content">
-                                                <ul class="post-info clearfix">
-                                                    <li><i class="fa-regular fa-calendar"></i>14.10.2022</li>
-                                                    <li><i class="fa-regular fa-user"></i><a href="products.php">Lillian Grace</a></li>
-                                                </ul>
-                                                <h3><a href="products.php">Industry’s Imperatives For Sustainability in...</a></h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-12 news-block">
-                                    <div class="news-block-one">
-                                        <div class="inner-box">
-                                            <div class="image-box">
-                                                <figure class="image"><img src="assets/images/news/news-2.jpg" alt=""></figure>
-                                                <div class="category"><a href="products.php">Smart Factory</a></div>
-                                                <div class="view-btn"><a href="assets/images/news/news-2.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-zoom-in"></i></a></div>
-                                            </div>
-                                            <div class="lower-content">
-                                                <ul class="post-info clearfix">
-                                                    <li><i class="fa-regular fa-calendar"></i>28.09.2022</li>
-                                                    <li><i class="fa-regular fa-user"></i><a href="products.php">Oliver Jack</a></li>
-                                                </ul>
-                                                <h3><a href="products.php">Digital Manufacturing Week 2020 – Leading the Way</a></h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-12 news-block">
-                                    <div class="news-block-one">
-                                        <div class="inner-box">
-                                            <div class="image-box">
-                                                <figure class="image"><img src="assets/images/news/news-3.jpg" alt=""></figure>
-                                                <div class="category"><a href="products.php">Innovation</a></div>
-                                                <div class="view-btn"><a href="assets/images/news/news-3.jpg" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-zoom-in"></i></a></div>
-                                            </div>
-                                            <div class="lower-content">
-                                                <ul class="post-info clearfix">
-                                                    <li><i class="fa-regular fa-calendar"></i>06.09.2022</li>
-                                                    <li><i class="fa-regular fa-user"></i><a href="products.php">Jacob Harry</a></li>
-                                                </ul>
-                                                <h3><a href="products.php">Building Back a Sustainable Manufacturing Sector</a></h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php endforeach; ?>
+                </div>
+                <div class="btn-box centred" style="margin-top: 30px;">
+                    <a href="blog.php" class="theme-btn btn-one"><span>View All Posts</span></a>
                 </div>
             </div>
         </section>

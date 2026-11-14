@@ -67,6 +67,7 @@
                                 <li><a href="<?= $safe($PageRoot) ?>about.php">About Us</a></li>
                                 <li><a href="<?= $safe($PageRoot) ?>products.php">Products</a></li>
                                 <li><a href="<?= $safe($PageRoot) ?>projects.php">Projects</a></li>
+                                <li><a href="<?= $safe($PageRoot) ?>blog.php">Blog</a></li>
                                 <li><a href="<?= $safe($PageRoot) ?>contact.php">Contact</a></li>
                             </ul>
                         </div>

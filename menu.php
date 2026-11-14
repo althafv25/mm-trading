@@ -104,6 +104,7 @@ $safe = static fn($value) => htmlspecialchars((string) $value, ENT_QUOTES, 'UTF-
                                             </ul>
                                         </li>
                                         <li class="<?= $Page === 'projects' ? 'current' : '' ?>"><a href="<?= $safe($PageRoot) ?>projects.php">Projects</a></li>
+                                        <li class="<?= $Page === 'blog' ? 'current' : '' ?>"><a href="<?= $safe($PageRoot) ?>blog.php">Blog</a></li>
                                         <li class="<?= $Page === 'contact' ? 'current' : '' ?>"><a href="<?= $safe($PageRoot) ?>contact.php">Contact</a></li>
                                     </ul>
                                 </div>
