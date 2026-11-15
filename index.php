@@ -448,7 +448,7 @@ $BLOG_POSTS = include __DIR__ . '/blog-data.php';
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-sm-12 image-column">
                                         <div class="image-box">
-                                            <figure class="image"><img src="assets/images/products/aluminium-stucco-sheets.png" alt="Aluminium stucco embossed sheets"></figure>
+                                            <figure class="image"><img src="assets/images/products/aluminium-stucco-sheets.jpg" alt="Aluminium stucco embossed sheets"></figure>
                                         </div>
                                     </div>
                                 </div>
@@ -483,7 +483,7 @@ $BLOG_POSTS = include __DIR__ . '/blog-data.php';
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-sm-12 image-column">
                                         <div class="image-box">
-                                            <figure class="image"><img src="assets/images/products/plain-aluminium-sheets-plates.png" alt="Plain aluminium sheets and plates"></figure>
+                                            <figure class="image"><img src="assets/images/products/plain-aluminium-sheets-plates.jpg" alt="Plain aluminium sheets and plates"></figure>
                                         </div>
                                     </div>
                                 </div>

@@ -7,7 +7,7 @@ return [
         'title' => 'Choosing Aluminium Chequered Plate for Walkways and Vehicle Decks',
         'category' => 'metals',
         'categoryLabel' => 'Aluminium & Metals',
-        'image' => 'products/plain-aluminium-sheets-plates.png',
+        'image' => 'products/plain-aluminium-sheets-plates.jpg',
         'excerpt' => '5-bar and diamond patterned tread plates give slip-resistant footing on industrial walkways, commercial vehicle decks, maritime decks, and public ramps.',
         'link' => 'products/aluminium-chequered-sheets.php',
     ],
