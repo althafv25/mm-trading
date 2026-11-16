@@ -992,7 +992,7 @@ p {
 
 .home-product-box .img-wrapper {
   position: relative;
-  height: 230px;
+  /* height: 230px; */
   background: var(--mm-slate-50);
   display: flex;
   align-items: center;
@@ -1005,7 +1005,7 @@ p {
   width: auto;
   max-width: 100%;
   object-fit: contain;
-  padding: 18px;
+  /* padding: 18px; */
   transition: transform 0.35s ease;
 }
 

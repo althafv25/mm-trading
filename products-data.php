@@ -617,7 +617,7 @@ return [
       'Lock Plate' => '71604 / 9888',
     ],
     'applications' => ['Swing doors and hinged entrance doors', 'Hinged windows and fixed frame assemblies', 'Interior partitions and shutter assemblies'],
-    'hero_image' => 'assets/images/products/thumbnails/architectural-aluminium-profiles.jpg',
+    'hero_image' => 'assets/images/products/thumbnails/hinged-doors.jpg',
     'catalogue_page' => null,
     'catalogue_page_img' => '',
   ],
