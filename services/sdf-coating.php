@@ -1,4 +1,4 @@
 <?php
 $PageRoot = '../';
 $slug = 'sdf-coating';
-include __DIR__ . '/../product-detail.php';
+include __DIR__ . '/../services-detail.php';

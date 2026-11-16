@@ -151,63 +151,76 @@ $status = $_GET['status'] ?? '';
                 </div>
             </div>
             <!-- Form Column -->
+            <?php
+            $CONTACT_PRODUCTS = include __DIR__ . '/products-data.php';
+            $CONTACT_SERVICES = include __DIR__ . '/services-data.php';
+            $divisionGroups = [
+                'metals' => 'Aluminium & Metals',
+                'profile-systems' => 'Profile Systems',
+                'chemicals' => 'Sealants & Chemicals',
+                'adhesives' => 'Wood & Adhesives',
+                'fire-acoustic' => 'Passive Fire & Acoustic',
+                'hardware' => 'Hardware & Accessories',
+                'services' => 'Coating & Processing',
+            ];
+            $optionGroups = [];
+            $CONTACT_ALL = $CONTACT_SERVICES + $CONTACT_PRODUCTS;
+            foreach ($CONTACT_ALL as $item) {
+                $optionGroups[$item['division']][] = $item['title'];
+            }
+            $preselect = $_GET['interest'] ?? '';
+            ?>
             <div class="col-lg-6 col-md-12 col-sm-12 form-column" style="margin-bottom: 30px;">
-                <div class="form-inner" style="background: #ffffff; border-radius: 12px; border: 1px solid #E2E8F0; padding: 35px 30px; box-shadow: 0 8px 24px rgba(15, 28, 38, 0.06); height: 100%;">
-                    <div style="margin-bottom: 24px;">
-                        <span class="sub-title" style="color: #D69A2D; font-weight: 700; text-transform: uppercase; font-size: 13px; letter-spacing: 0.08em;">Quick RFQ / Proposal</span>
-                        <h3 style="font-family: 'D-DIN', sans-serif; font-weight: 700; color: #0F1C26; margin-top: 4px;">Request Product Quotation</h3>
-                        <p style="font-size: 14px; color: #64748B; margin-top: 4px;">Submit your material specifications or project bill of quantities.</p>
+                <div class="rfq-card">
+                    <div class="rfq-head">
+                        <span class="rfq-kicker">Quick RFQ / Proposal</span>
+                        <h4>Request Product Quotation</h4>
+                        <p>Submit your material specifications or project bill of quantities. Our sales engineers reply within 24 hours.</p>
                     </div>
-
                     <form method="post" action="sendemail.php" id="contact-form">
-                        <div class="row clearfix">
-                            <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                <label style="font-size: 13px; font-weight: 600; color: #0F1C26;">Your Name *</label>
-                                <input type="text" name="name" placeholder="Full name" required>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                <label style="font-size: 13px; font-weight: 600; color: #0F1C26;">Email Address *</label>
-                                <input type="email" name="email" placeholder="name@company.com" value="<?= $safe($_GET['email'] ?? '') ?>" required>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                <label style="font-size: 13px; font-weight: 600; color: #0F1C26;">Phone Number</label>
-                                <input type="text" name="phone" placeholder="+971 -- --- ----">
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                <label style="font-size: 13px; font-weight: 600; color: #0F1C26;">Company Name</label>
-                                <input type="text" name="company" placeholder="Organization / Entity">
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                <label style="font-size: 13px; font-weight: 600; color: #0F1C26;">Product Required</label>
-                                <div class="select-box">
-                                    <select class="selectmenu" name="interest">
-                                        <option value="Plain Aluminium Sheets & Plates">Plain Aluminium Sheets & Plates</option>
-                                        <option value="Aluminium Chequered Sheets & Tread Plates">Aluminium Chequered Sheets & Tread Plates</option>
-                                        <option value="Aluminium Stucco Embossed Sheets">Aluminium Stucco Embossed Sheets</option>
-                                        <option value="Perforated Metal Sheets">Perforated Metal Sheets</option>
-                                        <option value="Stainless Steel Sheets & Plates">Stainless Steel Sheets & Plates</option>
-                                        <option value="Stainless Steel Profiles & Pipes">Stainless Steel Profiles & Pipes</option>
-                                        <option value="Architectural Aluminium Profiles">Architectural Aluminium Profiles</option>
-                                        <option value="Standard Aluminium Extrusions">Standard Aluminium Extrusions</option>
-                                        <option value="GUIBAO Structural Glazing Silicone">GUIBAO Structural Glazing Silicone</option>
-                                        <option value="GUIBAO Weatherproofing Sealants">GUIBAO Weatherproofing Sealants</option>
-                                        <option value="TKK PU Foam – Top Foam">TKK PU Foam – Top Foam</option>
-                                        <option value="Astral Bondtite Wood Adhesives">Astral Bondtite Wood Adhesives</option>
-                                        <option value="SEALz Concealed Drop Seals">SEALz Concealed Drop Seals</option>
-                                        <option value="SEALz Intumescent Fire Seals">SEALz Intumescent Fire Seals</option>
-                                        <option value="Coating & Coil Cutting Services">Coating & Coil Cutting Services</option>
+                        <div class="rfq-body">
+                            <div class="rfq-row">
+                                <div class="rfq-field">
+                                    <label for="contact-name">Your Name <span>*</span></label>
+                                    <input id="contact-name" type="text" name="name" placeholder="Full name" required>
+                                </div>
+                                <div class="rfq-field">
+                                    <label for="contact-email">Email Address <span>*</span></label>
+                                    <input id="contact-email" type="email" name="email" placeholder="name@company.com" value="<?= $safe($_GET['email'] ?? '') ?>" required>
+                                </div>
+                                <div class="rfq-field">
+                                    <label for="contact-phone">Phone Number</label>
+                                    <input id="contact-phone" type="text" name="phone" placeholder="+971 __ ___ ____">
+                                </div>
+                                <div class="rfq-field">
+                                    <label for="contact-company">Company Name</label>
+                                    <input id="contact-company" type="text" name="company" placeholder="Organization / entity">
+                                </div>
+                                <div class="rfq-field full">
+                                    <label for="contact-interest">Product Required</label>
+                                    <select id="contact-interest" name="interest">
+                                        <option value="">Select a product or service</option>
+                                        <?php foreach ($divisionGroups as $divKey => $divLabel): if (empty($optionGroups[$divKey])) continue; ?>
+                                            <optgroup label="<?= $safe($divLabel) ?>">
+                                                <?php foreach ($optionGroups[$divKey] as $optTitle): ?>
+                                                    <option value="<?= $safe($optTitle) ?>"<?= $preselect === $optTitle ? ' selected' : '' ?>><?= $safe($optTitle) ?></option>
+                                                <?php endforeach; ?>
+                                            </optgroup>
+                                        <?php endforeach; ?>
+                                        <option value="Other / Not Sure"<?= $preselect === 'Other / Not Sure' ? ' selected' : '' ?>>Other / Not Sure</option>
                                     </select>
                                 </div>
+                                <div class="rfq-field full">
+                                    <label for="contact-message">Detailed Message / Material Specs <span>*</span></label>
+                                    <textarea id="contact-message" name="message" rows="4" placeholder="Provide dimensions, alloy grade, quantity, or delivery requirements..." required></textarea>
+                                </div>
                             </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                <label style="font-size: 13px; font-weight: 600; color: #0F1C26;">Detailed Message / Material Specs *</label>
-                                <textarea name="message" placeholder="Provide dimensions, alloy grade, quantity, or delivery requirements..." rows="4" required></textarea>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                <button type="submit" class="theme-btn btn-one" style="width: 100%; padding: 14px 28px;">
-                                    <span>Submit Request for Quotation</span>
-                                </button>
-                            </div>
+                        </div>
+                        <div class="rfq-foot">
+                            <small>Fields marked <span style="color:#D69A2D;">*</span> are required.</small>
+                            <button type="submit" class="rfq-submit">
+                                <i class="fa-solid fa-paper-plane"></i> Submit Request for Quotation
+                            </button>
                         </div>
                     </form>
                 </div>

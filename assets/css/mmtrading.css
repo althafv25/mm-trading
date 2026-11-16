@@ -1152,7 +1152,7 @@ p {
 }
 
 .case-section .case-block-one .inner-box .image-box .image {
-  height: 260px;
+  /* height: 260px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1160,7 +1160,7 @@ p {
   padding: 18px;
   margin-bottom: 0;
   position: relative;
-  overflow: hidden;
+  overflow: hidden; */
 }
 
 .case-section .case-block-one .inner-box .image-box .image a {
@@ -1172,8 +1172,8 @@ p {
 }
 
 .case-section .case-block-one .inner-box .image-box .image img {
-  max-height: 220px;
-  max-width: 90%;
+  /* max-height: 220px;
+  max-width: 90%; */
   width: auto !important;
   height: auto;
   object-fit: contain;
@@ -1508,4 +1508,76 @@ p {
   .main-menu .navigation > li.dropdown > .megamenu.mega-narrow .mega-grid{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+}
+
+
+/** sidebar category list **/
+.category-widget .cat-list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.category-widget .cat-list li{
+  margin: 0 0 8px 0;
+  padding: 0;
+}
+.category-widget .cat-list li:before{
+  display: none;
+}
+.category-widget .cat-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 11px 14px;
+  border-radius: 8px;
+  border: 1px solid #E2E8F0;
+  background: #F8FAFC;
+  color: #1E293B;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.category-widget .cat-item span{
+  flex: 1;
+  min-width: 0;
+}
+.category-widget .cat-item i{
+  flex-shrink: 0;
+  font-size: 11px;
+  color: #D69A2D;
+}
+.category-widget .cat-item:hover{
+  background: #FFFFFF;
+  border-color: #D69A2D;
+  color: #0F1C26;
+}
+.category-widget .cat-item.is-active{
+  background: #D69A2D;
+  border-color: #D69A2D;
+  color: #FFFFFF;
+}
+.category-widget .cat-item.is-active i{
+  color: #FFFFFF;
+}
+
+
+/** RFQ select field (contact page) **/
+.rfq-field select{
+  width: 100%;
+  background: #F8FAFC;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  padding: 11px 14px;
+  font-size: 14px;
+  color: #0F1C26;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+.rfq-field select:focus{
+  border-color: #D69A2D;
+  box-shadow: 0 0 0 3px rgba(214, 154, 45, 0.18);
+  background: #FFFFFF;
 }

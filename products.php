@@ -23,7 +23,7 @@ $divisions = [
         'name' => 'All Product Families',
         'short_name' => 'All Products',
         'icon' => 'fa-solid fa-boxes-stacked',
-        'badge' => '36 Verified Product Lines'
+        'badge' => '31 Verified Product Lines'
     ],
     'metals' => [
         'name' => 'Aluminium & Metal Products',
@@ -136,7 +136,7 @@ function renderProductBox($slug, $product) {
         <!-- Filter Bar -->
         <div class="filter-bar text-center" style="margin-bottom: 45px; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;">
             <button type="button" class="product-filter-btn <?= $activeFilter === 'all' ? 'is-active' : '' ?>" data-division="all">
-                <i class="fa-solid fa-boxes-stacked"></i> All Products <span class="badge-count">36</span>
+                <i class="fa-solid fa-boxes-stacked"></i> All Products <span class="badge-count">31</span>
             </button>
             <?php foreach ($divisions as $divKey => $divInfo): ?>
                 <?php if ($divKey === 'all') continue; ?>

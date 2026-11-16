@@ -237,15 +237,15 @@ $allProductsInDivision = array_filter($PRODUCTS_DB, fn($p) => $p['division'] ===
                             <h3 style="font-size: 19px; font-weight: 700; color: #0F1C26; margin: 0;">In This Category</h3>
                         </div>
                         <div class="widget-content">
-                            <ul class="category-list clearfix" style="list-style: none; padding: 0; margin: 0;">
-                                <?php foreach ($allProductsInDivision as $pSlug => $pItem): 
+                            <ul class="cat-list">
+                                <?php foreach ($allProductsInDivision as $pSlug => $pItem):
                                     $targetDir = ($pItem['division'] === 'services') ? 'services/' : 'products/';
                                     $targetUrl = $safe($PageRoot) . $targetDir . $pSlug . '.php';
                                 ?>
-                                    <li style="margin-bottom: 8px;">
-                                        <a href="<?= $targetUrl ?>" style="display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; border-radius: 6px; font-size: 14px; font-weight: 600; text-decoration: none; transition: all 0.2s; <?= $pSlug === $currentSlug ? 'background: #D69A2D; color: #ffffff;' : 'background: #F8FAFC; color: #1E293B;' ?>">
+                                    <li>
+                                        <a href="<?= $targetUrl ?>" class="cat-item<?= $pSlug === $currentSlug ? ' is-active' : '' ?>">
                                             <span><?= htmlspecialchars($pItem['title'], ENT_QUOTES, 'UTF-8') ?></span>
-                                            <i class="fa-solid fa-chevron-right" style="font-size: 11px;"></i>
+                                            <i class="fa-solid fa-chevron-right"></i>
                                         </a>
                                     </li>
                                 <?php endforeach; ?>

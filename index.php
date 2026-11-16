@@ -172,7 +172,7 @@ $BLOG_POSTS = include __DIR__ . '/blog-data.php';
                             <div class="inner-box">
                                 <div class="icon-box"><i class="flaticon-factory"></i></div>
                                 <div class="count-outer count-box">
-                                    <span class="count-text" data-speed="1500" data-stop="36">0</span>
+                                    <span class="count-text" data-speed="1500" data-stop="31">0</span>
                                 </div>
                                 <div class="text">
                                     <h3>Product Lines</h3>
@@ -568,7 +568,7 @@ $BLOG_POSTS = include __DIR__ . '/blog-data.php';
                 </div>
             </div>
             <div class="outer-container border-top border-bottom">
-                <div class="bg-layer" style="background-image: url(assets/images/background/working-bg.jpg);"></div>
+                <div class="bg-layer" style="background-image: url(assets/images/resource/working-bg.jpg);"></div>
                 <div class="auto-container">
                     <div class="tabs-box">
                         <div class="row clearfix">
@@ -674,7 +674,7 @@ $BLOG_POSTS = include __DIR__ . '/blog-data.php';
                         <div class="quote-box">
                             <div class="quote"><i class="flaticon-quote"></i></div>
                         </div>
-                        <figure class="thumb-box"><img src="assets/images/resource/testimonial-1.jpg" alt=""></figure>
+                        <!-- <figure class="thumb-box"><img src="assets/images/resource/testimonial-1.jpg" alt=""></figure> -->
                         <div class="inner-box">
                             <ul class="rating clearfix">
                                 <li><i class="flaticon-star"></i></li>
@@ -692,7 +692,7 @@ $BLOG_POSTS = include __DIR__ . '/blog-data.php';
                         <div class="quote-box">
                             <div class="quote"><i class="flaticon-quote"></i></div>
                         </div>
-                        <figure class="thumb-box"><img src="assets/images/resource/testimonial-1.jpg" alt=""></figure>
+                        <!-- <figure class="thumb-box"><img src="assets/images/resource/testimonial-1.jpg" alt=""></figure> -->
                         <div class="inner-box">
                             <ul class="rating clearfix">
                                 <li><i class="flaticon-star"></i></li>
@@ -710,7 +710,7 @@ $BLOG_POSTS = include __DIR__ . '/blog-data.php';
                         <div class="quote-box">
                             <div class="quote"><i class="flaticon-quote"></i></div>
                         </div>
-                        <figure class="thumb-box"><img src="assets/images/resource/testimonial-1.jpg" alt=""></figure>
+                        <!-- <figure class="thumb-box"><img src="assets/images/resource/testimonial-1.jpg" alt=""></figure> -->
                         <div class="inner-box">
                             <ul class="rating clearfix">
                                 <li><i class="flaticon-star"></i></li>

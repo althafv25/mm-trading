@@ -34,7 +34,7 @@ return [
         'title' => 'Stucco Embossed Aluminium for HVAC Ducts and Cold Storage',
         'category' => 'metals',
         'categoryLabel' => 'Aluminium & Metals',
-        'image' => 'products/aluminium-stucco-sheets.png',
+        'image' => 'products/aluminium-stucco-sheets.jpg',
         'excerpt' => 'Stucco embossed sheets and coils with polykraft or surlyn moisture barriers are widely specified for duct cladding, pipe insulation, and cold storage.',
         'link' => 'products/aluminium-stucco-sheets.php',
     ],

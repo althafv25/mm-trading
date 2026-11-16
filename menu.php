@@ -44,10 +44,14 @@ $safe = static fn($value) => htmlspecialchars((string) $value, ENT_QUOTES, 'UTF-
                         <li><a href="index.html"><i class="fa-brands fa-youtube"></i></a></li>
                     </ul>
                     <div class="text">
-                        <span class="top-badge"><i class="fa-solid fa-location-dot"></i> P.O. Box : 26737 DIP - 2, Dubai-U.A.E</span>
+                        <ul class="links-list clearfix">
+                            <li><i class="fa-solid fa-phone"></i><a href="tel:+97148872112">+971 4 8872112</a> / <a href="tel:+97148878778">+971 4 8878778</a></li>
+                           
+                        </ul>
+                        
                     </div>
                     <ul class="links-list clearfix">
-                        <li><i class="fa-solid fa-phone"></i><a href="tel:+97148872112">+971 4 8872112</a> / <a href="tel:+97148878778">+971 4 8878778</a></li>
+                        
                         <li><i class="fa-solid fa-envelope"></i><a href="mailto:info@mmgeneraltrading.com">info@mmgeneraltrading.com</a></li>
                     </ul>
                 </div>
@@ -157,11 +161,11 @@ $safe = static fn($value) => htmlspecialchars((string) $value, ENT_QUOTES, 'UTF-
                                                     <?php endforeach; ?>
                                                 </div>
                                                 <div class="mega-footer">
-                                                    <a href="<?= $safe($PageRoot) ?>products.php">View all 36 products</a>
+                                                    <a href="<?= $safe($PageRoot) ?>products.php">View all 31 products</a>
                                                 </div>
                                             </div>
                                         </li>
-                                        <li class="dropdown"><a href="<?= $safe($PageRoot) ?>services/coating-processing-services.php">Services</a>
+                                        <li class="dropdown <?= $Page === 'services' ? 'current' : '' ?>"><a href="<?= $safe($PageRoot) ?>services/coating-processing-services.php">Services</a>
                                             <div class="megamenu mega-narrow">
                                                 <div class="mega-grid">
                                                     <div class="mega-col">

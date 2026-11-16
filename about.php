@@ -39,8 +39,8 @@ include __DIR__ . '/header.php';
         <div class="row clearfix align-items-center">
             <div class="col-lg-6 col-md-12 col-sm-12 image-column">
                 <div class="image-box">
-                    <figure class="image image-1"><img src="assets/images/resource/about-2.jpg" alt="MM General Trading Facility"></figure>
-                    <figure class="image image-2"><img src="assets/images/resource/about-3.jpg" alt="Industrial Metal Processing"></figure>
+                    <figure class="image image-1"><img src="assets/images/resource/about1.png" alt="MM General Trading Facility"></figure>
+                    
                     <div class="text-box" style="background: linear-gradient(135deg, #E6B555 0%, #D69A2D 55%, #B87F1C 100%);">
                         <h5>Industry Excellence</h5>
                         <h2>12+</h2>
